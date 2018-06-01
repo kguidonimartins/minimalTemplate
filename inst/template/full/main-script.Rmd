@@ -1,0 +1,273 @@
+---
+title: "Chapter xx"
+author:
+- Eu^1^\*, Tu^2^, Ele^3^
+- ^1^Aqui, Brazil
+- ^2^Lá, Brazil
+- ^3^Acolá, Brazil
+- \*meliga@gagamail.com
+date: "`r format(Sys.time(), '%d de %B de %Y')`"
+knit: (function(inputFile, encoding) {
+      out_dir <- 'manuscript';
+      rmarkdown::render(inputFile,
+                        encoding = encoding,
+                        output_file = file.path(dirname(inputFile),
+                        out_dir,
+                        'manuscript.docx')) })
+output:
+  word_document:
+    reference_docx: sources/template.docx
+# Para o estilo de citação desejado, use a função `baixar_csl.R` contida na pasta r-scripts
+csl: sources/ecology-letters.csl
+bibliography:
+- sources/library.bib
+- sources/installed-r-packages.bib
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r write quant output files, include = FALSE}
+# http://stackoverflow.com/questions/28894515/rmarkdown-directing-output-file-into-a-directory
+out_dir <- 'manuscript'
+if(!file.exists(out_dir)) {
+  dir.create(out_dir)
+}
+```
+
+
+
+```{r r_packages, include = FALSE}
+# ipak function: install and load multiple R packages.
+# Check to see if packages are installed.
+# Install them if they are not, then load them into the R session.
+# https://gist.github.com/stevenworthington/3178163
+
+ipak <- function(pkg){
+    new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+    if (length(new.pkg))
+    {
+      install.packages(new.pkg,
+                       dependencies = TRUE,
+                       repos = "https://cloud.r-project.org")
+    }
+    suppressPackageStartupMessages(sapply(pkg, require, character.only = TRUE))
+}
+
+ipak(packages_list <- c(
+                       "devtools",
+                       "bibtex",
+                       "vegan",
+                       "tidyverse",
+                       "betapart",
+                       "ape",
+                       "readxl",
+                       "flora",
+                       "data.table",
+                       "phytools",
+                       "brranching",
+                       "picante",
+                       "knitr", 
+                       "pacman"
+                   )
+     )
+
+pacman::p_load_gh(char = c(
+                           "crsh/citr", 
+                           "benmarwick/wordcountaddin",
+                           "ropensci/rcrossref",
+                           "sylvainschmitt/Cite"
+                           ), 
+                  install = TRUE, 
+                  dependencies = TRUE)
+
+write.bib(packages_list, "sources/installed-r-packages.bib")
+```
+
+# Abstract
+
+Lá-lá-lá
+
+**Keywords: aguardente, gelo, limão, açúcar**
+
+##### page break
+
+# Intro
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit [@Vellend2001] in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+
+##### page break
+
+# M & M
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit [@Vellend2001] in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+
+##### page break
+
+# Results
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit [@Vellend2001] in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+
+##### page break
+
+# Discussion
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit [@Vellend2001] in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+
+##### page break
+
+# Conclusion
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit [@Vellend2001] in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+
+##### page break
+
+# R packages
+
+```{r eval = TRUE, echo = FALSE, results='asis'}
+source("r-scripts/citar_pacotes.R")
+citar_pacotes(packages_list)
+```
+
+##### page break
+
+# References
+
+<!-- https://stackoverflow.com/a/44294306/5974372 -->
+
+<div id="refs"></div>
+
+##### page break
+
+# Tables
+
+<!-- https://datascienceplus.com/r-markdown-how-to-number-and-reference-tables/ -->
+
+```{r}
+knitr::kable(x = head(mtcars), format = "markdown", align = "c")
+```
+
+##### page break
+
+# Figures
+
+via `![]()` command
+
+1. pdf image
+
+![Ma fig cap](images/drawing.pdf)
+
+##### page break
+
+2. png image (280 x 474 pixels)
+
+![Ma fig cap](images/drawing.png)
+
+##### page break
+
+3. svg image (262 x 444 pixels)
+
+![Ma fig cap](images/drawing.svg)
+
+##### page break
+
+4. jpg image (280 x 474 pixels)
+
+![Ma fig cap](images/drawing.jpg)
+
+##### page break
+
+5. tiff image (280 x 474 pixels)
+
+![Ma fig cap](images/drawing.tiff)
+
+
+##### page break
+
+via `include_graphics` command
+
+1. pdf image
+
+```{r, echo=FALSE, fig.cap="Ma fig cap"}
+include_graphics(path = "images/drawing.pdf", dpi = "2in")
+```
+
+##### page break
+
+2. png image
+
+```{r, echo=FALSE, fig.cap="Ma fig cap"}
+include_graphics(path = "images/drawing.png", dpi = "2in")
+```
+
+##### page break
+
+3. svg image
+
+```{r, echo=FALSE, fig.cap="Ma fig cap"}
+include_graphics(path = "images/drawing.svg", dpi = "2in")
+```
+
+
+##### page break
+
+4. jpg image
+
+```{r, echo=FALSE, fig.cap="Ma fig cap"}
+include_graphics(path = "images/drawing.jpg", dpi = "2in")
+```
+
+
+##### page break
+
+5. tiff image
+
+```{r, echo=FALSE, fig.cap="Ma fig cap"}
+include_graphics(path = "images/drawing.tiff", dpi = "2in")
+```
+
+
+##### page break
+
+# Appendix
+
+##### page break
+
+```{r}
+wordcountaddin:::text_stats(filename = "main-script.Rmd")
+```
+
+##### page break
+
+```{r session-info}
+sessionInfo()
+```

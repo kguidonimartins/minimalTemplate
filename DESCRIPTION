@@ -1,0 +1,8 @@
+Package: minimalTemplate
+Version: 0.1
+Date: 2018-05-31
+Title: Karlo Guidoni Martins
+Description: A minimal template for scientific manuscripts
+Author: Karlo Guidoni Martins
+Maintainer: Karlo Guidoni Martins <kguidonimartins@gmail.com>
+RoxygenNote: 6.0.1
