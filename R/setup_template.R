@@ -10,32 +10,25 @@
 #' @examples
 #' setup_template("my_new_project")
 setup_template <- function(name) {
+  
   # criar r project
   usethis::create_project(path = name,
                           rstudio = TRUE,
                           open = TRUE)
   
-  # criar pastas
-  file.copy(
-    from = system.file("template/full/data", package = "minimalTemplate"),
-    to = name,
-    recursive = TRUE
-  )
-  file.copy(
-    from = system.file("template/full/manuscript", package = "minimalTemplate"),
-    to = name,
-    recursive = TRUE
-  )
-  file.copy(
-    from = system.file("template/full/output", package = "minimalTemplate"),
-    to = name,
-    recursive = TRUE
-  )
-  file.copy(
-    from = system.file("template/full/main-script.Rmd", package = "minimalTemplate"),
-    to = name,
-    recursive = TRUE
-  )
+  inst_files <- c("data", 
+                  "manuscript", 
+                  "output", 
+                  "main-script.Rmd")
   
-}
+  # criar pastas
 
+  for (i in seq_along(inst_files)) {
+    file.copy(
+      from = system.file(paste0("template/full/", inst_files[i]), 
+                         package = "minimalTemplate"),
+      to = name,
+      recursive = TRUE
+    )
+  }
+}
