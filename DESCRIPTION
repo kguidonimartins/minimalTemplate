@@ -5,4 +5,17 @@ Title: Karlo Guidoni Martins
 Description: A minimal template for scientific manuscripts
 Author: Karlo Guidoni Martins
 Maintainer: Karlo Guidoni Martins <kguidonimartins@gmail.com>
+Imports: 
+    clipr (>= 0.4.0),
+    clisymbols (>= 1.2.0),
+    crayon (>= 1.3.4),
+    desc (>= 1.2.0),
+    devtools (>= 1.13.5),
+    fs (>= 1.2.2),
+    git2r (>= 0.21.0),
+    rmarkdown (>= 1.9),
+    rprojroot (>= 1.3.2),
+    usethis (>= 1.3.0),
+    utils (>= 3.4.4),
+    withr (>= 2.1.2)
 RoxygenNote: 6.0.1
