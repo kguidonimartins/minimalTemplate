@@ -1,11 +1,40 @@
 Package: minimalTemplate
+Title: A minimal template for scientific manuscripts
 Version: 0.1
 Date: 2018-05-31
-Title: Karlo Guidoni Martins
-Description: A minimal template for scientific manuscripts
-Author: Karlo Guidoni Martins
-Maintainer: Karlo Guidoni Martins <kguidonimartins@gmail.com>
+Authors@R: person("Karlo", "Guidoni Martins", 
+           email = "kguidonimartins@gmail.com",
+           role = c("aut", "cre"))
+Description: This package focuses on writing scientific manuscripts using 
+             RMarkdown. All package architecture was developed to deliver a 
+             document in `.docx` format. In addition, the package provides a 
+             configuration function for version control of files in `.docx` 
+             using the pre- and post-commit scripts.
 RoxygenNote: 6.0.1
-Imports: usethis,
+Imports: 
+    usethis,
     git2r,
-    bibtex
+    bibtex,
+    captioner,
+    knitr,
+    rmarkdown,
+    devtools,
+    curl,
+    RCurl,
+    vegan,
+    tidyverse,
+    readxl,
+    pacman,
+    evaluate,
+    highr,
+    markdown,
+    stringr,
+    yaml,
+    Rcpp,
+    htmltools,
+    caTools,
+    bitops,
+    jsonlite,
+    base64enc,
+    rprojroot,
+    digest
