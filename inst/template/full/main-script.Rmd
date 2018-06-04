@@ -1,12 +1,15 @@
 ---
 title: "Chapter xx"
+
 author:
 - Eu^1^\*, Tu^2^, Ele^3^
 - ^1^Aqui, Brazil
 - ^2^Lá, Brazil
 - ^3^Acolá, Brazil
 - \*meliga@gagamail.com
+
 date: "`r format(Sys.time(), '%d de %B de %Y')`"
+
 knit: (function(inputFile, encoding) {
       out_dir <- 'manuscript';
       rmarkdown::render(inputFile,
@@ -16,22 +19,19 @@ knit: (function(inputFile, encoding) {
                         'manuscript.docx')) })
 output:
   word_document:
-    reference_docx: sources/template.docx
+    reference_docx: manuscript/sources/template.docx
+
 # Para o estilo de citação desejado, use a função `baixar_csl.R` contida na pasta r-scripts
-csl: sources/ecology-letters.csl
+csl: manuscript/sources/ecology-letters.csl
 bibliography:
-- sources/library.bib
-- sources/installed-r-packages.bib
+- manuscript/sources/library.bib
+- manuscript/sources/installed-r-packages.bib
 ---
+
 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-```
-
-
-
-```{r write quant output files, include = FALSE}
 # http://stackoverflow.com/questions/28894515/rmarkdown-directing-output-file-into-a-directory
 out_dir <- 'manuscript'
 if(!file.exists(out_dir)) {
@@ -72,7 +72,8 @@ ipak(packages_list <- c(
                        "brranching",
                        "picante",
                        "knitr", 
-                       "pacman"
+                       "pacman",
+                       "captioner"
                    )
      )
 
@@ -85,7 +86,10 @@ pacman::p_load_gh(char = c(
                   install = TRUE, 
                   dependencies = TRUE)
 
-write.bib(packages_list, "sources/installed-r-packages.bib")
+write.bib(packages_list, "manuscript/sources/installed-r-packages.bib")
+
+fig <- captioner(prefix ="Figure")
+tab <- captioner(prefix="Table")
 ```
 
 # Abstract
@@ -154,8 +158,33 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 # R packages
 
 ```{r eval = TRUE, echo = FALSE, results='asis'}
-source("r-scripts/citar_pacotes.R")
-citar_pacotes(packages_list)
+cite_pkg <- function(pkg_list) {
+  
+  packages <- sort(pkg_list)
+  cites <- lapply(packages, utils::citation)
+  cites.bib <- lapply(cites, utils::toBibtex)
+  
+  # generate reference key
+  for (i in seq_len(length(cites.bib))) {
+    cites.bib[[i]] <-
+      sub(
+        pattern = "\\{,$",
+        replacement = paste0("{", packages[i], ","),
+        x = cites.bib[[i]]
+      )
+  }
+  
+  # write bibtex references to file
+  writeLines(enc2utf8(unlist(cites.bib)), con = "manuscript/sources/pkg-refs.bib", useBytes = TRUE)
+  
+  # return named list of bibtex references
+  names(cites.bib) <- packages # pkgs
+  
+  writeLines(paste("- ", names(cites.bib), " [@", names(cites.bib), "]", sep = ""))
+}
+
+
+cite_pkg(packages_list)
 ```
 
 ##### page break
@@ -172,7 +201,9 @@ citar_pacotes(packages_list)
 
 <!-- https://datascienceplus.com/r-markdown-how-to-number-and-reference-tables/ -->
 
-```{r}
+
+```{r, eval=TRUE, echo=FALSE, results='asis'}
+cat(tab(name = "tab_exemplo", "Apenas um exempĺo de como aplicar a legenda em uma tabela."))
 knitr::kable(x = head(mtcars), format = "markdown", align = "c")
 ```
 
@@ -180,81 +211,18 @@ knitr::kable(x = head(mtcars), format = "markdown", align = "c")
 
 # Figures
 
-via `![]()` command
-
-1. pdf image
-
-![Ma fig cap](images/drawing.pdf)
-
-##### page break
-
-2. png image (280 x 474 pixels)
-
-![Ma fig cap](images/drawing.png)
-
-##### page break
-
-3. svg image (262 x 444 pixels)
-
-![Ma fig cap](images/drawing.svg)
-
-##### page break
-
-4. jpg image (280 x 474 pixels)
-
-![Ma fig cap](images/drawing.jpg)
-
-##### page break
-
-5. tiff image (280 x 474 pixels)
-
-![Ma fig cap](images/drawing.tiff)
-
-
-##### page break
-
-via `include_graphics` command
-
-1. pdf image
-
-```{r, echo=FALSE, fig.cap="Ma fig cap"}
-include_graphics(path = "images/drawing.pdf", dpi = "2in")
+```{r, echo=FALSE, eval=TRUE, results='asis', fig.height=10, fig.width=10}
+plot(1:10, pch = 21, bg = "red")
+cat("\n", fig(name = "fig_exemplo", "Apenas um exemplo de como aplicar a legenda em um figura."))
 ```
 
 ##### page break
 
-2. png image
+Figuras externas também podem ser incluídas usando a função `include_graphics`. Exemplo de código logo abaixo:
 
-```{r, echo=FALSE, fig.cap="Ma fig cap"}
-include_graphics(path = "images/drawing.png", dpi = "2in")
+```{r, echo=TRUE, eval=FALSE}
+include_graphics(path = "pasta/da/minha/figura", dpi = "2in")
 ```
-
-##### page break
-
-3. svg image
-
-```{r, echo=FALSE, fig.cap="Ma fig cap"}
-include_graphics(path = "images/drawing.svg", dpi = "2in")
-```
-
-
-##### page break
-
-4. jpg image
-
-```{r, echo=FALSE, fig.cap="Ma fig cap"}
-include_graphics(path = "images/drawing.jpg", dpi = "2in")
-```
-
-
-##### page break
-
-5. tiff image
-
-```{r, echo=FALSE, fig.cap="Ma fig cap"}
-include_graphics(path = "images/drawing.tiff", dpi = "2in")
-```
-
 
 ##### page break
 
