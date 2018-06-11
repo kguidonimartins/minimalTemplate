@@ -18,8 +18,8 @@ None
 Download csl citation style from \url{https://github.com/citation-style-language/styles}.
 }
 \examples{
-# First, search by our prefered citation style using:
-eco <- grep(pattern = "ecology", x = rcrossref::get_styles(), value = TRUE)
+# First, search by your preferred citation style using:
+(eco <- grep(pattern = "ecology", x = rcrossref::get_styles(), value = TRUE))
 # then:
 download_csl(journal_style = eco[4], directory = "")
 }
