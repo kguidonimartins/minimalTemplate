@@ -56,7 +56,7 @@ ms_chap_01/
 Set a new citation style using:
 
 ```r
-# First, search by our your citation style using:
+# First, search by your citation style using:
 (eco <- grep(pattern = "ecology", x = rcrossref::get_styles(), value = TRUE))
 # then:
 download_csl(journal_style = eco[4], directory = "manuscript/sources/")
