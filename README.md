@@ -51,6 +51,9 @@ ms_chap_01/
 `-- R/                     # your R functions
 ```
 
+Open the `main_script.Rmd` file and press the `Knit` button.
+
+
 ### 2. Download a new citation style
 
 Set a new citation style using:
