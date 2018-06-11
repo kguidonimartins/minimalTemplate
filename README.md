@@ -14,12 +14,12 @@ devtools::install_github("kguidonimartins/minimalTemplate")
 
 ## Example
 
-To using the full workflow of the `minimalTemplate`, follow the steps below:
+To use the full workflow of the `minimalTemplate`, follow the steps below:
 
-1. Setting up a new template
+1. Set up a new template
 2. Download a new citation style
-3. Setting up git in your new template
-4. Setting up the version control of `.docx` files (optional, but recommended)
+3. Set up git in your new template
+4. Set up the version control of `.docx` files (optional, but recommended)
 
 ### 1. Setting up a new template
 
