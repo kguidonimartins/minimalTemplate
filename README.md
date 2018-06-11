@@ -46,7 +46,7 @@ ms_chap_01/
 |       `-- template.docx  # an editable `.docx` template
 |-- ms_chap_01.Rproj       # RStudio project
 |-- output/                # main output folder
-|   |-- figures/           # producted or handmaid figures
+|   |-- figures/           # producted figures
 |   `-- results/           # output of analitical results
 `-- R/                     # your R functions
 ```
