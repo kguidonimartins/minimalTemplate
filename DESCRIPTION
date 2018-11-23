@@ -37,4 +37,5 @@ Imports:
     jsonlite,
     base64enc,
     rprojroot,
-    digest
+    digest,
+    citr
