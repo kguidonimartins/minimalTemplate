@@ -19,7 +19,8 @@ setup_template <- function(name) {
   inst_files <- c("data", 
                   "manuscript", 
                   "output", 
-                  "main-script.Rmd")
+                  "main-script.Rmd", 
+                  ".github")
   
   # criar pastas
 
