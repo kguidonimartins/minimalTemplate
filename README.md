@@ -1,4 +1,4 @@
-# minimalTemplate
+# minimalTemplate ![](http://www.textfiles.com/underconstruction/HeHeartlandPark2601underconstructionbar9.gif)
 
 The goal of minimalTemplate is to create a template for writing scientific manuscripts using [RMarkdown](https://rmarkdown.rstudio.com/). `minimalTemplate` focuses in `.docx` output, and provides a function to set the version control those files.
 
