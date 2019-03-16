@@ -17,6 +17,6 @@ download_csl <- function(journal_style, directory) {
 
   style <- "https://raw.githubusercontent.com/citation-style-language/styles/master/"
 
-  download.file(paste0(style, journal_style, ".csl"), mode = "w",
+  utils::download.file(paste0(style, journal_style, ".csl"), mode = "w",
                 destfile = paste0(directory, journal_style, ".csl"))
 }
