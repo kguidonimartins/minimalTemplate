@@ -18,8 +18,7 @@ To use the full workflow of the `minimalTemplate`, follow the steps below:
 
 1. Set up a new template
 2. Download a new citation style
-3. Set up git in your new template
-4. Set up the version control of `.docx` files (optional, but recommended)
+3. Set up the version control of `.docx` files (optional, but recommended)
 
 ### 1. Setting up a new template
 
@@ -65,11 +64,14 @@ Set a new citation style using:
 download_csl(journal_style = eco[4], directory = "manuscript/sources/")
 ```
 
-### 3. Setting up git in your new template
+### 3. Setting up the version control of `.docx` files
 
-todo
+In this step, I'm assuming you want to control the changes (files changes [text and code], entry of new analysis files) in your new project folder. Please, refer to [this](https://kbroman.org/github_tutorial/) to learn how to configure git in your new project template.
 
-### 4. Setting up the version control of `.docx` files
+To versioning your `.docx` files, just run the function:
 
+```r
+setup_wdiff()
+```
 
-todo
+This function is based on two git hooks (available [here](https://github.com/vigente/gerardus/tree/master/shell-script)) to create a `.md` copy of `.docx` files and track the changes.
