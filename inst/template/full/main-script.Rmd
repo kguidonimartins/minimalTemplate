@@ -148,33 +148,33 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 # R packages
 
 ```{r eval = TRUE, echo = FALSE, results='asis'}
-# cite_pkg <- function(pkg_list) {
-# 
-#   packages <- sort(pkg_list)
-#   cites <- lapply(packages, utils::citation)
-#   cites.bib <- lapply(cites, utils::toBibtex)
-# 
-#   # generate reference key
-#   for (i in seq_len(length(cites.bib))) {
-#     cites.bib[[i]] <-
-#       sub(
-#         pattern = "\\{,$",
-#         replacement = paste0("{", packages[i], ","),
-#         x = cites.bib[[i]]
-#       )
-#   }
-# 
-#   # write bibtex references to file
-#   writeLines(enc2utf8(unlist(cites.bib)), con = "manuscript/sources/pkg-refs.bib", useBytes = TRUE)
-# 
-#   # return named list of bibtex references
-#   names(cites.bib) <- packages # pkgs
-# 
-#   writeLines(paste("- ", names(cites.bib), " [@", names(cites.bib), "]", sep = ""))
-# }
-# 
-# 
-# cite_pkg(packages_list)
+cite_pkg <- function(pkg_list) {
+
+  packages <- sort(pkg_list)
+  cites <- lapply(packages, utils::citation)
+  cites.bib <- lapply(cites, utils::toBibtex)
+
+  # generate reference key
+  for (i in seq_len(length(cites.bib))) {
+    cites.bib[[i]] <-
+      sub(
+        pattern = "\\{,$",
+        replacement = paste0("{", packages[i], ","),
+        x = cites.bib[[i]]
+      )
+  }
+
+  # write bibtex references to file
+  writeLines(enc2utf8(unlist(cites.bib)), con = "manuscript/sources/pkg-refs.bib", useBytes = TRUE)
+
+  # return named list of bibtex references
+  names(cites.bib) <- packages # pkgs
+
+  writeLines(paste("- ", names(cites.bib), " [@", names(cites.bib), "]", sep = ""))
+}
+
+
+cite_pkg(packages_list)
 ```
 
 ##### page break
