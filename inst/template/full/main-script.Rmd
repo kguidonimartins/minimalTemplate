@@ -20,8 +20,6 @@ knit: (function(inputFile, encoding) {
 output:
   word_document:
     reference_docx: manuscript/sources/template.docx
-
-# Para o estilo de citação desejado, use a função `baixar_csl.R` contida na pasta r-scripts
 csl: manuscript/sources/ecology-letters.csl
 bibliography:
 - manuscript/sources/library.bib
@@ -65,17 +63,7 @@ ipak(packages_list <- c(
                        "rmarkdown", # required; do not exclude from this list
                        "pacman",    # required; do not exclude from this list
                        "captioner", # required; do not exclude from this list
-                       "git2r",     # required; do not exclude from this list
-                       "vegan",
-                       "tidyverse",
-                       "betapart",
-                       "ape",
-                       "readxl",
-                       "flora",
-                       "data.table",
-                       "phytools",
-                       "brranching",
-                       "picante"
+                       "git2r"      # required; do not exclude from this list
                       )
      )
 
@@ -160,33 +148,33 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 # R packages
 
 ```{r eval = TRUE, echo = FALSE, results='asis'}
-cite_pkg <- function(pkg_list) {
-
-  packages <- sort(pkg_list)
-  cites <- lapply(packages, utils::citation)
-  cites.bib <- lapply(cites, utils::toBibtex)
-
-  # generate reference key
-  for (i in seq_len(length(cites.bib))) {
-    cites.bib[[i]] <-
-      sub(
-        pattern = "\\{,$",
-        replacement = paste0("{", packages[i], ","),
-        x = cites.bib[[i]]
-      )
-  }
-
-  # write bibtex references to file
-  writeLines(enc2utf8(unlist(cites.bib)), con = "manuscript/sources/pkg-refs.bib", useBytes = TRUE)
-
-  # return named list of bibtex references
-  names(cites.bib) <- packages # pkgs
-
-  writeLines(paste("- ", names(cites.bib), " [@", names(cites.bib), "]", sep = ""))
-}
-
-
-cite_pkg(packages_list)
+# cite_pkg <- function(pkg_list) {
+# 
+#   packages <- sort(pkg_list)
+#   cites <- lapply(packages, utils::citation)
+#   cites.bib <- lapply(cites, utils::toBibtex)
+# 
+#   # generate reference key
+#   for (i in seq_len(length(cites.bib))) {
+#     cites.bib[[i]] <-
+#       sub(
+#         pattern = "\\{,$",
+#         replacement = paste0("{", packages[i], ","),
+#         x = cites.bib[[i]]
+#       )
+#   }
+# 
+#   # write bibtex references to file
+#   writeLines(enc2utf8(unlist(cites.bib)), con = "manuscript/sources/pkg-refs.bib", useBytes = TRUE)
+# 
+#   # return named list of bibtex references
+#   names(cites.bib) <- packages # pkgs
+# 
+#   writeLines(paste("- ", names(cites.bib), " [@", names(cites.bib), "]", sep = ""))
+# }
+# 
+# 
+# cite_pkg(packages_list)
 ```
 
 ##### page break
@@ -220,7 +208,7 @@ cat("\n", fig(name = "fig_exemplo", "Apenas um exemplo de como aplicar a legenda
 
 ##### page break
 
-Figuras externas também podem ser incluídas usando a função `include_graphics`. Exemplo de código logo abaixo:
+External figures can also be included using the `include_graphics` function. Example code below:
 
 ```{r, echo=TRUE, eval=FALSE}
 include_graphics(path = "pasta/da/minha/figura", dpi = "2in")
