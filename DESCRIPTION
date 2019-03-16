@@ -10,6 +10,7 @@ Description: This package focuses on writing scientific manuscripts using
              document in `.docx` format. In addition, the package provides a 
              configuration function for version control of files in `.docx` 
              using the pre- and post-commit scripts.
+License: MIT + file LICENSE
 RoxygenNote: 6.0.1
 Imports: 
     usethis,
