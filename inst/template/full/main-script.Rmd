@@ -220,7 +220,7 @@ include_graphics(path = "pasta/da/minha/figura", dpi = "2in")
 
 ##### page break
 
-```{r, echo=TRUE, eval=FAlSE}
+```{r, echo=TRUE, eval=FALSE}
 wordcountaddin:::text_stats(filename = "main-script.Rmd")
 ```
 
