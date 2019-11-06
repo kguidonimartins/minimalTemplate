@@ -16,6 +16,8 @@ None
 Setup wdiff for .docx files via pre- and post-commit hooks
 }
 \examples{
+\dontrun{
 # Just run:
 setup_wdiff()
+}
 }

@@ -9,10 +9,12 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' # First, search by your preferred citation style using:
 #' (eco <- grep(pattern = "ecology", x = rcrossref::get_styles(), value = TRUE))
 #' # then:
 #' download_csl(journal_style = eco[4], directory = "")
+#' }
 download_csl <- function(journal_style, directory) {
 
   style <- "https://raw.githubusercontent.com/citation-style-language/styles/master/"

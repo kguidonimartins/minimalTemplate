@@ -16,5 +16,7 @@ None
 Setup and open a new projetc in RStudio
 }
 \examples{
+\dontrun{
 setup_template("my_new_project")
+}
 }

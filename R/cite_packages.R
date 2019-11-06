@@ -6,8 +6,10 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' pkg <- c("vegan", "ggplot2")
 #' cite_pkg(pkg)
+#' }
 cite_pkg <- function(pkg_list) {
   
   packages <- sort(pkg_list)
@@ -25,6 +27,10 @@ cite_pkg <- function(pkg_list) {
   }
   
   # write bibtex references to file
+  if (!dir.exists("sources")){
+    dir.create("sources")
+  }
+  file.create("sources/pkg-refs.bib")
   writeLines(enc2utf8(unlist(cites.bib)), con = "sources/pkg-refs.bib", useBytes = TRUE)
   
   # return named list of bibtex references

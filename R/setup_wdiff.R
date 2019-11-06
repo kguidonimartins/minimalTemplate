@@ -6,15 +6,17 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' # Just run:
 #' setup_wdiff()
+#' }
 setup_wdiff <- function(verbose = TRUE) {
   
   if(!dir.exists(".git")){
     message("This is not a git repository! Access the site: https://git-scm.com/")
   } else {
   
-  require(git2r)
+  # requireNamespace(git2r)
   
   hooks.files <- c("pre-commit",
                    "post-commit")

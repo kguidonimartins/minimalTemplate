@@ -16,6 +16,8 @@ None
 Cite packages in .docx output
 }
 \examples{
+\dontrun{
 pkg <- c("vegan", "ggplot2")
 cite_pkg(pkg)
+}
 }

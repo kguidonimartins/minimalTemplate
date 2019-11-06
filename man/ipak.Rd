@@ -16,6 +16,8 @@ None
 Thanks to Steve Worthington \url{https://gist.github.com/stevenworthington/3178163}.
 }
 \examples{
+\dontrun{
 list_pkg <- c("vegan", "ggplot2")
 ipak(list_pkg)
+}
 }

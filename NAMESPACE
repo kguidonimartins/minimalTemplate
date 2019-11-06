@@ -5,3 +5,6 @@ export(download_csl)
 export(ipak)
 export(setup_template)
 export(setup_wdiff)
+
+importFrom("utils", "download.file", "install.packages",
+               "installed.packages")
