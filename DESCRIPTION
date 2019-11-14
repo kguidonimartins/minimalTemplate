@@ -21,7 +21,6 @@ Imports:
     rmarkdown,
     devtools,
     curl,
-    RCurl,
     vegan,
     tidyverse,
     readxl,
@@ -39,5 +38,4 @@ Imports:
     jsonlite,
     base64enc,
     rprojroot,
-    digest,
-    citr
+    digest
