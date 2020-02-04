@@ -88,7 +88,7 @@ Lá-lá-lá
 
 **Keywords: aguardente, gelo, limão, açúcar**
 
-##### page break
+\pagebreak
 
 # Intro
 
@@ -99,7 +99,7 @@ consequat. Duis aute irure dolor in reprehenderit [@Vellend2001] in voluptate ve
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-##### page break
+\pagebreak
 
 # M & M
 
@@ -110,7 +110,7 @@ consequat. Duis aute irure dolor in reprehenderit [@Vellend2001] in voluptate ve
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-##### page break
+\pagebreak
 
 # Results
 
@@ -121,7 +121,7 @@ consequat. Duis aute irure dolor in reprehenderit [@Vellend2001] in voluptate ve
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-##### page break
+\pagebreak
 
 # Discussion
 
@@ -132,7 +132,7 @@ consequat. Duis aute irure dolor in reprehenderit [@Vellend2001] in voluptate ve
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-##### page break
+\pagebreak
 
 # Conclusion
 
@@ -143,7 +143,7 @@ consequat. Duis aute irure dolor in reprehenderit [@Vellend2001] in voluptate ve
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-##### page break
+\pagebreak
 
 # R packages
 
@@ -177,7 +177,7 @@ cite_pkg <- function(pkg_list) {
 cite_pkg(packages_list)
 ```
 
-##### page break
+\pagebreak
 
 # References
 
@@ -185,7 +185,7 @@ cite_pkg(packages_list)
 
 <div id="refs"></div>
 
-##### page break
+\pagebreak
 
 # Tables
 
@@ -197,7 +197,7 @@ cat(tab(name = "tab_exemplo", "Apenas um exempĺo de como aplicar a legenda em u
 knitr::kable(x = head(mtcars), format = "markdown", align = "c")
 ```
 
-##### page break
+\pagebreak
 
 # Figures
 
@@ -206,7 +206,7 @@ plot(1:10, pch = 21, bg = "red")
 cat("\n", fig(name = "fig_exemplo", "Apenas um exemplo de como aplicar a legenda em um figura."))
 ```
 
-##### page break
+\pagebreak
 
 External figures can also be included using the `include_graphics` function. Example code below:
 
@@ -214,11 +214,11 @@ External figures can also be included using the `include_graphics` function. Exa
 include_graphics(path = "pasta/da/minha/figura", dpi = "2in")
 ```
 
-##### page break
+\pagebreak
 
 # Appendix
 
-##### page break
+\pagebreak
 
 Word count by *wordcountaddin* package
 
@@ -226,7 +226,7 @@ Word count by *wordcountaddin* package
 wordcountaddin::text_stats(filename = "main-script.Rmd")
 ```
 
-##### page break
+\pagebreak
 
 ```{r session-info}
 sessionInfo()
