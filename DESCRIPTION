@@ -11,7 +11,8 @@ Description: This package focuses on writing scientific manuscripts using
              configuration function for version control of files in `.docx` 
              using the pre- and post-commit scripts.
 License: MIT + file LICENSE
-RoxygenNote: 6.1.1
+Encoding: UTF-8
+RoxygenNote: 7.1.0
 Imports: 
     usethis,
     git2r,
@@ -22,7 +23,9 @@ Imports:
     devtools,
     curl,
     vegan,
-    tidyverse,
+    dplyr,
+    readr,
+    magrittr,
     readxl,
     pacman,
     evaluate,
@@ -38,4 +41,8 @@ Imports:
     jsonlite,
     base64enc,
     rprojroot,
-    digest
+    digest,
+    fs,
+    docxtractr,
+    glue,
+    rcrossref

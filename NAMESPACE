@@ -2,9 +2,17 @@
 
 export(cite_pkg)
 export(download_csl)
+export(extract_comments)
 export(ipak)
 export(setup_template)
 export(setup_wdiff)
-
-importFrom("utils", "download.file", "install.packages",
-               "installed.packages")
+importFrom(docxtractr,docx_extract_all_cmnts)
+importFrom(docxtractr,read_docx)
+importFrom(dplyr,select)
+importFrom(glue,glue)
+importFrom(magrittr,"%>%")
+importFrom(rcrossref,get_styles)
+importFrom(readr,write_csv)
+importFrom(utils,download.file)
+importFrom(utils,install.packages)
+importFrom(utils,installed.packages)
