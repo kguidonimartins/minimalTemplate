@@ -7,8 +7,8 @@
 #'
 #' @examples
 #' \dontrun{
-#' pkg <- c("vegan", "ggplot2")
-#' cite_pkg(pkg)
+#' pkg_list <- c("vegan", "ggplot2")
+#' cite_pkg(pkg_list)
 #' }
 cite_pkg <- function(pkg_list) {
   
@@ -30,8 +30,8 @@ cite_pkg <- function(pkg_list) {
   if (!dir.exists("sources")){
     dir.create("sources")
   }
-  file.create("sources/pkg-refs.bib")
-  writeLines(enc2utf8(unlist(cites.bib)), con = "sources/pkg-refs.bib", useBytes = TRUE)
+  file.create("sources/pkg_list-refs.bib")
+  writeLines(enc2utf8(unlist(cites.bib)), con = "sources/pkg_list-refs.bib", useBytes = TRUE)
   
   # return named list of bibtex references
   names(cites.bib) <- packages # pkgs
