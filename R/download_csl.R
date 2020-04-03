@@ -5,6 +5,8 @@
 #' @param journal_style Journal style (see examples)
 #' @param directory Directory to store the csl file
 #'
+#' @importFrom rcrossref get_styles
+#'
 #' @return None
 #' @export
 #'
