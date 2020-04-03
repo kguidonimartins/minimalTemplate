@@ -1,26 +1,32 @@
+
 # minimalTemplate ![](http://www.textfiles.com/underconstruction/HeHeartlandPark2601underconstructionbar9.gif)
 
-The goal of minimalTemplate is to create a template for writing scientific manuscripts using [RMarkdown](https://rmarkdown.rstudio.com/). `minimalTemplate` focuses in `.docx` output, and provides a function to set the version control those files.
+The goal of minimalTemplate is to create a template for writing
+scientific manuscripts using
+[RMarkdown](https://rmarkdown.rstudio.com/). `minimalTemplate` focuses
+in `.docx` output, and provides a function to set the version control
+those files.
 
 ## Installation
 
 You can install the development version of minimalTemplate with:
 
 ``` r
-if(!require("devtools")) install.packages("devtools")
-devtools::install_github("ropensci/rcrossref")
-devtools::install_github("kguidonimartins/minimalTemplate")
+if(!require("remotes")) install.packages("remotes")
+remotes::install_github("kguidonimartins/minimalTemplate")
 ```
 
 ## Example
 
-To use the full workflow of the `minimalTemplate`, follow the steps below:
+To use the full workflow of the `minimalTemplate`, follow the steps
+below:
 
-1. Set up a new template
-2. Download a new citation style
-3. Set up the version control of `.docx` files (optional, but recommended)
+1.  Set up a new template
+2.  Download a new citation style
+3.  Set up the version control of `.docx` files (optional, but
+    recommended)
 
-### 1. Setting up a new template
+### 1\. Setting up a new template
 
 Set a new template using:
 
@@ -28,50 +34,67 @@ Set a new template using:
 setup_template("ms_chap_01")
 ```
 
-The above line will open a new [RStudio project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects).
+The above line will open a new [RStudio
+project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects).
 
-The folder structure of the `ms_chap_01` project is (*this is not a mandatory structure*):
+The folder structure of the `ms_chap_01` project is (*this is not a
+mandatory structure*):
 
-```
-ms_chap_01/
-|-- data/                  # main data folder
-|   |-- clean/             # folder of cleaned data
-|   `-- raw/               # folder of raw data
-|-- main-script.Rmd        # script to writing your scientific manuscript
-|-- manuscript/            # folder of the `.docx` output
-|   `-- sources/           # folder with files to manuscript
-|       |-- journal.csl    # citation style file
-|       |-- library.bib    # your scientific references
-|       `-- template.docx  # an editable `.docx` template
-|-- ms_chap_01.Rproj       # RStudio project
-|-- output/                # main output folder
-|   |-- figures/           # producted figures
-|   `-- results/           # output of analitical results
-`-- R/                     # your R functions
-```
+    ms_chap_01/
+    
+    ├── Makefile
+    ├── R
+    │   ├── README.md
+    │   ├── analysis.Rmd
+    │   ├── local_functions.R
+    │   ├── package_list.R
+    │   └── utils.R
+    ├── README.md
+    ├── data
+    │   ├── clean
+    │   ├── raw
+    │   └── temp
+    ├── main-script.Rmd
+    ├── manuscript
+    │   └── sources
+    │       ├── analyse-refs.Rmd
+    │       ├── clean-bib-file-bibtool.sh
+    │       ├── criticmarkup.lua
+    │       ├── ecology-letters.csl
+    │       ├── library.bib
+    │       ├── source-config-bibtool.rsc
+    │       └── template.docx
+    └── output
+        ├── figures
+        └── results
 
 Open the `main_script.Rmd` file and press the `Knit` button.
 
-
-### 2. Download a new citation style
+### 2\. Download a new citation style
 
 Set a new citation style using:
 
-```r
+``` r
 # First, search by your citation style using:
 (eco <- grep(pattern = "ecology", x = rcrossref::get_styles(), value = TRUE))
 # then:
 download_csl(journal_style = eco[4], directory = "manuscript/sources/")
 ```
 
-### 3. Setting up the version control of `.docx` files
+### 3\. Setting up the version control of `.docx` files
 
-In this step, I'm assuming you want to control the changes (files changes [text and code], entry of new analysis files) in your new project folder. Please, refer to [this](https://kbroman.org/github_tutorial/) to learn how to configure git in your new project template.
+In this step, I’m assuming you want to control the changes (files
+changes \[text and code\], entry of new analysis files) in your new
+project folder. Please, refer to
+[this](https://kbroman.org/github_tutorial/) to learn how to configure
+git in your new project template.
 
 To versioning your `.docx` files, just run the function:
 
-```r
+``` r
 setup_wdiff()
 ```
 
-This function is based on two git hooks (available [here](https://github.com/vigente/gerardus/tree/master/shell-script)) to create a `.md` copy of `.docx` files and track the changes.
+This function is based on two git hooks (available
+[here](https://github.com/vigente/gerardus/tree/master/shell-script)) to
+create a `.md` copy of `.docx` files and track the changes.
