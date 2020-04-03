@@ -1,0 +1,1 @@
+utils::globalVariables(c(".", "author", "id", "word_src", "comment_text"))
