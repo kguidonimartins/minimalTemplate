@@ -3,3 +3,7 @@
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+inst/template/full/.atom
+inst/template/full/.github
+^vignettes/how-to-use\.Rmd$
+README.Rmd
