@@ -4,10 +4,10 @@
 \alias{ipak}
 \title{Install and load multiple R packages}
 \usage{
-ipak(pkg)
+ipak(pkg_list)
 }
 \arguments{
-\item{pkg}{A character vector with the package names}
+\item{pkg_list}{A character vector with the package names}
 }
 \value{
 None
@@ -17,7 +17,7 @@ Thanks to Steve Worthington \url{https://gist.github.com/stevenworthington/31781
 }
 \examples{
 \dontrun{
-list_pkg <- c("vegan", "ggplot2")
-ipak(list_pkg)
+pkg_list <- c("vegan", "ggplot2")
+ipak(pkg_list)
 }
 }

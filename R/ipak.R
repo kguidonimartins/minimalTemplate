@@ -2,21 +2,24 @@
 #'
 #' Thanks to Steve Worthington \url{https://gist.github.com/stevenworthington/3178163}.
 #'
-#' @param pkg A character vector with the package names 
+#' @param pkg_list A character vector with the package names 
 #'
 #' @return None
+#' 
+#' @importFrom utils download.file install.packages installed.packages
+#' 
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#' list_pkg <- c("vegan", "ggplot2")
-#' ipak(list_pkg)
+#' pkg_list <- c("vegan", "ggplot2")
+#' ipak(pkg_list)
 #' }
-ipak <- function(pkg){
-    new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
-    if (length(new.pkg))
-        install.packages(new.pkg, dependencies = TRUE)
-    sapply(X = pkg, FUN = require, quietly = TRUE, character.only = TRUE)
+ipak <- function(pkg_list) {
+    new_pkg <- pkg_list[!(pkg_list %in% installed.packages()[, "Package"])]
+    if (length(new_pkg))
+        install.packages(new_pkg, dependencies = TRUE)
+    sapply(X = pkg_list, FUN = require, quietly = TRUE, character.only = TRUE)
 }
 # ipak function: install and load multiple R packages.
 # Check to see if packages are installed.
