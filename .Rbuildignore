@@ -7,3 +7,5 @@ inst/template/full/.atom
 inst/template/full/.github
 ^vignettes/how-to-use\.Rmd$
 README.Rmd
+README.html
+Makefile
