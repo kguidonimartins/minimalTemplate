@@ -2,13 +2,19 @@
 output: github_document
 ---
 
-# minimalTemplate ![](http://www.textfiles.com/underconstruction/HeHeartlandPark2601underconstructionbar9.gif)
+![](http://www.textfiles.com/underconstruction/HeHeartlandPark2601underconstructionbar9.gif)
 
-The goal of minimalTemplate is to create a template for writing scientific manuscripts using [RMarkdown](https://rmarkdown.rstudio.com/). `minimalTemplate` focuses in `.docx` output, and provides a function to set the version control those files.
+# minimalTemplate 
+
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+[![License:
+MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+`{minimalTemplate}` is a highly opinionated package to facilitate the production of docx files using [RMarkdown](https://rmarkdown.rstudio.com/). For now, this package has no commitment to the structure standards of the projects or R packages. *Use at your own risk*.
 
 ## Installation
 
-You can install the development version of minimalTemplate with:
+You can install the development version of `{minimalTemplate}` with:
 
 ``` r
 if(!require("remotes")) install.packages("remotes")
@@ -17,7 +23,7 @@ remotes::install_github("kguidonimartins/minimalTemplate")
 
 ## Example
 
-To use the full workflow of the `minimalTemplate`, follow the steps below:
+To use the full workflow of the `{minimalTemplate}`, follow the steps below:
 
 1. Set up a new template
 2. Download a new citation style
