@@ -1,0 +1,9 @@
+☐ check package using `{goodpractice}`
+☐ improve tables and figures captions workflow - maybe with flextable  
+☐ clean up ref analysis
+☐ add criticmarkup in pre/post commit hooks
+☐ add tests!
+☐ write vignette how to use; including `usethis::use_github()`
+☐ write vignette about workflow with `setup_wdiff()`
+
+
