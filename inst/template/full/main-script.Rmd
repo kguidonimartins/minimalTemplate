@@ -1,39 +1,20 @@
 ---
-title: "Chapter xx"
-
-author:
-- Eu^1^\*, Tu^2^, Ele^3^
-- ^1^Aqui, Brazil
-- ^2^Lá, Brazil
-- ^3^Acolá, Brazil
-- \*meliga@gagamail.com
-
-date: "`r format(Sys.time(), '%d de %B de %Y')`"
-
-knit: (function(inputFile, encoding) {
-      out_dir <- 'manuscript';
-      rmarkdown::render(inputFile,
-                        encoding = encoding,
-                        output_file = file.path(dirname(inputFile),
-                        out_dir,
-                        'manuscript.docx')) })
 output:
   word_document:
     reference_docx: manuscript/sources/template.docx
-csl: manuscript/sources/ecology-letters.csl
-bibliography:
-- manuscript/sources/library.bib
-- manuscript/sources/installed-r-packages.bib
+    pandoc_args: ["--metadata-file=manuscript/header.yml"]
 ---
 
-```{r setup}
-knitr::opts_chunk$set(echo = TRUE)
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
 if (!require("here")) install.packages("here")
 ```
 
-```{r analysis, child = "R/analysis.Rmd", eval = TRUE}
 
+```{r analysis, child = "R/analysis.Rmd", eval = TRUE}
 ```
+
 
 ```{r caption_functions}
 table_cap <- captioner(prefix = "Table")
@@ -48,7 +29,6 @@ figure_ref <- function(label) {
   stringr::str_extract(label, "[^:]*")
 }
 ```
-
 
 # Abstract
 
