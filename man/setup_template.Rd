@@ -4,12 +4,10 @@
 \alias{setup_template}
 \title{Setup a new project template}
 \usage{
-setup_template(name, open = TRUE)
+setup_template(name)
 }
 \arguments{
 \item{name}{Name of the projetc}
-
-\item{open}{If the new must be open in a new RStudio session}
 }
 \value{
 None
@@ -19,6 +17,6 @@ Setup and open a new projetc in RStudio
 }
 \examples{
 \dontrun{
-setup_template(name = "my_new_project", open = FALSE)
+setup_template(name = "my_new_project")
 }
 }

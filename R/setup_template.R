@@ -1,35 +1,39 @@
 #' Setup a new project template
-#' 
+#'
 #' Setup and open a new projetc in RStudio
 #'
 #' @param name Name of the projetc
-#' @param open If the new must be open in a new RStudio session
 #'
 #' @return None
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#' setup_template(name = "my_new_project", open = FALSE)
+#' setup_template(name = "my_new_project")
 #' }
-setup_template <- function(name, open = TRUE) {
-  
+setup_template <- function(name) {
+
   # criar r project
   usethis::create_project(path = name,
-                          rstudio = TRUE,
-                          open = open)
-  
+                          rstudio = TRUE)
+
   inst_files <- c(
       ".atom",
+      ".ctagsignore",
       ".github",
-      "data",
-      "manuscript",
-      "output",
-      "R",
       ".gitignore",
+      ".session.vim",
+      ".tmuxinator.yml",
+      "data",
       "main-script.Rmd",
       "Makefile",
-      "README.md"
+      "manuscript",
+      "NOTES.md",
+      "output",
+      "R",
+      "README.md",
+      "tags",
+      "todo.txt"
     )
 
   # criar pastas
