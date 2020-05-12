@@ -14,11 +14,7 @@ report:
 convert-pdf:
 	lowriter --convert-to pdf $(DOC) --outdir manuscript
 
-
-.PHONY: clean convert-md
+.PHONY: clean 
 clean:
 	rm output/figures/*
 
-convert-md:
-	pandoc $(DOC) --track-change=all -t markdown \
-	--lua-filter=criticmarkup.lua > $(MD)

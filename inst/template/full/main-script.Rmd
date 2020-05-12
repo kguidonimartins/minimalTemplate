@@ -146,8 +146,8 @@ include_graphics(path = "pasta/da/minha/figura", dpi = "2in")
 
 <!-- Word count by *wordcountaddin* package 
 
-```{r, echo=TRUE, eval=TRUE, message=FALSE}
-wordcountaddin::text_stats(filename = "main-script.Rmd")
+```{r, echo=FALSE, eval=FALSE, message=FALSE}
+# wordcountaddin::text_stats(filename = "main-script.Rmd")
 ```
 
 -->

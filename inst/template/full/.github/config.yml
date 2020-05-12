@@ -1,9 +1,8 @@
-# See setup at https://todo.jasonet.co/
 todo:
-  keyword: ["@todo", "TODO"]     # string|string[]
-  bodyKeyword: ["@body", "BODY"] # string|string[]
-  blobLines: 15                  # number|boolean, 0 or false to disable
-  autoAssign: false              # string|string[]|boolean
-  label: true                    # boolean|string|string[]
-  reopenClosed: true             # boolean
-
+  autoAssign:    true
+  keyword:       ["NOTE", "TODO", "REVIEW", "FIX", "BUG", "TEST", "TESTING"]
+  bodyKeyword:   ["BODY"]
+  blobLines:     15
+  caseSensitive: true
+  label:         ["auto-todo"]
+  reopenClosed:  true

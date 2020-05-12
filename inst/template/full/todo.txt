@@ -1,0 +1,1 @@
+- [ ] edit .tmuxinator.yml file

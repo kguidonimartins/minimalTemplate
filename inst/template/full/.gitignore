@@ -37,3 +37,12 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# vim files
+# .session.vim
+
+# tmuxinator files
+# .tmuxinator.yml
+
+# tags
+# tags
