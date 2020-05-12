@@ -109,7 +109,7 @@
 <h3 class="hasAnchor">
 <a href="#1-setting-up-a-new-template" class="anchor"></a>1. Setting up a new template</h3>
 <p>Set a new template using:</p>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="fu">setup_template</span>(<span class="st">"ms_chap_01"</span>)</pre></div>
+<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="reference/setup_template.html">setup_template</a></span>(<span class="st">"ms_chap_01"</span>)</pre></div>
 <p>The above line will open a new <a href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects">RStudio project</a>.</p>
 <p>The folder structure of the <code>ms_chap_01</code> project is (<em>this is not a mandatory structure</em>):</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>ms_chap_<span class="dv">01</span><span class="op">/</span></span>
@@ -148,14 +148,14 @@
 <div class="sourceCode" id="cb4"><pre class="r"><span class="co"># First, search by your citation style using:</span>
 (<span class="no">eco</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/grep.html">grep</a></span>(<span class="kw">pattern</span> <span class="kw">=</span> <span class="st">"ecology"</span>, <span class="kw">x</span> <span class="kw">=</span> <span class="kw pkg">rcrossref</span><span class="kw ns">::</span><span class="fu"><a href="https://docs.ropensci.org/rcrossref/reference/get_styles.html">get_styles</a></span>(), <span class="kw">value</span> <span class="kw">=</span> <span class="fl">TRUE</span>))
 <span class="co"># then:</span>
-<span class="fu">download_csl</span>(<span class="kw">journal_style</span> <span class="kw">=</span> <span class="no">eco</span>[<span class="fl">4</span>], <span class="kw">directory</span> <span class="kw">=</span> <span class="st">"manuscript/sources/"</span>)</pre></div>
+<span class="fu"><a href="reference/download_csl.html">download_csl</a></span>(<span class="kw">journal_style</span> <span class="kw">=</span> <span class="no">eco</span>[<span class="fl">4</span>], <span class="kw">directory</span> <span class="kw">=</span> <span class="st">"manuscript/sources/"</span>)</pre></div>
 </div>
 <div id="3-setting-up-the-version-control-of-docx-files" class="section level3">
 <h3 class="hasAnchor">
 <a href="#3-setting-up-the-version-control-of-docx-files" class="anchor"></a>3. Setting up the version control of <code>.docx</code> files</h3>
 <p>In this step, I’m assuming you want to control the changes (files changes <br><span class="math display"><em>t</em><em>e</em><em>x</em><em>t</em><em>a</em><em>n</em><em>d</em><em>c</em><em>o</em><em>d</em><em>e</em></span><br>, entry of new analysis files) in your new project folder. Please, refer to <a href="https://kbroman.org/github_tutorial/">this</a> to learn how to configure git in your new project template.</p>
 <p>To versioning your <code>.docx</code> files, just run the function:</p>
-<div class="sourceCode" id="cb5"><pre class="r"><span class="fu">setup_wdiff</span>()</pre></div>
+<div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="reference/setup_wdiff.html">setup_wdiff</a></span>()</pre></div>
 <p>This function is based on two git hooks (available <a href="https://github.com/vigente/gerardus/tree/master/shell-script">here</a>) to create a <code>.md</code> copy of <code>.docx</code> files and track the changes.</p>
 </div>
 </div>
