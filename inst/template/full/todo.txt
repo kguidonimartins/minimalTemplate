@@ -1,1 +1,19 @@
-- [ ] edit .tmuxinator.yml file
+## BACKLOG
+
+- ICEBOX
+    > Someday, maybe, that data...
+    * [ ] see cool_paper.pdf
+
+## TODO
+
+- edit `.tmuxinator.yml`
+- run `ctags -R --exclude=@.ctagsignore`
+
+## DOING
+
+
+## WAITING
+
+
+## DONE
+
