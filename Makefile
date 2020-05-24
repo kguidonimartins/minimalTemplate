@@ -1,8 +1,18 @@
-all: check build
+.DEFAULT_GOAL := help
 
-check:
+all: check build ## run check and build
+
+check: ## check package build
 	Rscript -e "devtools::check()"
 
-build:
+build: ## build package site
 	Rscript -e "rmarkdown::render(input = 'README.Rmd', output_format = 'all', encoding = 'UTF-8')"
 	Rscript -e "pkgdown::build_site(preview = TRUE)"
+
+.PHONY: clean help
+clean: ## remove figures
+	rm output/figures/*
+
+help: ## show this message
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
+		awk 'BEGIN {FS = ":.*?## "}; { printf "\033[36m%-20s\033[0m %s\n", $$1, $$2 }'

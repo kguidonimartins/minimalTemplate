@@ -1,7 +1,7 @@
 # .tmuxinator.yml
 
-# name: my-awesome-project
-# root: /full/path/to/your/project
+name: my-awesome-project
+root: /full/path/to/your/project
 
 # Optional tmux socket
 # socket_name: foo
