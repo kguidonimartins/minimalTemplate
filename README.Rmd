@@ -53,7 +53,7 @@ if (!require("fs")) install.packages("fs")
 fs::dir_tree(path = tmp_proj, recurse = TRUE)
 ```
 
-You can use the various README files distributed by the subdirectories to explain what these folders contain.
+You can edit the various README files distributed among the subdirectories to explain what these folders contain.
 
 Open the `main_script.Rmd` file and press the `Knit` button.
 
