@@ -31,6 +31,7 @@ deploy:
   keep_history: true
   on:
     branch: master
+  local_dir: docs
 
 after_success:
   - Rscript -e "devtools::install()"
