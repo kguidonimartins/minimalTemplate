@@ -14,4 +14,4 @@ FILE=$1
 echo Clean up commas of "$FILE"
 sed -i 's/,/, /g; s/,\s\+/, /g' "$FILE"
 echo Clean up references of "$FILE"
-bibtool -r source-config-bibtool.rsc "$FILE" -o "$FILE"
+bibtool -r bibtool.config.rsc "$FILE" -o "$FILE"

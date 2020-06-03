@@ -11,6 +11,8 @@
 #pkgdown-sidebar h2	docs/pkgdown.css	/^#pkgdown-sidebar h2 {$/;"	s
 #pkgdown-sidebar h2:first-child	docs/pkgdown.css	/^#pkgdown-sidebar h2:first-child {$/;"	s
 $nav	docs/bootstrap-toc.js	/^            $nav: arg$/;"	p	class:window.Toc.helpers.parseOps.opts
+.DEFAULT_GOAL	Makefile	/^.DEFAULT_GOAL := help$/;"	m
+.DEFAULT_GOAL	inst/template/full/Makefile	/^.DEFAULT_GOAL := help$/;"	m
 .algolia-autocomplete	docs/docsearch.css	/^.algolia-autocomplete {$/;"	c
 .algolia-autocomplete .algolia-docsearch-footer	docs/docsearch.css	/^.algolia-autocomplete .algolia-docsearch-footer {$/;"	c
 .algolia-autocomplete .algolia-docsearch-footer--logo	docs/docsearch.css	/^.algolia-autocomplete .algolia-docsearch-footer--logo {$/;"	c
@@ -75,19 +77,13 @@ $nav	docs/bootstrap-toc.js	/^            $nav: arg$/;"	p	class:window.Toc.helper
 .ref-index-icons .alias	docs/pkgdown.css	/^.ref-index-icons .alias {width: calc(40% - 40px);}$/;"	c
 .st	docs/pkgdown.css	/^.ch,.st  {color: #036a07;} \/* string *\/$/;"	c
 .warning	docs/pkgdown.css	/^.warning { color: #6A0366; font-weight: bolder;}$/;"	c
-1-setting-up-a-new-template	README.html	/^<h3 id="1-setting-up-a-new-template">1. Setting up a new template<\/h3>$/;"	I
 1-setting-up-a-new-template	docs/index.html	/^<div id="1-setting-up-a-new-template" class="section level3">$/;"	I
-1. Setting up a new template	README.html	/^<h3 id="1-setting-up-a-new-template">1. Setting up a new template<\/h3>$/;"	j
 1. Setting up a new template	docs/index.html	/^<a href="#1-setting-up-a-new-template" class="anchor"><\/a>1. Setting up a new template<\/h3>$/;"	j
 1\\. Setting up a new template	README.md	/^### 1\\. Setting up a new template$/;"	S
-2-download-a-new-citation-style	README.html	/^<h3 id="2-download-a-new-citation-style">2. Download a new citation style<\/h3>$/;"	I
 2-download-a-new-citation-style	docs/index.html	/^<div id="2-download-a-new-citation-style" class="section level3">$/;"	I
-2. Download a new citation style	README.html	/^<h3 id="2-download-a-new-citation-style">2. Download a new citation style<\/h3>$/;"	j
 2. Download a new citation style	docs/index.html	/^<a href="#2-download-a-new-citation-style" class="anchor"><\/a>2. Download a new citation style</;"	j
 2\\. Download a new citation style	README.md	/^### 2\\. Download a new citation style$/;"	S
-3-setting-up-the-version-control-of-docx-files	README.html	/^<h3 id="3-setting-up-the-version-control-of-docx-files">3. Setting up the version control of <co/;"	I
 3-setting-up-the-version-control-of-docx-files	docs/index.html	/^<div id="3-setting-up-the-version-control-of-docx-files" class="section level3">$/;"	I
-3. Setting up the version control of .docx files	README.html	/^<h3 id="3-setting-up-the-version-control-of-docx-files">3. Setting up the version control of <co/;"	j
 3. Setting up the version control of .docx files	docs/index.html	/^<a href="#3-setting-up-the-version-control-of-docx-files" class="anchor"><\/a>3. Setting up the /;"	j
 3\\. Setting up the version control of `.docx` files	README.md	/^### 3\\. Setting up the version control of `.docx` files$/;"	S
 All functions	docs/reference/index.html	/^          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" clas/;"	i
@@ -124,10 +120,9 @@ Contents	docs/reference/index.html	/^      <h2 data-toc-skip>Contents<\/h2>$/;"	
 Contents	docs/reference/ipak.html	/^      <h2 data-toc-skip>Contents<\/h2>$/;"	i
 Contents	docs/reference/setup_template.html	/^      <h2 data-toc-skip>Contents<\/h2>$/;"	i
 Contents	docs/reference/setup_wdiff.html	/^      <h2 data-toc-skip>Contents<\/h2>$/;"	i
-DOC	inst/template/full/Makefile	/^DOC = manuscript\/report.docx$/;"	m
+DOC	inst/template/full/Makefile	/^DOC = manuscript\/manuscript.docx$/;"	m
 Developers	docs/index.html	/^<h2>Developers<\/h2>$/;"	i
 Download csl citation style	docs/reference/download_csl.html	/^    <h1>Download csl citation style<\/h1>$/;"	h
-Example	README.html	/^<h2 id="example">Example<\/h2>$/;"	i
 Example	README.md	/^## Example$/;"	s
 Example	docs/index.html	/^<a href="#example" class="anchor"><\/a>Example<\/h2>$/;"	i
 Examples	docs/reference/cite_pkg.html	/^    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"><\/a>Examples<\/h2>$/;"	i
@@ -138,22 +133,19 @@ Examples	docs/reference/setup_wdiff.html	/^    <h2 class="hasAnchor" id="example
 Extract comments of a docx file to a csv	docs/reference/extract_comments.html	/^    <h1>Extract comments of a docx file to a csv<\/h1>$/;"	h
 How to use	docs/articles/how-to-use.html	/^      <h1 data-toc-skip>How to use<\/h1>$/;"	h
 Install and load multiple R packages	docs/reference/ipak.html	/^    <h1>Install and load multiple R packages<\/h1>$/;"	h
-Installation	README.html	/^<h2 id="installation">Installation<\/h2>$/;"	i
 Installation	README.md	/^## Installation$/;"	s
 Installation	docs/index.html	/^<a href="#installation" class="anchor"><\/a>Installation<\/h2>$/;"	i
 Layer_1	docs/link.svg	/^	 viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">$/;"	i
 License	docs/LICENSE-text.html	/^      <h1>License<\/h1>$/;"	h
 License	docs/index.html	/^<h2>License<\/h2>$/;"	i
 Links	docs/index.html	/^<h2>Links<\/h2>$/;"	i
-Lopez-Martinez2013	inst/template/full/manuscript/sources/library.bib	/^@article{Lopez-Martinez2013,$/;"	a
 MD	inst/template/full/Makefile	/^MD = $(addsuffix .md, $(basename $(DOC)))$/;"	m
 Page not found (404)	docs/404.html	/^      <h1>Page not found (404)<\/h1>$/;"	h
 RMD	inst/template/full/Makefile	/^RMD = main-script.Rmd$/;"	m
 Reference	docs/reference/index.html	/^      <h1>Reference<\/h1>$/;"	h
 Setup a new project template	docs/reference/setup_template.html	/^    <h1>Setup a new project template<\/h1>$/;"	h
 Setup wdiff for .docx files via pre- and post-commit hooks	docs/reference/setup_wdiff.html	/^    <h1>Setup wdiff for .docx files via pre- and post-commit hooks<\/h1>$/;"	h
-Span	inst/template/full/manuscript/sources/criticmarkup.lua	/^function Span(elem)$/;"	f
-Swenson2012	inst/template/full/manuscript/sources/library.bib	/^@article{Swenson2012,$/;"	a
+Span	inst/template/full/manuscript/sources/helpers/criticmarkup.lua	/^function Span(elem)$/;"	f
 Toc	docs/bootstrap-toc.js	/^  window.Toc = {$/;"	c	class:window
 Value	docs/reference/cite_pkg.html	/^    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"><\/a>Value<\/h2>$/;"	i
 Value	docs/reference/download_csl.html	/^    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"><\/a>Value<\/h2>$/;"	i
@@ -161,11 +153,10 @@ Value	docs/reference/extract_comments.html	/^    <h2 class="hasAnchor" id="value
 Value	docs/reference/ipak.html	/^    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"><\/a>Value<\/h2>$/;"	i
 Value	docs/reference/setup_template.html	/^    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"><\/a>Value<\/h2>$/;"	i
 Value	docs/reference/setup_wdiff.html	/^    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"><\/a>Value<\/h2>$/;"	i
-Vellend2001	inst/template/full/manuscript/sources/library.bib	/^@article{Vellend2001,$/;"	a
 a.anchor	docs/pkgdown.css	/^a.anchor {$/;"	c
 a.sourceLine:hover	docs/pkgdown.css	/^a.sourceLine:hover {$/;"	c
-all	Makefile	/^all: check build$/;"	t
-all	inst/template/full/Makefile	/^all: report convert-pdf $/;"	t
+all	Makefile	/^all: check build ## run check and build$/;"	t
+all	inst/template/full/Makefile	/^all: report manuscript convert-pdf ## run report, manuscript and convert-pdf$/;"	t
 args	inst/template/full/R/utils.R	/^  args <- list($/;"	v
 arguments	docs/reference/cite_pkg.html	/^    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"><\/a>Arguments<\/h2/;"	I
 arguments	docs/reference/download_csl.html	/^    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"><\/a>Arguments<\/h2/;"	I
@@ -178,15 +169,10 @@ body	docs/pkgdown.css	/^body {$/;"	s
 body	docs/pkgdown.css	/^html, body {$/;"	s
 body > .container	docs/pkgdown.css	/^body > .container {$/;"	c
 body > .container .row	docs/pkgdown.css	/^body > .container .row {$/;"	c
-build	Makefile	/^build:$/;"	t
-cb1	README.html	/^<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="/;"	I
+build	Makefile	/^build: ## build package site$/;"	t
 cb1	docs/articles/how-to-use.html	/^<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https:\/\//;"	I
 cb1	docs/index.html	/^<div class="sourceCode" id="cb1"><pre class="r"><span class="kw">if<\/span>(!<span class="fu"><a/;"	I
-cb1-1	README.html	/^<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="/;"	I
-cb1-2	README.html	/^<span id="cb1-2"><a href="#cb1-2"><\/a>remotes<span class="op">::<\/span><span class="kw">instal/;"	I
-cb2	README.html	/^<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="/;"	I
-cb2	docs/index.html	/^<div class="sourceCode" id="cb2"><pre class="r"><span class="fu">setup_template<\/span>(<span cl/;"	I
-cb2-1	README.html	/^<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="/;"	I
+cb2	docs/index.html	/^<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="reference\/setup_templ/;"	I
 cb3	docs/index.html	/^<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="/;"	I
 cb3-1	docs/index.html	/^<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="/;"	I
 cb3-10	docs/index.html	/^<span id="cb3-10"><a href="#cb3-10"><\/a>├── README.md<\/span>$/;"	I
@@ -215,20 +201,13 @@ cb3-6	docs/index.html	/^<span id="cb3-6"><a href="#cb3-6"><\/a>│   ├── a
 cb3-7	docs/index.html	/^<span id="cb3-7"><a href="#cb3-7"><\/a>│   ├── local_functions.R<\/span>$/;"	I
 cb3-8	docs/index.html	/^<span id="cb3-8"><a href="#cb3-8"><\/a>│   ├── package_list.R<\/span>$/;"	I
 cb3-9	docs/index.html	/^<span id="cb3-9"><a href="#cb3-9"><\/a>│   └── utils.R<\/span>$/;"	I
-cb4	README.html	/^<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="/;"	I
 cb4	docs/index.html	/^<div class="sourceCode" id="cb4"><pre class="r"><span class="co"># First, search by your citatio/;"	I
-cb4-1	README.html	/^<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="/;"	I
-cb4-2	README.html	/^<span id="cb4-2"><a href="#cb4-2"><\/a>(eco &lt;-<span class="st"> <\/span><span class="kw">grep/;"	I
-cb4-3	README.html	/^<span id="cb4-3"><a href="#cb4-3"><\/a><span class="co"># then:<\/span><\/span>$/;"	I
-cb4-4	README.html	/^<span id="cb4-4"><a href="#cb4-4"><\/a><span class="kw">download_csl<\/span>(<span class="dt">jo/;"	I
-cb5	README.html	/^<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="/;"	I
-cb5	docs/index.html	/^<div class="sourceCode" id="cb5"><pre class="r"><span class="fu">setup_wdiff<\/span>()<\/pre><\//;"	I
-cb5-1	README.html	/^<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="/;"	I
+cb5	docs/index.html	/^<div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="reference\/setup_wdiff/;"	I
 changeTooltipMessage	docs/pkgdown.js	/^  function changeTooltipMessage(element, msg) {$/;"	f
-check	Makefile	/^check:$/;"	t
-chunk_definitions	.Rproj.user/shared/notebooks/12EE2C6-README/1/s/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1585967301}/;"	a
+check	Makefile	/^check: ## check package build$/;"	t
+chunk_definitions	.Rproj.user/shared/notebooks/12EE2C6-README/1/FFB020DFF7E18985/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1591209219}/;"	a
+chunk_definitions	.Rproj.user/shared/notebooks/12EE2C6-README/1/s/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1591211821}/;"	a
 chunk_definitions	.Rproj.user/shared/notebooks/59F70011-main-script/1/s/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1585961951}/;"	a
-chunk_definitions	.Rproj.user/shared/notebooks/8335F3E4-analyse-refs/1/s/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1572955086}/;"	a
 chunk_definitions	.Rproj.user/shared/notebooks/E6E55EB3-analysis/1/s/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1585941411}/;"	a
 cite_pkg	R/cite_packages.R	/^cite_pkg <- function(pkg_list) {$/;"	f
 cite_pkg	inst/template/full/R/local_functions.R	/^cite_pkg <- function(pkg_list) {$/;"	f
@@ -238,7 +217,8 @@ cites.bib	R/cite_packages.R	/^  cites.bib <- lapply(cites, utils::toBibtex)$/;"	
 cites.bib	inst/template/full/R/local_functions.R	/^  cites.bib <- lapply(cites, utils::toBibtex)$/;"	v
 cites.bib[[i]]	R/cite_packages.R	/^      sub($/;"	v
 cites.bib[[i]]	inst/template/full/R/local_functions.R	/^      sub($/;"	v
-clean	inst/template/full/Makefile	/^clean:$/;"	t
+clean	Makefile	/^clean: ## remove figures$/;"	t
+clean	inst/template/full/Makefile	/^clean: ## remove figures$/;"	t
 clean_columns	inst/template/full/R/utils.R	/^clean_columns <- function(x) {$/;"	f
 cmmts_file	R/extract_comments.R	/^    cmmts_file <- filename_to_save$/;"	v
 cmmts_file	R/extract_comments.R	/^    cmmts_file <- gsub(".docx", "_comments.csv", docx_path)$/;"	v
@@ -249,7 +229,7 @@ code a:visited:after	docs/pkgdown.css	/^  code a:link:after, code a:visited:afte
 cols	inst/template/full/R/utils.R	/^  cols <- x %>%$/;"	v
 cols[i]	inst/template/full/R/utils.R	/^      cols[i] <- glue('column_{i}')$/;"	v
 cols[i]	inst/template/full/R/utils.R	/^      cols[i] <- glue('{cols[i]}_{i}')$/;"	v
-convert-pdf	inst/template/full/Makefile	/^convert-pdf:$/;"	t
+convert-pdf	inst/template/full/Makefile	/^convert-pdf: ## convert manuscript to pdf$/;"	t
 convert_str_to_logical	inst/template/full/R/utils.R	/^convert_str_to_logical <- function(x, truthy = 'T|TRUE', falsy = 'F|FALSE') {$/;"	f
 createChildNavList	docs/bootstrap-toc.js	/^      createChildNavList: function($parent) {$/;"	m	class:window.Toc.helpers
 createNavList	docs/bootstrap-toc.js	/^      createNavList: function() {$/;"	m	class:window.Toc.helpers
@@ -259,13 +239,12 @@ default_dpi	inst/template/full/R/utils.R	/^  default_dpi <- 300$/;"	v
 default_filename	inst/template/full/R/utils.R	/^  default_filename <- deparse(substitute(variable))$/;"	v
 default_format	inst/template/full/R/utils.R	/^  default_format <- 'png'$/;"	v
 default_units	inst/template/full/R/utils.R	/^  default_units <- 'in'$/;"	v
-doc_write_time	.Rproj.user/shared/notebooks/12EE2C6-README/1/s/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1585967301}/;"	n
+doc_write_time	.Rproj.user/shared/notebooks/12EE2C6-README/1/FFB020DFF7E18985/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1591209219}/;"	n
+doc_write_time	.Rproj.user/shared/notebooks/12EE2C6-README/1/s/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1591211821}/;"	n
 doc_write_time	.Rproj.user/shared/notebooks/59F70011-main-script/1/s/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1585961951}/;"	n
-doc_write_time	.Rproj.user/shared/notebooks/8335F3E4-analyse-refs/1/s/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1572955086}/;"	n
 doc_write_time	.Rproj.user/shared/notebooks/E6E55EB3-analysis/1/s/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1585941411}/;"	n
 download_csl	R/download_csl.R	/^download_csl <- function(journal_style, directory) {$/;"	f
 end_processing	inst/template/full/R/utils.R	/^end_processing <- function() {$/;"	f
-example	README.html	/^<h2 id="example">Example<\/h2>$/;"	I
 example	docs/index.html	/^<div id="example" class="section level2">$/;"	I
 examples	docs/reference/cite_pkg.html	/^    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"><\/a>Examples<\/h2>$/;"	I
 examples	docs/reference/download_csl.html	/^    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"><\/a>Examples<\/h2>$/;"	I
@@ -288,6 +267,8 @@ generateUniqueIdBase	docs/bootstrap-toc.js	/^      generateUniqueIdBase: functio
 getHeadings	docs/bootstrap-toc.js	/^      getHeadings: function($scope, topLevel) {$/;"	m	class:window.Toc.helpers
 getNavLevel	docs/bootstrap-toc.js	/^      getNavLevel: function(el) {$/;"	m	class:window.Toc.helpers
 getTopLevel	docs/bootstrap-toc.js	/^      getTopLevel: function($scope) {$/;"	m	class:window.Toc.helpers
+help	Makefile	/^help: ## show this message$/;"	t
+help	inst/template/full/Makefile	/^help: ## show this message$/;"	t
 helpers	docs/bootstrap-toc.js	/^    helpers: {$/;"	c	class:window.Toc
 hooks.files	R/setup_wdiff.R	/^  hooks.files <- c("pre-commit",$/;"	v
 html	docs/pkgdown.css	/^html, body {$/;"	s
@@ -303,18 +284,16 @@ img.icon	docs/pkgdown.css	/^img.icon {$/;"	c
 index	inst/template/full/R/utils.R	/^index <- function(m) {$/;"	f
 init	docs/bootstrap-toc.js	/^    init: function(opts) {$/;"	m	class:window.Toc
 inst_files	R/setup_template.R	/^  inst_files <- c($/;"	v
-installation	README.html	/^<h2 id="installation">Installation<\/h2>$/;"	I
 installation	docs/index.html	/^<div id="installation" class="section level2">$/;"	I
 ipak	R/ipak.R	/^ipak <- function(pkg_list) {$/;"	f
 ipak	inst/template/full/R/local_functions.R	/^ipak <- function(pkg_list) {$/;"	f
 load_requirements	inst/template/full/R/utils.R	/^load_requirements <- function(pkg){$/;"	f
+manuscript	inst/template/full/Makefile	/^manuscript: ## compile manuscript$/;"	t
 mark	docs/docsearch.js	/^    var mark = function() {$/;"	f	function:AnonymousFunctionbc7e89340300
 mark	docs/pkgdown.css	/^mark {$/;"	s
 matchedWords	docs/docsearch.js	/^function matchedWords(hit) {$/;"	f
-minimalTemplate	README.html	/^<h1 id="minimaltemplate">minimalTemplate<\/h1>$/;"	h
 minimalTemplate	README.md	/^# minimalTemplate$/;"	c
 minimalTemplate	docs/index.html	/^<a href="#minimaltemplate" class="anchor"><\/a>minimalTemplate<\/h1><\/div>$/;"	h
-minimaltemplate	README.html	/^<h1 id="minimaltemplate">minimalTemplate<\/h1>$/;"	I
 minimaltemplate	docs/index.html	/^<div id="minimaltemplate" class="section level1">$/;"	I
 mode	inst/template/full/R/utils.R	/^mode <- function(x) {$/;"	f
 names(cites.bib)	R/cite_packages.R	/^  names(cites.bib) <- packages # pkgs$/;"	v
@@ -396,7 +375,7 @@ read_all_excel_sheets	inst/template/full/R/utils.R	/^read_all_excel_sheets <- fu
 reg	inst/template/full/R/utils.R	/^  reg <- paste0(sep, ".+$")$/;"	v
 render_notebook	inst/template/full/R/utils.R	/^render_notebook <- function(notebook_file) {$/;"	f
 reorder_within	inst/template/full/R/utils.R	/^reorder_within <- function(x, by, within, fun = mean, sep = "___", ...) {$/;"	f
-report	inst/template/full/Makefile	/^report:$/;"	t
+report	inst/template/full/Makefile	/^report: ## generate analyis report$/;"	t
 run_basic_eda	inst/template/full/R/utils.R	/^run_basic_eda <- function(data){$/;"	f
 scale_x_reordered	inst/template/full/R/utils.R	/^scale_x_reordered <- function(..., sep = "___") {$/;"	f
 scale_y_reordered	inst/template/full/R/utils.R	/^scale_y_reordered <- function(..., sep = "___") {$/;"	f

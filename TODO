@@ -6,3 +6,6 @@
 ☐ write vignette how to use; including `usethis::use_github()`
 ☐ write vignette about workflow with `setup_wdiff()`
 ☐ knitr with params: https://twitter.com/EmilyRiederer/status/1262738071952523264?s=20
+☐ update Dockerfile
+☐ update travis for template
+☐ add travis in repo

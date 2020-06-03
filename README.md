@@ -39,8 +39,27 @@ below:
 Set a new template using:
 
 ``` r
-setup_template("ms_chap_01")
+# load minimalTemplate
+library(minimalTemplate)
+
+# create a temporary directory (for a demo proposal only)
+tmp_proj <- file.path(tempdir(), "ms_chap_01")
+
+# run `setup_template()`
+setup_template(tmp_proj)
 ```
+
+    ## ✓ Creating '/tmp/RtmpzTy4Yk/ms_chap_01/'
+
+    ## ✓ Setting active project to '/tmp/RtmpzTy4Yk/ms_chap_01'
+
+    ## ✓ Creating 'R/'
+
+    ## ✓ Writing 'ms_chap_01.Rproj'
+
+    ## ✓ Adding '.Rproj.user' to '.gitignore'
+
+    ## ✓ Setting active project to '<no active project>'
 
 The above line will open a new [RStudio
 project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects).
@@ -48,33 +67,44 @@ project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects)
 The folder structure of the `ms_chap_01` project is (*this is not a
 mandatory structure*):
 
-    ms_chap_01/
-    
-    ├── Makefile
-    ├── R
-    │   ├── README.md
-    │   ├── analysis.Rmd
-    │   ├── local_functions.R
-    │   ├── package_list.R
-    │   └── utils.R
-    ├── README.md
-    ├── data
-    │   ├── clean
-    │   ├── raw
-    │   └── temp
-    ├── main-script.Rmd
-    ├── manuscript
-    │   └── sources
-    │       ├── analyse-refs.Rmd
-    │       ├── clean-bib-file-bibtool.sh
-    │       ├── criticmarkup.lua
-    │       ├── ecology-letters.csl
-    │       ├── library.bib
-    │       ├── source-config-bibtool.rsc
-    │       └── template.docx
-    └── output
-        ├── figures
-        └── results
+    ## /tmp/RtmpzTy4Yk/ms_chap_01
+    ## ├── NOTES.md
+    ## ├── R
+    ## │   ├── README.md
+    ## │   ├── analysis.Rmd
+    ## │   ├── local_functions.R
+    ## │   ├── package_list.R
+    ## │   └── utils.R
+    ## ├── README.md
+    ## ├── data
+    ## │   ├── clean
+    ## │   │   └── README.md
+    ## │   ├── raw
+    ## │   │   └── README.md
+    ## │   └── temp
+    ## │       └── README.md
+    ## ├── main-script.Rmd
+    ## ├── manuscript
+    ## │   ├── README.md
+    ## │   ├── header.yml
+    ## │   └── sources
+    ## │       ├── README.md
+    ## │       ├── analyse-refs.Rmd
+    ## │       ├── clean-bib-file-bibtool.sh
+    ## │       ├── criticmarkup.lua
+    ## │       ├── ecology-letters.csl
+    ## │       ├── library.bib
+    ## │       ├── source-config-bibtool.rsc
+    ## │       └── template.docx
+    ## ├── ms_chap_01.Rproj
+    ## ├── output
+    ## │   ├── figures
+    ## │   │   └── README.md
+    ## │   ├── results
+    ## │   │   └── README.md
+    ## │   └── supp
+    ## │       └── README.md
+    ## └── todo.txt
 
 Open the `main_script.Rmd` file and press the `Knit` button.
 

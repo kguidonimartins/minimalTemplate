@@ -1,0 +1,38 @@
+os:
+  - linux
+
+language: r
+
+r_packages:
+  - devtools
+
+sudo: false
+
+before_install: |
+  sudo apt-get -y install \
+  build-essential \
+  libcurl4-gnutls-dev \
+  libxml2-dev \
+  libssl-dev \
+  libgdal-dev \
+  bwidget \
+  libgdal1-dev \
+  libgeos-dev \
+  libgeos++-dev \
+  libgsl0-dev \
+  libproj-dev \
+  libspatialite-dev \
+  netcdf-bin \
+  libudunits2-dev
+
+cache: packages
+
+script: make all
+
+matrix:
+  include:
+  - r: release
+
+after_success:
+  - Rscript -e 'devtools::install()'
+
