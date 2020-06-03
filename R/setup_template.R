@@ -18,13 +18,17 @@ setup_template <- function(name) {
                           rstudio = FALSE)
 
   inst_files <- c(
-      ".atom",
       ".ctagsignore",
+      ".editorconfig",
       ".github",
       ".gitignore",
+      ".Rbuildignore",
       ".session.vim",
       ".tmuxinator.yml",
+      ".travis.yml",
       "data",
+      "DESCRIPTION",
+      "Dockerfile",
       "main-script.Rmd",
       "Makefile",
       "manuscript",
