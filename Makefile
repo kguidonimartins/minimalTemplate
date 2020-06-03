@@ -1,13 +1,12 @@
 .DEFAULT_GOAL := help
 
-all: check build ## run check and build
+all: render_readme check ## run render_readme and check targets
+
+render_readme: ## render readme
+	Rscript -e "rmarkdown::render(input = 'README.Rmd', encoding = 'UTF-8')"
 
 check: ## check package build
 	Rscript -e "devtools::check()"
-
-build: ## build package site
-	Rscript -e "rmarkdown::render(input = 'README.Rmd', output_format = 'all', encoding = 'UTF-8')"
-	Rscript -e "pkgdown::build_site(preview = TRUE)"
 
 .PHONY: help
 

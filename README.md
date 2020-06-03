@@ -3,6 +3,8 @@
 
 # minimalTemplate
 
+[![Build
+Status](https://travis-ci.com/kguidonimartins/minimalTemplate.svg?branch=master)](https://travis-ci.com/kguidonimartins/minimalTemplate)
 [![Project Status: WIP – Initial development is in progress, but there
 has not yet been a stable, usable release suitable for the
 public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
@@ -49,17 +51,17 @@ tmp_proj <- file.path(tempdir(), "ms_chap_01")
 setup_template(tmp_proj)
 ```
 
-    ## ✓ Creating '/tmp/RtmpzTy4Yk/ms_chap_01/'
+    ## ✔ Creating '/tmp/RtmplOdqpq/ms_chap_01/'
 
-    ## ✓ Setting active project to '/tmp/RtmpzTy4Yk/ms_chap_01'
+    ## ✔ Setting active project to '/tmp/RtmplOdqpq/ms_chap_01'
 
-    ## ✓ Creating 'R/'
+    ## ✔ Creating 'R/'
 
-    ## ✓ Writing 'ms_chap_01.Rproj'
+    ## ✔ Writing 'ms_chap_01.Rproj'
 
-    ## ✓ Adding '.Rproj.user' to '.gitignore'
+    ## ✔ Adding '.Rproj.user' to '.gitignore'
 
-    ## ✓ Setting active project to '<no active project>'
+    ## ✔ Setting active project to '<no active project>'
 
 The above line will open a new [RStudio
 project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects).
@@ -67,7 +69,7 @@ project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects)
 The folder structure of the `ms_chap_01` project is (*this is not a
 mandatory structure*):
 
-    ## /tmp/RtmpzTy4Yk/ms_chap_01
+    ## /tmp/RtmplOdqpq/ms_chap_01
     ## ├── NOTES.md
     ## ├── R
     ## │   ├── README.md
@@ -105,6 +107,9 @@ mandatory structure*):
     ## │   └── supp
     ## │       └── README.md
     ## └── todo.txt
+
+You can use the various README files distributed by the subdirectories
+to explain what these folders contain.
 
 Open the `main_script.Rmd` file and press the `Knit` button.
 
