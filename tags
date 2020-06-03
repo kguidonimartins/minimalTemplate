@@ -217,7 +217,6 @@ cites.bib	R/cite_packages.R	/^  cites.bib <- lapply(cites, utils::toBibtex)$/;"	
 cites.bib	inst/template/full/R/local_functions.R	/^  cites.bib <- lapply(cites, utils::toBibtex)$/;"	v
 cites.bib[[i]]	R/cite_packages.R	/^      sub($/;"	v
 cites.bib[[i]]	inst/template/full/R/local_functions.R	/^      sub($/;"	v
-clean	Makefile	/^clean: ## remove figures$/;"	t
 clean	inst/template/full/Makefile	/^clean: ## remove figures$/;"	t
 clean_columns	inst/template/full/R/utils.R	/^clean_columns <- function(x) {$/;"	f
 cmmts_file	R/extract_comments.R	/^    cmmts_file <- filename_to_save$/;"	v
