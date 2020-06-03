@@ -88,6 +88,7 @@ $nav	docs/bootstrap-toc.js	/^            $nav: arg$/;"	p	class:window.Toc.helper
 3\\. Setting up the version control of `.docx` files	README.md	/^### 3\\. Setting up the version control of `.docx` files$/;"	S
 All functions	docs/reference/index.html	/^          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" clas/;"	i
 All vignettes	docs/articles/index.html	/^      <h3>All vignettes<\/h3>$/;"	j
+AnonymousFunction18dd9bfd0100	docs/articles/how-to-use_files/header-attrs-2.2/header-attrs.js	/^document.addEventListener('DOMContentLoaded', function(e) {$/;"	f
 AnonymousFunction52cddb790100	docs/bootstrap-toc.js	/^        $headings.each(function(i, el) {$/;"	f
 AnonymousFunction52cddb790200	docs/bootstrap-toc.js	/^  $(function() {$/;"	f
 AnonymousFunction52cddb790300	docs/bootstrap-toc.js	/^    $('nav[data-toggle="toc"]').each(function(i, el) {$/;"	f
@@ -155,7 +156,7 @@ Value	docs/reference/setup_template.html	/^    <h2 class="hasAnchor" id="value">
 Value	docs/reference/setup_wdiff.html	/^    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"><\/a>Value<\/h2>$/;"	i
 a.anchor	docs/pkgdown.css	/^a.anchor {$/;"	c
 a.sourceLine:hover	docs/pkgdown.css	/^a.sourceLine:hover {$/;"	c
-all	Makefile	/^all: check build ## run check and build$/;"	t
+all	Makefile	/^all: render_readme check ## run render_readme and check targets$/;"	t
 all	inst/template/full/Makefile	/^all: report manuscript convert-pdf ## run report, manuscript and convert-pdf$/;"	t
 args	inst/template/full/R/utils.R	/^  args <- list($/;"	v
 arguments	docs/reference/cite_pkg.html	/^    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"><\/a>Arguments<\/h2/;"	I
@@ -169,40 +170,62 @@ body	docs/pkgdown.css	/^body {$/;"	s
 body	docs/pkgdown.css	/^html, body {$/;"	s
 body > .container	docs/pkgdown.css	/^body > .container {$/;"	c
 body > .container .row	docs/pkgdown.css	/^body > .container .row {$/;"	c
-build	Makefile	/^build: ## build package site$/;"	t
 cb1	docs/articles/how-to-use.html	/^<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https:\/\//;"	I
 cb1	docs/index.html	/^<div class="sourceCode" id="cb1"><pre class="r"><span class="kw">if<\/span>(!<span class="fu"><a/;"	I
-cb2	docs/index.html	/^<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="reference\/setup_templ/;"	I
+cb2	docs/index.html	/^<div class="sourceCode" id="cb2"><pre class="r"><span class="co"># load minimalTemplate<\/span>$/;"	I
 cb3	docs/index.html	/^<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="/;"	I
 cb3-1	docs/index.html	/^<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="/;"	I
-cb3-10	docs/index.html	/^<span id="cb3-10"><a href="#cb3-10"><\/a>├── README.md<\/span>$/;"	I
-cb3-11	docs/index.html	/^<span id="cb3-11"><a href="#cb3-11"><\/a>├── data<\/span>$/;"	I
-cb3-12	docs/index.html	/^<span id="cb3-12"><a href="#cb3-12"><\/a>│   ├── clean<\/span>$/;"	I
-cb3-13	docs/index.html	/^<span id="cb3-13"><a href="#cb3-13"><\/a>│   ├── raw<\/span>$/;"	I
-cb3-14	docs/index.html	/^<span id="cb3-14"><a href="#cb3-14"><\/a>│   └── temp<\/span>$/;"	I
-cb3-15	docs/index.html	/^<span id="cb3-15"><a href="#cb3-15"><\/a>├── main<span class="op">-<\/span>script.Rmd<\/sp/;"	I
-cb3-16	docs/index.html	/^<span id="cb3-16"><a href="#cb3-16"><\/a>├── manuscript<\/span>$/;"	I
-cb3-17	docs/index.html	/^<span id="cb3-17"><a href="#cb3-17"><\/a>│   └── sources<\/span>$/;"	I
-cb3-18	docs/index.html	/^<span id="cb3-18"><a href="#cb3-18"><\/a>│       ├── analyse<span class="op">-<\/span>re/;"	I
-cb3-19	docs/index.html	/^<span id="cb3-19"><a href="#cb3-19"><\/a>│       ├── clean<span class="op">-<\/span>bib</;"	I
-cb3-2	docs/index.html	/^<span id="cb3-2"><a href="#cb3-2"><\/a><\/span>$/;"	I
-cb3-20	docs/index.html	/^<span id="cb3-20"><a href="#cb3-20"><\/a>│       ├── criticmarkup.lua<\/span>$/;"	I
-cb3-21	docs/index.html	/^<span id="cb3-21"><a href="#cb3-21"><\/a>│       ├── ecology<span class="op">-<\/span>le/;"	I
-cb3-22	docs/index.html	/^<span id="cb3-22"><a href="#cb3-22"><\/a>│       ├── library.bib<\/span>$/;"	I
-cb3-23	docs/index.html	/^<span id="cb3-23"><a href="#cb3-23"><\/a>│       ├── source<span class="op">-<\/span>con/;"	I
-cb3-24	docs/index.html	/^<span id="cb3-24"><a href="#cb3-24"><\/a>│       └── template.docx<\/span>$/;"	I
-cb3-25	docs/index.html	/^<span id="cb3-25"><a href="#cb3-25"><\/a>└── output<\/span>$/;"	I
-cb3-26	docs/index.html	/^<span id="cb3-26"><a href="#cb3-26"><\/a>    ├── figures<\/span>$/;"	I
-cb3-27	docs/index.html	/^<span id="cb3-27"><a href="#cb3-27"><\/a>    └── results<\/span><\/code><\/pre><\/div>$/;"	I
-cb3-3	docs/index.html	/^<span id="cb3-3"><a href="#cb3-3"><\/a>├── Makefile<\/span>$/;"	I
-cb3-4	docs/index.html	/^<span id="cb3-4"><a href="#cb3-4"><\/a>├── R<\/span>$/;"	I
-cb3-5	docs/index.html	/^<span id="cb3-5"><a href="#cb3-5"><\/a>│   ├── README.md<\/span>$/;"	I
-cb3-6	docs/index.html	/^<span id="cb3-6"><a href="#cb3-6"><\/a>│   ├── analysis.Rmd<\/span>$/;"	I
-cb3-7	docs/index.html	/^<span id="cb3-7"><a href="#cb3-7"><\/a>│   ├── local_functions.R<\/span>$/;"	I
-cb3-8	docs/index.html	/^<span id="cb3-8"><a href="#cb3-8"><\/a>│   ├── package_list.R<\/span>$/;"	I
-cb3-9	docs/index.html	/^<span id="cb3-9"><a href="#cb3-9"><\/a>│   └── utils.R<\/span>$/;"	I
-cb4	docs/index.html	/^<div class="sourceCode" id="cb4"><pre class="r"><span class="co"># First, search by your citatio/;"	I
-cb5	docs/index.html	/^<div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="reference\/setup_wdiff/;"	I
+cb3-10	docs/index.html	/^<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"><\/a><\/span>$/;"	I
+cb3-11	docs/index.html	/^<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"><\/a><span class="co">## ✔ Setting acti/;"	I
+cb3-2	docs/index.html	/^<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"><\/a><\/span>$/;"	I
+cb3-3	docs/index.html	/^<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"><\/a><span class="co">## ✔ Setting active/;"	I
+cb3-4	docs/index.html	/^<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"><\/a><\/span>$/;"	I
+cb3-5	docs/index.html	/^<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"><\/a><span class="co">## ✔ Creating 'R\/'/;"	I
+cb3-6	docs/index.html	/^<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"><\/a><\/span>$/;"	I
+cb3-7	docs/index.html	/^<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"><\/a><span class="co">## ✔ Writing 'ms_ch/;"	I
+cb3-8	docs/index.html	/^<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"><\/a><\/span>$/;"	I
+cb3-9	docs/index.html	/^<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"><\/a><span class="co">## ✔ Adding '.Rproj/;"	I
+cb4	docs/index.html	/^<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="/;"	I
+cb4-1	docs/index.html	/^<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="/;"	I
+cb4-10	docs/index.html	/^<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"><\/a><span class="co">## ├── data<\//;"	I
+cb4-11	docs/index.html	/^<span id="cb4-11"><a href="#cb4-11" aria-hidden="true"><\/a><span class="co">## │   ├── /;"	I
+cb4-12	docs/index.html	/^<span id="cb4-12"><a href="#cb4-12" aria-hidden="true"><\/a><span class="co">## │   │   └─/;"	I
+cb4-13	docs/index.html	/^<span id="cb4-13"><a href="#cb4-13" aria-hidden="true"><\/a><span class="co">## │   ├── /;"	I
+cb4-14	docs/index.html	/^<span id="cb4-14"><a href="#cb4-14" aria-hidden="true"><\/a><span class="co">## │   │   └─/;"	I
+cb4-15	docs/index.html	/^<span id="cb4-15"><a href="#cb4-15" aria-hidden="true"><\/a><span class="co">## │   └── /;"	I
+cb4-16	docs/index.html	/^<span id="cb4-16"><a href="#cb4-16" aria-hidden="true"><\/a><span class="co">## │       └─/;"	I
+cb4-17	docs/index.html	/^<span id="cb4-17"><a href="#cb4-17" aria-hidden="true"><\/a><span class="co">## ├── main-s/;"	I
+cb4-18	docs/index.html	/^<span id="cb4-18"><a href="#cb4-18" aria-hidden="true"><\/a><span class="co">## ├── manusc/;"	I
+cb4-19	docs/index.html	/^<span id="cb4-19"><a href="#cb4-19" aria-hidden="true"><\/a><span class="co">## │   ├── /;"	I
+cb4-2	docs/index.html	/^<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"><\/a><span class="co">## ├── NOTES.md/;"	I
+cb4-20	docs/index.html	/^<span id="cb4-20"><a href="#cb4-20" aria-hidden="true"><\/a><span class="co">## │   ├── /;"	I
+cb4-21	docs/index.html	/^<span id="cb4-21"><a href="#cb4-21" aria-hidden="true"><\/a><span class="co">## │   └── /;"	I
+cb4-22	docs/index.html	/^<span id="cb4-22"><a href="#cb4-22" aria-hidden="true"><\/a><span class="co">## │       ├─/;"	I
+cb4-23	docs/index.html	/^<span id="cb4-23"><a href="#cb4-23" aria-hidden="true"><\/a><span class="co">## │       ├─/;"	I
+cb4-24	docs/index.html	/^<span id="cb4-24"><a href="#cb4-24" aria-hidden="true"><\/a><span class="co">## │       ├─/;"	I
+cb4-25	docs/index.html	/^<span id="cb4-25"><a href="#cb4-25" aria-hidden="true"><\/a><span class="co">## │       ├─/;"	I
+cb4-26	docs/index.html	/^<span id="cb4-26"><a href="#cb4-26" aria-hidden="true"><\/a><span class="co">## │       ├─/;"	I
+cb4-27	docs/index.html	/^<span id="cb4-27"><a href="#cb4-27" aria-hidden="true"><\/a><span class="co">## │       ├─/;"	I
+cb4-28	docs/index.html	/^<span id="cb4-28"><a href="#cb4-28" aria-hidden="true"><\/a><span class="co">## │       ├─/;"	I
+cb4-29	docs/index.html	/^<span id="cb4-29"><a href="#cb4-29" aria-hidden="true"><\/a><span class="co">## │       └─/;"	I
+cb4-3	docs/index.html	/^<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"><\/a><span class="co">## ├── R<\/span/;"	I
+cb4-30	docs/index.html	/^<span id="cb4-30"><a href="#cb4-30" aria-hidden="true"><\/a><span class="co">## ├── ms_cha/;"	I
+cb4-31	docs/index.html	/^<span id="cb4-31"><a href="#cb4-31" aria-hidden="true"><\/a><span class="co">## ├── output/;"	I
+cb4-32	docs/index.html	/^<span id="cb4-32"><a href="#cb4-32" aria-hidden="true"><\/a><span class="co">## │   ├── /;"	I
+cb4-33	docs/index.html	/^<span id="cb4-33"><a href="#cb4-33" aria-hidden="true"><\/a><span class="co">## │   │   └─/;"	I
+cb4-34	docs/index.html	/^<span id="cb4-34"><a href="#cb4-34" aria-hidden="true"><\/a><span class="co">## │   ├── /;"	I
+cb4-35	docs/index.html	/^<span id="cb4-35"><a href="#cb4-35" aria-hidden="true"><\/a><span class="co">## │   │   └─/;"	I
+cb4-36	docs/index.html	/^<span id="cb4-36"><a href="#cb4-36" aria-hidden="true"><\/a><span class="co">## │   └── /;"	I
+cb4-37	docs/index.html	/^<span id="cb4-37"><a href="#cb4-37" aria-hidden="true"><\/a><span class="co">## │       └─/;"	I
+cb4-38	docs/index.html	/^<span id="cb4-38"><a href="#cb4-38" aria-hidden="true"><\/a><span class="co">## └── todo.t/;"	I
+cb4-4	docs/index.html	/^<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"><\/a><span class="co">## │   ├── RE/;"	I
+cb4-5	docs/index.html	/^<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"><\/a><span class="co">## │   ├── an/;"	I
+cb4-6	docs/index.html	/^<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"><\/a><span class="co">## │   ├── lo/;"	I
+cb4-7	docs/index.html	/^<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"><\/a><span class="co">## │   ├── pa/;"	I
+cb4-8	docs/index.html	/^<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"><\/a><span class="co">## │   └── ut/;"	I
+cb4-9	docs/index.html	/^<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"><\/a><span class="co">## ├── README.m/;"	I
+cb5	docs/index.html	/^<div class="sourceCode" id="cb5"><pre class="r"><span class="co"># First, search by your citatio/;"	I
+cb6	docs/index.html	/^<div class="sourceCode" id="cb6"><pre class="r"><span class="fu"><a href="reference\/setup_wdiff/;"	I
 changeTooltipMessage	docs/pkgdown.js	/^  function changeTooltipMessage(element, msg) {$/;"	f
 check	Makefile	/^check: ## check package build$/;"	t
 chunk_definitions	.Rproj.user/shared/notebooks/12EE2C6-README/1/FFB020DFF7E18985/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1591209219}/;"	a
@@ -373,6 +396,7 @@ re	inst/template/full/R/utils.R	/^  re <- '^\\\\s'$/;"	v
 read_all_excel_sheets	inst/template/full/R/utils.R	/^read_all_excel_sheets <- function($/;"	f
 reg	inst/template/full/R/utils.R	/^  reg <- paste0(sep, ".+$")$/;"	v
 render_notebook	inst/template/full/R/utils.R	/^render_notebook <- function(notebook_file) {$/;"	f
+render_readme	Makefile	/^render_readme: ## render readme$/;"	t
 reorder_within	inst/template/full/R/utils.R	/^reorder_within <- function(x, by, within, fun = mean, sep = "___", ...) {$/;"	f
 report	inst/template/full/Makefile	/^report: ## generate analyis report$/;"	t
 run_basic_eda	inst/template/full/R/utils.R	/^run_basic_eda <- function(data){$/;"	f

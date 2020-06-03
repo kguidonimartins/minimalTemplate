@@ -6,6 +6,10 @@ language: r
 r_packages:
   - devtools
   - pkgdown
+  - remotes
+
+r_github_packages:
+  - kguidonimartins/minimalTemplate
 
 sudo: false
 
