@@ -19,3 +19,4 @@ vignettes/*.pdf
 .Renviron
 .session.vim
 .tmuxinator.yml
+docs
