@@ -87,7 +87,7 @@
 <div id="minimaltemplate" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#minimaltemplate" class="anchor"></a>minimalTemplate</h1></div>
-<p><a href="https://www.repostatus.org/#wip"><img src="https://www.repostatus.org/badges/latest/wip.svg" alt="Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public."></a> <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a></p>
+<p><a href="https://travis-ci.com/kguidonimartins/minimalTemplate"><img src="https://travis-ci.com/kguidonimartins/minimalTemplate.svg?branch=master" alt="Build Status"></a> <a href="https://www.repostatus.org/#wip"><img src="https://www.repostatus.org/badges/latest/wip.svg" alt="Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public."></a> <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a></p>
 <p><code>{minimalTemplate}</code> is a highly opinionated package to facilitate the production of docx files using <a href="https://rmarkdown.rstudio.com/">RMarkdown</a>. For now, this package has no commitment to the structure standards of the projects or R packages. <em>Use at your own risk</em>.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
@@ -117,57 +117,64 @@
 
 <span class="co"># run `setup_template()`</span>
 <span class="fu"><a href="reference/setup_template.html">setup_template</a></span>(<span class="no">tmp_proj</span>)</pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">## ✓ Creating '/tmp/RtmpzTy4Yk/ms_chap_01/'</a>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">## ✔ Creating '/tmp/RtmpqscP8j/ms_chap_01/'</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3">## ✓ Setting active project to '/tmp/RtmpzTy4Yk/ms_chap_01'</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">## ✔ Setting active project to '/tmp/RtmpqscP8j/ms_chap_01'</a>
 <a class="sourceLine" id="cb3-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb3-5" data-line-number="5">## ✓ Creating 'R/'</a>
+<a class="sourceLine" id="cb3-5" data-line-number="5">## ✔ Creating 'R/'</a>
 <a class="sourceLine" id="cb3-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb3-7" data-line-number="7">## ✓ Writing 'ms_chap_01.Rproj'</a>
+<a class="sourceLine" id="cb3-7" data-line-number="7">## ✔ Writing a sentinel file '.here'</a>
 <a class="sourceLine" id="cb3-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb3-9" data-line-number="9">## ✓ Adding '.Rproj.user' to '.gitignore'</a>
+<a class="sourceLine" id="cb3-9" data-line-number="9">## ● Build robust paths within your project via `here::here()`</a>
 <a class="sourceLine" id="cb3-10" data-line-number="10"></a>
-<a class="sourceLine" id="cb3-11" data-line-number="11">## ✓ Setting active project to '&lt;no active project&gt;'</a></code></pre></div>
+<a class="sourceLine" id="cb3-11" data-line-number="11">## ● Learn more at &lt;https://here.r-lib.org&gt;</a>
+<a class="sourceLine" id="cb3-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb3-13" data-line-number="13">## ✔ Setting active project to '&lt;no active project&gt;'</a></code></pre></div>
 <p>The above line will open a new <a href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects">RStudio project</a>.</p>
 <p>The folder structure of the <code>ms_chap_01</code> project is (<em>this is not a mandatory structure</em>):</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">## /tmp/RtmpzTy4Yk/ms_chap_01</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2">## ├── NOTES.md</a>
-<a class="sourceLine" id="cb4-3" data-line-number="3">## ├── R</a>
-<a class="sourceLine" id="cb4-4" data-line-number="4">## │   ├── README.md</a>
-<a class="sourceLine" id="cb4-5" data-line-number="5">## │   ├── analysis.Rmd</a>
-<a class="sourceLine" id="cb4-6" data-line-number="6">## │   ├── local_functions.R</a>
-<a class="sourceLine" id="cb4-7" data-line-number="7">## │   ├── package_list.R</a>
-<a class="sourceLine" id="cb4-8" data-line-number="8">## │   └── utils.R</a>
-<a class="sourceLine" id="cb4-9" data-line-number="9">## ├── README.md</a>
-<a class="sourceLine" id="cb4-10" data-line-number="10">## ├── data</a>
-<a class="sourceLine" id="cb4-11" data-line-number="11">## │   ├── clean</a>
-<a class="sourceLine" id="cb4-12" data-line-number="12">## │   │   └── README.md</a>
-<a class="sourceLine" id="cb4-13" data-line-number="13">## │   ├── raw</a>
-<a class="sourceLine" id="cb4-14" data-line-number="14">## │   │   └── README.md</a>
-<a class="sourceLine" id="cb4-15" data-line-number="15">## │   └── temp</a>
-<a class="sourceLine" id="cb4-16" data-line-number="16">## │       └── README.md</a>
-<a class="sourceLine" id="cb4-17" data-line-number="17">## ├── main-script.Rmd</a>
-<a class="sourceLine" id="cb4-18" data-line-number="18">## ├── manuscript</a>
-<a class="sourceLine" id="cb4-19" data-line-number="19">## │   ├── README.md</a>
-<a class="sourceLine" id="cb4-20" data-line-number="20">## │   ├── header.yml</a>
-<a class="sourceLine" id="cb4-21" data-line-number="21">## │   └── sources</a>
-<a class="sourceLine" id="cb4-22" data-line-number="22">## │       ├── README.md</a>
-<a class="sourceLine" id="cb4-23" data-line-number="23">## │       ├── analyse-refs.Rmd</a>
-<a class="sourceLine" id="cb4-24" data-line-number="24">## │       ├── clean-bib-file-bibtool.sh</a>
-<a class="sourceLine" id="cb4-25" data-line-number="25">## │       ├── criticmarkup.lua</a>
-<a class="sourceLine" id="cb4-26" data-line-number="26">## │       ├── ecology-letters.csl</a>
-<a class="sourceLine" id="cb4-27" data-line-number="27">## │       ├── library.bib</a>
-<a class="sourceLine" id="cb4-28" data-line-number="28">## │       ├── source-config-bibtool.rsc</a>
-<a class="sourceLine" id="cb4-29" data-line-number="29">## │       └── template.docx</a>
-<a class="sourceLine" id="cb4-30" data-line-number="30">## ├── ms_chap_01.Rproj</a>
-<a class="sourceLine" id="cb4-31" data-line-number="31">## ├── output</a>
-<a class="sourceLine" id="cb4-32" data-line-number="32">## │   ├── figures</a>
-<a class="sourceLine" id="cb4-33" data-line-number="33">## │   │   └── README.md</a>
-<a class="sourceLine" id="cb4-34" data-line-number="34">## │   ├── results</a>
-<a class="sourceLine" id="cb4-35" data-line-number="35">## │   │   └── README.md</a>
-<a class="sourceLine" id="cb4-36" data-line-number="36">## │   └── supp</a>
-<a class="sourceLine" id="cb4-37" data-line-number="37">## │       └── README.md</a>
-<a class="sourceLine" id="cb4-38" data-line-number="38">## └── todo.txt</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">## /tmp/RtmpqscP8j/ms_chap_01</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2">## ├── DESCRIPTION</a>
+<a class="sourceLine" id="cb4-3" data-line-number="3">## ├── Dockerfile</a>
+<a class="sourceLine" id="cb4-4" data-line-number="4">## ├── NOTES.md</a>
+<a class="sourceLine" id="cb4-5" data-line-number="5">## ├── R</a>
+<a class="sourceLine" id="cb4-6" data-line-number="6">## │   ├── 99_analyse-refs.Rmd</a>
+<a class="sourceLine" id="cb4-7" data-line-number="7">## │   ├── README.md</a>
+<a class="sourceLine" id="cb4-8" data-line-number="8">## │   ├── analysis.Rmd</a>
+<a class="sourceLine" id="cb4-9" data-line-number="9">## │   ├── local_functions.R</a>
+<a class="sourceLine" id="cb4-10" data-line-number="10">## │   ├── package_list.R</a>
+<a class="sourceLine" id="cb4-11" data-line-number="11">## │   ├── utils-pipe.R</a>
+<a class="sourceLine" id="cb4-12" data-line-number="12">## │   └── utils.R</a>
+<a class="sourceLine" id="cb4-13" data-line-number="13">## ├── README.md</a>
+<a class="sourceLine" id="cb4-14" data-line-number="14">## ├── data</a>
+<a class="sourceLine" id="cb4-15" data-line-number="15">## │   ├── clean</a>
+<a class="sourceLine" id="cb4-16" data-line-number="16">## │   │   └── README.md</a>
+<a class="sourceLine" id="cb4-17" data-line-number="17">## │   ├── raw</a>
+<a class="sourceLine" id="cb4-18" data-line-number="18">## │   │   └── README.md</a>
+<a class="sourceLine" id="cb4-19" data-line-number="19">## │   └── temp</a>
+<a class="sourceLine" id="cb4-20" data-line-number="20">## │       └── README.md</a>
+<a class="sourceLine" id="cb4-21" data-line-number="21">## ├── main-script.Rmd</a>
+<a class="sourceLine" id="cb4-22" data-line-number="22">## ├── manuscript</a>
+<a class="sourceLine" id="cb4-23" data-line-number="23">## │   ├── README.md</a>
+<a class="sourceLine" id="cb4-24" data-line-number="24">## │   ├── header.yml</a>
+<a class="sourceLine" id="cb4-25" data-line-number="25">## │   └── sources</a>
+<a class="sourceLine" id="cb4-26" data-line-number="26">## │       ├── README.md</a>
+<a class="sourceLine" id="cb4-27" data-line-number="27">## │       ├── ecology-letters.csl</a>
+<a class="sourceLine" id="cb4-28" data-line-number="28">## │       ├── helpers</a>
+<a class="sourceLine" id="cb4-29" data-line-number="29">## │       │   ├── README.md</a>
+<a class="sourceLine" id="cb4-30" data-line-number="30">## │       │   ├── bibtool.config.rsc</a>
+<a class="sourceLine" id="cb4-31" data-line-number="31">## │       │   ├── clean-bib.sh</a>
+<a class="sourceLine" id="cb4-32" data-line-number="32">## │       │   └── criticmarkup.lua</a>
+<a class="sourceLine" id="cb4-33" data-line-number="33">## │       ├── library.bib</a>
+<a class="sourceLine" id="cb4-34" data-line-number="34">## │       └── template.docx</a>
+<a class="sourceLine" id="cb4-35" data-line-number="35">## ├── output</a>
+<a class="sourceLine" id="cb4-36" data-line-number="36">## │   ├── figures</a>
+<a class="sourceLine" id="cb4-37" data-line-number="37">## │   │   └── README.md</a>
+<a class="sourceLine" id="cb4-38" data-line-number="38">## │   ├── results</a>
+<a class="sourceLine" id="cb4-39" data-line-number="39">## │   │   └── README.md</a>
+<a class="sourceLine" id="cb4-40" data-line-number="40">## │   └── supp</a>
+<a class="sourceLine" id="cb4-41" data-line-number="41">## │       └── README.md</a>
+<a class="sourceLine" id="cb4-42" data-line-number="42">## └── todo.txt</a></code></pre></div>
+<p>You can edit the various README files distributed among the subdirectories to explain what these folders contain.</p>
 <p>Open the <code>main_script.Rmd</code> file and press the <code>Knit</code> button.</p>
 </div>
 <div id="download-a-new-citation-style" class="section level3">
