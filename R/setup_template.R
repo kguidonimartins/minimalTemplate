@@ -15,7 +15,7 @@ setup_template <- function(name) {
 
   # criar r project
   usethis::create_project(path = name,
-                          rstudio = TRUE)
+                          rstudio = FALSE)
 
   inst_files <- c(
       ".atom",
