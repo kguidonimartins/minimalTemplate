@@ -9,9 +9,7 @@ build: ## build package site
 	Rscript -e "rmarkdown::render(input = 'README.Rmd', output_format = 'all', encoding = 'UTF-8')"
 	Rscript -e "pkgdown::build_site(preview = TRUE)"
 
-.PHONY: clean help
-clean: ## remove figures
-	rm output/figures/*
+.PHONY: help
 
 help: ## show this message
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \

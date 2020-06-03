@@ -1,0 +1,38 @@
+os:
+  - linux
+
+language: r
+
+r_packages:
+  - devtools
+  - pkgdown
+
+sudo: false
+
+before_install: |
+  sudo apt-get -y install \
+  build-essential \
+  libcurl4-gnutls-dev \
+  libxml2-dev \
+  libssl-dev
+
+cache: packages
+
+script: make check
+
+matrix:
+  include:
+  - r: release
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: master
+
+after_success:
+  - Rscript -e "devtools::install()"
+  - Rscript -e "pkgdown::build_site()"
+
