@@ -1,8 +1,0 @@
-todo:
-  autoAssign:    true
-  keyword:       ["NOTE", "TODO", "REVIEW", "FIX", "BUG", "TEST", "TESTING"]
-  bodyKeyword:   ["BODY"]
-  blobLines:     15
-  caseSensitive: true
-  label:         ["auto-todo"]
-  reopenClosed:  true
