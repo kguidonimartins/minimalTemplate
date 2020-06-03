@@ -1,0 +1,409 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+#pkgdown-sidebar	docs/pkgdown.css	/^#pkgdown-sidebar {$/;"	i
+#pkgdown-sidebar .list-unstyled li	docs/pkgdown.css	/^#pkgdown-sidebar .list-unstyled li {$/;"	s
+#pkgdown-sidebar h2	docs/pkgdown.css	/^#pkgdown-sidebar h2 {$/;"	s
+#pkgdown-sidebar h2:first-child	docs/pkgdown.css	/^#pkgdown-sidebar h2:first-child {$/;"	s
+$nav	docs/bootstrap-toc.js	/^            $nav: arg$/;"	p	class:window.Toc.helpers.parseOps.opts
+.DEFAULT_GOAL	Makefile	/^.DEFAULT_GOAL := help$/;"	m
+.DEFAULT_GOAL	inst/template/full/Makefile	/^.DEFAULT_GOAL := help$/;"	m
+.algolia-autocomplete	docs/docsearch.css	/^.algolia-autocomplete {$/;"	c
+.algolia-autocomplete .algolia-docsearch-footer	docs/docsearch.css	/^.algolia-autocomplete .algolia-docsearch-footer {$/;"	c
+.algolia-autocomplete .algolia-docsearch-footer--logo	docs/docsearch.css	/^.algolia-autocomplete .algolia-docsearch-footer--logo {$/;"	c
+.algolia-autocomplete .algolia-docsearch-suggestion	docs/docsearch.css	/^.algolia-autocomplete .algolia-docsearch-suggestion {$/;"	c
+.algolia-autocomplete .algolia-docsearch-suggestion--category-header	docs/docsearch.css	/^.algolia-autocomplete .algolia-docsearch-suggestion--category-header {$/;"	c
+.algolia-autocomplete .algolia-docsearch-suggestion--content	docs/docsearch.css	/^.algolia-autocomplete .algolia-docsearch-suggestion--content {$/;"	c
+.algolia-autocomplete .algolia-docsearch-suggestion--content::before	docs/docsearch.css	/^.algolia-autocomplete .algolia-docsearch-suggestion--content::before {$/;"	c
+.algolia-autocomplete .algolia-docsearch-suggestion--highlight	docs/docsearch.css	/^.algolia-autocomplete .algolia-docsearch-suggestion--highlight {$/;"	c
+.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column	docs/docsearch.css	/^.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {$/;"	c
+.algolia-autocomplete .algolia-docsearch-suggestion--text	docs/docsearch.css	/^.algolia-autocomplete .algolia-docsearch-suggestion--text {$/;"	c
+.algolia-autocomplete .algolia-docsearch-suggestion--text .algolia-docsearch-suggestion--highlight	docs/docsearch.css	/^.algolia-autocomplete .algolia-docsearch-suggestion--text .algolia-docsearch-suggestion--highlig/;"	c
+.algolia-autocomplete .algolia-docsearch-suggestion--title	docs/docsearch.css	/^.algolia-autocomplete .algolia-docsearch-suggestion--title {$/;"	c
+.algolia-autocomplete .algolia-docsearch-suggestion--wrapper	docs/docsearch.css	/^.algolia-autocomplete .algolia-docsearch-suggestion--wrapper {$/;"	c
+.algolia-autocomplete .ds-dropdown-menu	docs/docsearch.css	/^  .algolia-autocomplete .ds-dropdown-menu {$/;"	c
+.algolia-autocomplete .ds-dropdown-menu	docs/docsearch.css	/^.algolia-autocomplete .ds-dropdown-menu {$/;"	c
+.algolia-autocomplete .ds-dropdown-menu .ds-suggestions	docs/docsearch.css	/^.algolia-autocomplete .ds-dropdown-menu .ds-suggestions {$/;"	c
+.algolia-autocomplete .ds-dropdown-menu::before	docs/docsearch.css	/^.algolia-autocomplete .ds-dropdown-menu::before {$/;"	c
+.algolia-autocomplete .ds-dropdown-menu[class^=ds-dataset-]	docs/docsearch.css	/^.algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-] {$/;"	c
+.algolia-autocomplete .ds-suggestion .algolia-docsearch-suggestion--subcategory-column	docs/docsearch.css	/^.algolia-autocomplete .ds-suggestion .algolia-docsearch-suggestion--subcategory-column {$/;"	c
+.algolia-autocomplete .ds-suggestion.ds-cursor .algolia-docsearch-suggestion--content	docs/docsearch.css	/^.algolia-autocomplete .ds-suggestion.ds-cursor .algolia-docsearch-suggestion--content {$/;"	c
+.algolia-autocomplete .ds-suggestion:not(:first-child) .algolia-docsearch-suggestion--category-header	docs/docsearch.css	/^.algolia-autocomplete .ds-suggestion:not(:first-child) .algolia-docsearch-suggestion--category-h/;"	c
+.btn-copy-ex	docs/pkgdown.css	/^.btn-copy-ex {$/;"	c
+.ch	docs/pkgdown.css	/^.ch,.st  {color: #036a07;} \/* string *\/$/;"	c
+.co	docs/pkgdown.css	/^.co      {color: #888888;} \/* comment *\/$/;"	c
+.contents .page-header	docs/pkgdown.css	/^.contents .page-header {$/;"	c
+.contents h1	docs/pkgdown.css	/^.contents h1, .contents h2, .contents h3, .contents h4 {$/;"	s
+.contents h2	docs/pkgdown.css	/^.contents h1, .contents h2, .contents h3, .contents h4 {$/;"	s
+.contents h3	docs/pkgdown.css	/^.contents h1, .contents h2, .contents h3, .contents h4 {$/;"	s
+.contents h4	docs/pkgdown.css	/^.contents h1, .contents h2, .contents h3, .contents h4 {$/;"	s
+.dropdown-submenu	docs/pkgdown.css	/^.dropdown-submenu {$/;"	c
+.dropdown-submenu.pull-left	docs/pkgdown.css	/^.dropdown-submenu.pull-left {$/;"	c
+.dropdown-submenu.pull-left>.dropdown-menu	docs/pkgdown.css	/^.dropdown-submenu.pull-left>.dropdown-menu {$/;"	c
+.dropdown-submenu:hover>.dropdown-menu	docs/pkgdown.css	/^.dropdown-submenu:hover>.dropdown-menu {$/;"	c
+.dropdown-submenu:hover>a:after	docs/pkgdown.css	/^.dropdown-submenu:hover>a:after {$/;"	c
+.dropdown-submenu>.dropdown-menu	docs/pkgdown.css	/^.dropdown-submenu>.dropdown-menu {$/;"	c
+.dropdown-submenu>a:after	docs/pkgdown.css	/^.dropdown-submenu>a:after {$/;"	c
+.error	docs/pkgdown.css	/^.error   { color: orange;  font-weight: bolder;}$/;"	c
+.fab	docs/pkgdown.css	/^.fab {$/;"	c
+.fl	docs/pkgdown.css	/^.fl      {color: #1514b5;}$/;"	c
+.fu	docs/pkgdown.css	/^.fu      {color: #000000;} \/* function *\/$/;"	c
+.hasAnchor:hover a.anchor	docs/pkgdown.css	/^  .hasAnchor:hover a.anchor {$/;"	c
+.hasAnchor:hover a.anchor	docs/pkgdown.css	/^.hasAnchor:hover a.anchor {$/;"	c
+.hasCopyButton	docs/pkgdown.css	/^.hasCopyButton {$/;"	c
+.hasCopyButton:hover button.btn-copy-ex	docs/pkgdown.css	/^.hasCopyButton:hover button.btn-copy-ex {$/;"	c
+.headroom	docs/pkgdown.css	/^.headroom {$/;"	c
+.headroom--pinned	docs/pkgdown.css	/^.headroom--pinned {$/;"	c
+.headroom--unpinned	docs/pkgdown.css	/^.headroom--unpinned {$/;"	c
+.html-widget	docs/pkgdown.css	/^.html-widget {$/;"	c
+.kw	docs/pkgdown.css	/^.kw      {color: #264D66;} \/* keyword *\/$/;"	c
+.message	docs/pkgdown.css	/^.message { color: black;   font-weight: bolder;}$/;"	c
+.orcid	docs/pkgdown.css	/^.orcid {$/;"	c
+.ref-arguments .desc	docs/pkgdown.css	/^.ref-arguments .desc {width: 80%;}$/;"	c
+.ref-arguments .name	docs/pkgdown.css	/^.ref-arguments .name {width: 20%;}$/;"	c
+.ref-arguments td	docs/pkgdown.css	/^.ref-arguments th, .ref-arguments td {vertical-align: top;}$/;"	s
+.ref-arguments th	docs/pkgdown.css	/^.ref-arguments th {text-align: right; padding-right: 10px;}$/;"	s
+.ref-arguments th	docs/pkgdown.css	/^.ref-arguments th, .ref-arguments td {vertical-align: top;}$/;"	s
+.ref-index .alias	docs/pkgdown.css	/^.ref-index .alias {width: 40%;}$/;"	c
+.ref-index .icon	docs/pkgdown.css	/^.ref-index .icon {width: 40px;}$/;"	c
+.ref-index .title	docs/pkgdown.css	/^.ref-index .title {width: 60%;}$/;"	c
+.ref-index td	docs/pkgdown.css	/^.ref-index td {vertical-align: top;}$/;"	s
+.ref-index th	docs/pkgdown.css	/^.ref-index th {font-weight: normal;}$/;"	s
+.ref-index-icons .alias	docs/pkgdown.css	/^.ref-index-icons .alias {width: calc(40% - 40px);}$/;"	c
+.st	docs/pkgdown.css	/^.ch,.st  {color: #036a07;} \/* string *\/$/;"	c
+.warning	docs/pkgdown.css	/^.warning { color: #6A0366; font-weight: bolder;}$/;"	c
+1-setting-up-a-new-template	docs/index.html	/^<div id="1-setting-up-a-new-template" class="section level3">$/;"	I
+1. Setting up a new template	docs/index.html	/^<a href="#1-setting-up-a-new-template" class="anchor"><\/a>1. Setting up a new template<\/h3>$/;"	j
+1\\. Setting up a new template	README.md	/^### 1\\. Setting up a new template$/;"	S
+2-download-a-new-citation-style	docs/index.html	/^<div id="2-download-a-new-citation-style" class="section level3">$/;"	I
+2. Download a new citation style	docs/index.html	/^<a href="#2-download-a-new-citation-style" class="anchor"><\/a>2. Download a new citation style</;"	j
+2\\. Download a new citation style	README.md	/^### 2\\. Download a new citation style$/;"	S
+3-setting-up-the-version-control-of-docx-files	docs/index.html	/^<div id="3-setting-up-the-version-control-of-docx-files" class="section level3">$/;"	I
+3. Setting up the version control of .docx files	docs/index.html	/^<a href="#3-setting-up-the-version-control-of-docx-files" class="anchor"><\/a>3. Setting up the /;"	j
+3\\. Setting up the version control of `.docx` files	README.md	/^### 3\\. Setting up the version control of `.docx` files$/;"	S
+All functions	docs/reference/index.html	/^          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" clas/;"	i
+All vignettes	docs/articles/index.html	/^      <h3>All vignettes<\/h3>$/;"	j
+AnonymousFunction52cddb790100	docs/bootstrap-toc.js	/^        $headings.each(function(i, el) {$/;"	f
+AnonymousFunction52cddb790200	docs/bootstrap-toc.js	/^  $(function() {$/;"	f
+AnonymousFunction52cddb790300	docs/bootstrap-toc.js	/^    $('nav[data-toggle="toc"]').each(function(i, el) {$/;"	f
+AnonymousFunction8603b9fc0100	docs/articles/how-to-use_files/header-attrs-2.1/header-attrs.js	/^document.addEventListener('DOMContentLoaded', function(e) {$/;"	f
+AnonymousFunctionbc7e89340100	docs/docsearch.js	/^$(function() {$/;"	f
+AnonymousFunctionbc7e89340200	docs/docsearch.js	/^  $(document).on('keydown', function(e) {$/;"	f
+AnonymousFunctionbc7e89340300	docs/docsearch.js	/^  $(document).ready(function() {$/;"	f
+AnonymousFunctionbc7e89340400	docs/docsearch.js	/^            done: function() {$/;"	f
+AnonymousFunctiondd7036020100	docs/pkgdown.js	/^  $(function() {$/;"	f
+AnonymousFunctiondd7036020200	docs/pkgdown.js	/^    $(window).resize(function(){$/;"	f
+AnonymousFunctiondd7036020300	docs/pkgdown.js	/^    $(document).ready(function() {$/;"	f
+AnonymousFunctiondd7036020400	docs/pkgdown.js	/^        text: function(trigger) {$/;"	f	function:AnonymousFunctiondd7036020300
+AnonymousFunctiondd7036020500	docs/pkgdown.js	/^      clipboardBtnCopies.on('success', function(e) {$/;"	f
+AnonymousFunctiondd7036020600	docs/pkgdown.js	/^      clipboardBtnCopies.on('error', function() {$/;"	f
+Arguments	docs/reference/cite_pkg.html	/^    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"><\/a>Arguments<\/h2/;"	i
+Arguments	docs/reference/download_csl.html	/^    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"><\/a>Arguments<\/h2/;"	i
+Arguments	docs/reference/extract_comments.html	/^    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"><\/a>Arguments<\/h2/;"	i
+Arguments	docs/reference/ipak.html	/^    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"><\/a>Arguments<\/h2/;"	i
+Arguments	docs/reference/setup_template.html	/^    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"><\/a>Arguments<\/h2/;"	i
+Arguments	docs/reference/setup_wdiff.html	/^    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"><\/a>Arguments<\/h2/;"	i
+Articles	docs/articles/index.html	/^      <h1>Articles<\/h1>$/;"	h
+Authors	docs/authors.html	/^      <h1>Authors<\/h1>$/;"	h
+Cite packages in .docx output	docs/reference/cite_pkg.html	/^    <h1>Cite packages in .docx output<\/h1>$/;"	h
+Contents	docs/404.html	/^      <h2 data-toc-skip>Contents<\/h2>$/;"	i
+Contents	docs/LICENSE-text.html	/^      <h2 data-toc-skip>Contents<\/h2>$/;"	i
+Contents	docs/reference/cite_pkg.html	/^      <h2 data-toc-skip>Contents<\/h2>$/;"	i
+Contents	docs/reference/download_csl.html	/^      <h2 data-toc-skip>Contents<\/h2>$/;"	i
+Contents	docs/reference/extract_comments.html	/^      <h2 data-toc-skip>Contents<\/h2>$/;"	i
+Contents	docs/reference/index.html	/^      <h2 data-toc-skip>Contents<\/h2>$/;"	i
+Contents	docs/reference/ipak.html	/^      <h2 data-toc-skip>Contents<\/h2>$/;"	i
+Contents	docs/reference/setup_template.html	/^      <h2 data-toc-skip>Contents<\/h2>$/;"	i
+Contents	docs/reference/setup_wdiff.html	/^      <h2 data-toc-skip>Contents<\/h2>$/;"	i
+DOC	inst/template/full/Makefile	/^DOC = manuscript\/manuscript.docx$/;"	m
+Developers	docs/index.html	/^<h2>Developers<\/h2>$/;"	i
+Download csl citation style	docs/reference/download_csl.html	/^    <h1>Download csl citation style<\/h1>$/;"	h
+Example	README.md	/^## Example$/;"	s
+Example	docs/index.html	/^<a href="#example" class="anchor"><\/a>Example<\/h2>$/;"	i
+Examples	docs/reference/cite_pkg.html	/^    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"><\/a>Examples<\/h2>$/;"	i
+Examples	docs/reference/download_csl.html	/^    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"><\/a>Examples<\/h2>$/;"	i
+Examples	docs/reference/ipak.html	/^    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"><\/a>Examples<\/h2>$/;"	i
+Examples	docs/reference/setup_template.html	/^    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"><\/a>Examples<\/h2>$/;"	i
+Examples	docs/reference/setup_wdiff.html	/^    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"><\/a>Examples<\/h2>$/;"	i
+Extract comments of a docx file to a csv	docs/reference/extract_comments.html	/^    <h1>Extract comments of a docx file to a csv<\/h1>$/;"	h
+How to use	docs/articles/how-to-use.html	/^      <h1 data-toc-skip>How to use<\/h1>$/;"	h
+Install and load multiple R packages	docs/reference/ipak.html	/^    <h1>Install and load multiple R packages<\/h1>$/;"	h
+Installation	README.md	/^## Installation$/;"	s
+Installation	docs/index.html	/^<a href="#installation" class="anchor"><\/a>Installation<\/h2>$/;"	i
+Layer_1	docs/link.svg	/^	 viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">$/;"	i
+License	docs/LICENSE-text.html	/^      <h1>License<\/h1>$/;"	h
+License	docs/index.html	/^<h2>License<\/h2>$/;"	i
+Links	docs/index.html	/^<h2>Links<\/h2>$/;"	i
+MD	inst/template/full/Makefile	/^MD = $(addsuffix .md, $(basename $(DOC)))$/;"	m
+Page not found (404)	docs/404.html	/^      <h1>Page not found (404)<\/h1>$/;"	h
+RMD	inst/template/full/Makefile	/^RMD = main-script.Rmd$/;"	m
+Reference	docs/reference/index.html	/^      <h1>Reference<\/h1>$/;"	h
+Setup a new project template	docs/reference/setup_template.html	/^    <h1>Setup a new project template<\/h1>$/;"	h
+Setup wdiff for .docx files via pre- and post-commit hooks	docs/reference/setup_wdiff.html	/^    <h1>Setup wdiff for .docx files via pre- and post-commit hooks<\/h1>$/;"	h
+Span	inst/template/full/manuscript/sources/helpers/criticmarkup.lua	/^function Span(elem)$/;"	f
+Toc	docs/bootstrap-toc.js	/^  window.Toc = {$/;"	c	class:window
+Value	docs/reference/cite_pkg.html	/^    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"><\/a>Value<\/h2>$/;"	i
+Value	docs/reference/download_csl.html	/^    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"><\/a>Value<\/h2>$/;"	i
+Value	docs/reference/extract_comments.html	/^    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"><\/a>Value<\/h2>$/;"	i
+Value	docs/reference/ipak.html	/^    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"><\/a>Value<\/h2>$/;"	i
+Value	docs/reference/setup_template.html	/^    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"><\/a>Value<\/h2>$/;"	i
+Value	docs/reference/setup_wdiff.html	/^    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"><\/a>Value<\/h2>$/;"	i
+a.anchor	docs/pkgdown.css	/^a.anchor {$/;"	c
+a.sourceLine:hover	docs/pkgdown.css	/^a.sourceLine:hover {$/;"	c
+all	Makefile	/^all: check build ## run check and build$/;"	t
+all	inst/template/full/Makefile	/^all: report manuscript convert-pdf ## run report, manuscript and convert-pdf$/;"	t
+args	inst/template/full/R/utils.R	/^  args <- list($/;"	v
+arguments	docs/reference/cite_pkg.html	/^    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"><\/a>Arguments<\/h2/;"	I
+arguments	docs/reference/download_csl.html	/^    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"><\/a>Arguments<\/h2/;"	I
+arguments	docs/reference/extract_comments.html	/^    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"><\/a>Arguments<\/h2/;"	I
+arguments	docs/reference/ipak.html	/^    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"><\/a>Arguments<\/h2/;"	I
+arguments	docs/reference/setup_template.html	/^    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"><\/a>Arguments<\/h2/;"	I
+arguments	docs/reference/setup_wdiff.html	/^    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"><\/a>Arguments<\/h2/;"	I
+begin_processing	inst/template/full/R/utils.R	/^begin_processing <- function() {$/;"	f
+body	docs/pkgdown.css	/^body {$/;"	s
+body	docs/pkgdown.css	/^html, body {$/;"	s
+body > .container	docs/pkgdown.css	/^body > .container {$/;"	c
+body > .container .row	docs/pkgdown.css	/^body > .container .row {$/;"	c
+build	Makefile	/^build: ## build package site$/;"	t
+cb1	docs/articles/how-to-use.html	/^<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https:\/\//;"	I
+cb1	docs/index.html	/^<div class="sourceCode" id="cb1"><pre class="r"><span class="kw">if<\/span>(!<span class="fu"><a/;"	I
+cb2	docs/index.html	/^<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="reference\/setup_templ/;"	I
+cb3	docs/index.html	/^<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="/;"	I
+cb3-1	docs/index.html	/^<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="/;"	I
+cb3-10	docs/index.html	/^<span id="cb3-10"><a href="#cb3-10"><\/a>├── README.md<\/span>$/;"	I
+cb3-11	docs/index.html	/^<span id="cb3-11"><a href="#cb3-11"><\/a>├── data<\/span>$/;"	I
+cb3-12	docs/index.html	/^<span id="cb3-12"><a href="#cb3-12"><\/a>│   ├── clean<\/span>$/;"	I
+cb3-13	docs/index.html	/^<span id="cb3-13"><a href="#cb3-13"><\/a>│   ├── raw<\/span>$/;"	I
+cb3-14	docs/index.html	/^<span id="cb3-14"><a href="#cb3-14"><\/a>│   └── temp<\/span>$/;"	I
+cb3-15	docs/index.html	/^<span id="cb3-15"><a href="#cb3-15"><\/a>├── main<span class="op">-<\/span>script.Rmd<\/sp/;"	I
+cb3-16	docs/index.html	/^<span id="cb3-16"><a href="#cb3-16"><\/a>├── manuscript<\/span>$/;"	I
+cb3-17	docs/index.html	/^<span id="cb3-17"><a href="#cb3-17"><\/a>│   └── sources<\/span>$/;"	I
+cb3-18	docs/index.html	/^<span id="cb3-18"><a href="#cb3-18"><\/a>│       ├── analyse<span class="op">-<\/span>re/;"	I
+cb3-19	docs/index.html	/^<span id="cb3-19"><a href="#cb3-19"><\/a>│       ├── clean<span class="op">-<\/span>bib</;"	I
+cb3-2	docs/index.html	/^<span id="cb3-2"><a href="#cb3-2"><\/a><\/span>$/;"	I
+cb3-20	docs/index.html	/^<span id="cb3-20"><a href="#cb3-20"><\/a>│       ├── criticmarkup.lua<\/span>$/;"	I
+cb3-21	docs/index.html	/^<span id="cb3-21"><a href="#cb3-21"><\/a>│       ├── ecology<span class="op">-<\/span>le/;"	I
+cb3-22	docs/index.html	/^<span id="cb3-22"><a href="#cb3-22"><\/a>│       ├── library.bib<\/span>$/;"	I
+cb3-23	docs/index.html	/^<span id="cb3-23"><a href="#cb3-23"><\/a>│       ├── source<span class="op">-<\/span>con/;"	I
+cb3-24	docs/index.html	/^<span id="cb3-24"><a href="#cb3-24"><\/a>│       └── template.docx<\/span>$/;"	I
+cb3-25	docs/index.html	/^<span id="cb3-25"><a href="#cb3-25"><\/a>└── output<\/span>$/;"	I
+cb3-26	docs/index.html	/^<span id="cb3-26"><a href="#cb3-26"><\/a>    ├── figures<\/span>$/;"	I
+cb3-27	docs/index.html	/^<span id="cb3-27"><a href="#cb3-27"><\/a>    └── results<\/span><\/code><\/pre><\/div>$/;"	I
+cb3-3	docs/index.html	/^<span id="cb3-3"><a href="#cb3-3"><\/a>├── Makefile<\/span>$/;"	I
+cb3-4	docs/index.html	/^<span id="cb3-4"><a href="#cb3-4"><\/a>├── R<\/span>$/;"	I
+cb3-5	docs/index.html	/^<span id="cb3-5"><a href="#cb3-5"><\/a>│   ├── README.md<\/span>$/;"	I
+cb3-6	docs/index.html	/^<span id="cb3-6"><a href="#cb3-6"><\/a>│   ├── analysis.Rmd<\/span>$/;"	I
+cb3-7	docs/index.html	/^<span id="cb3-7"><a href="#cb3-7"><\/a>│   ├── local_functions.R<\/span>$/;"	I
+cb3-8	docs/index.html	/^<span id="cb3-8"><a href="#cb3-8"><\/a>│   ├── package_list.R<\/span>$/;"	I
+cb3-9	docs/index.html	/^<span id="cb3-9"><a href="#cb3-9"><\/a>│   └── utils.R<\/span>$/;"	I
+cb4	docs/index.html	/^<div class="sourceCode" id="cb4"><pre class="r"><span class="co"># First, search by your citatio/;"	I
+cb5	docs/index.html	/^<div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="reference\/setup_wdiff/;"	I
+changeTooltipMessage	docs/pkgdown.js	/^  function changeTooltipMessage(element, msg) {$/;"	f
+check	Makefile	/^check: ## check package build$/;"	t
+chunk_definitions	.Rproj.user/shared/notebooks/12EE2C6-README/1/FFB020DFF7E18985/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1591209219}/;"	a
+chunk_definitions	.Rproj.user/shared/notebooks/12EE2C6-README/1/s/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1591211821}/;"	a
+chunk_definitions	.Rproj.user/shared/notebooks/59F70011-main-script/1/s/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1585961951}/;"	a
+chunk_definitions	.Rproj.user/shared/notebooks/E6E55EB3-analysis/1/s/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1585941411}/;"	a
+cite_pkg	R/cite_packages.R	/^cite_pkg <- function(pkg_list) {$/;"	f
+cite_pkg	inst/template/full/R/local_functions.R	/^cite_pkg <- function(pkg_list) {$/;"	f
+cites	R/cite_packages.R	/^  cites <- lapply(packages, utils::citation)$/;"	v
+cites	inst/template/full/R/local_functions.R	/^  cites <- lapply(packages, utils::citation)$/;"	v
+cites.bib	R/cite_packages.R	/^  cites.bib <- lapply(cites, utils::toBibtex)$/;"	v
+cites.bib	inst/template/full/R/local_functions.R	/^  cites.bib <- lapply(cites, utils::toBibtex)$/;"	v
+cites.bib[[i]]	R/cite_packages.R	/^      sub($/;"	v
+cites.bib[[i]]	inst/template/full/R/local_functions.R	/^      sub($/;"	v
+clean	Makefile	/^clean: ## remove figures$/;"	t
+clean	inst/template/full/Makefile	/^clean: ## remove figures$/;"	t
+clean_columns	inst/template/full/R/utils.R	/^clean_columns <- function(x) {$/;"	f
+cmmts_file	R/extract_comments.R	/^    cmmts_file <- filename_to_save$/;"	v
+cmmts_file	R/extract_comments.R	/^    cmmts_file <- gsub(".docx", "_comments.csv", docx_path)$/;"	v
+code	docs/pkgdown.css	/^pre, code {$/;"	s
+code a	docs/pkgdown.css	/^code a, pre a {$/;"	s
+code a:link:after	docs/pkgdown.css	/^  code a:link:after, code a:visited:after {$/;"	s
+code a:visited:after	docs/pkgdown.css	/^  code a:link:after, code a:visited:after {$/;"	s
+cols	inst/template/full/R/utils.R	/^  cols <- x %>%$/;"	v
+cols[i]	inst/template/full/R/utils.R	/^      cols[i] <- glue('column_{i}')$/;"	v
+cols[i]	inst/template/full/R/utils.R	/^      cols[i] <- glue('{cols[i]}_{i}')$/;"	v
+convert-pdf	inst/template/full/Makefile	/^convert-pdf: ## convert manuscript to pdf$/;"	t
+convert_str_to_logical	inst/template/full/R/utils.R	/^convert_str_to_logical <- function(x, truthy = 'T|TRUE', falsy = 'F|FALSE') {$/;"	f
+createChildNavList	docs/bootstrap-toc.js	/^      createChildNavList: function($parent) {$/;"	m	class:window.Toc.helpers
+createNavList	docs/bootstrap-toc.js	/^      createNavList: function() {$/;"	m	class:window.Toc.helpers
+d	inst/template/full/R/utils.R	/^    d <- jsonlite::fromJSON($/;"	v
+dd	docs/pkgdown.css	/^dd {$/;"	s
+default_dpi	inst/template/full/R/utils.R	/^  default_dpi <- 300$/;"	v
+default_filename	inst/template/full/R/utils.R	/^  default_filename <- deparse(substitute(variable))$/;"	v
+default_format	inst/template/full/R/utils.R	/^  default_format <- 'png'$/;"	v
+default_units	inst/template/full/R/utils.R	/^  default_units <- 'in'$/;"	v
+doc_write_time	.Rproj.user/shared/notebooks/12EE2C6-README/1/FFB020DFF7E18985/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1591209219}/;"	n
+doc_write_time	.Rproj.user/shared/notebooks/12EE2C6-README/1/s/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1591211821}/;"	n
+doc_write_time	.Rproj.user/shared/notebooks/59F70011-main-script/1/s/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1585961951}/;"	n
+doc_write_time	.Rproj.user/shared/notebooks/E6E55EB3-analysis/1/s/chunks.json	/^{"chunk_definitions":[],"doc_write_time":1585941411}/;"	n
+download_csl	R/download_csl.R	/^download_csl <- function(journal_style, directory) {$/;"	f
+end_processing	inst/template/full/R/utils.R	/^end_processing <- function() {$/;"	f
+example	docs/index.html	/^<div id="example" class="section level2">$/;"	I
+examples	docs/reference/cite_pkg.html	/^    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"><\/a>Examples<\/h2>$/;"	I
+examples	docs/reference/download_csl.html	/^    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"><\/a>Examples<\/h2>$/;"	I
+examples	docs/reference/ipak.html	/^    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"><\/a>Examples<\/h2>$/;"	I
+examples	docs/reference/setup_template.html	/^    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"><\/a>Examples<\/h2>$/;"	I
+examples	docs/reference/setup_wdiff.html	/^    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"><\/a>Examples<\/h2>$/;"	I
+extract_comments	R/extract_comments.R	/^extract_comments <- function(docx_path, filename_to_save = NULL) {$/;"	f
+filename	inst/template/full/R/utils.R	/^    filename <- glue('{filename}_{format(now, "%Y-%m-%d_%H:%M:%S")}')$/;"	v
+filename	inst/template/full/R/utils.R	/^  filename <- deparse(substitute(variable))$/;"	v
+findOrFilter	docs/bootstrap-toc.js	/^      findOrFilter: function($el, selector) {$/;"	m	class:window.Toc.helpers
+footer	docs/pkgdown.css	/^footer {$/;"	s
+footer .pkgdown	docs/pkgdown.css	/^footer .pkgdown {$/;"	c
+footer div	docs/pkgdown.css	/^footer div {$/;"	s
+footer p	docs/pkgdown.css	/^footer p {$/;"	s
+generateAnchor	docs/bootstrap-toc.js	/^      generateAnchor: function(el) {$/;"	m	class:window.Toc.helpers
+generateNavEl	docs/bootstrap-toc.js	/^      generateNavEl: function(anchor, text) {$/;"	m	class:window.Toc.helpers
+generateNavItem	docs/bootstrap-toc.js	/^      generateNavItem: function(headingEl) {$/;"	m	class:window.Toc.helpers
+generateUniqueId	docs/bootstrap-toc.js	/^      generateUniqueId: function(el) {$/;"	m	class:window.Toc.helpers
+generateUniqueIdBase	docs/bootstrap-toc.js	/^      generateUniqueIdBase: function(el) {$/;"	m	class:window.Toc.helpers
+getHeadings	docs/bootstrap-toc.js	/^      getHeadings: function($scope, topLevel) {$/;"	m	class:window.Toc.helpers
+getNavLevel	docs/bootstrap-toc.js	/^      getNavLevel: function(el) {$/;"	m	class:window.Toc.helpers
+getTopLevel	docs/bootstrap-toc.js	/^      getTopLevel: function($scope) {$/;"	m	class:window.Toc.helpers
+help	Makefile	/^help: ## show this message$/;"	t
+help	inst/template/full/Makefile	/^help: ## show this message$/;"	t
+helpers	docs/bootstrap-toc.js	/^    helpers: {$/;"	c	class:window.Toc
+hooks.files	R/setup_wdiff.R	/^  hooks.files <- c("pre-commit",$/;"	v
+html	docs/pkgdown.css	/^html, body {$/;"	s
+if(!is.na(dpi))default_dpi	inst/template/full/R/utils.R	/^  if(!is.na(dpi)) default_dpi <- dpi$/;"	v
+if(!is.na(filename))default_filename	inst/template/full/R/utils.R	/^  if(!is.na(filename)) default_filename <- filename$/;"	v
+if(!is.na(format))default_format	inst/template/full/R/utils.R	/^  if(!is.na(format)) default_format <- format$/;"	v
+if(!is.na(units))default_units	inst/template/full/R/utils.R	/^  if(!is.na(units)) default_units <- units$/;"	v
+if(alpha)re	inst/template/full/R/utils.R	/^  if (alpha) re <- paste(re, 'a-zA-Z', sep = '')$/;"	v
+if(default_format=='pdf')args[['useDingbats']]	inst/template/full/R/utils.R	/^  if (default_format == 'pdf') args[['useDingbats']] <- FALSE$/;"	v
+if(digits)re	inst/template/full/R/utils.R	/^  if (digits) re <- paste(re, '0-9', sep = '')$/;"	v
+img	docs/pkgdown.css	/^img {$/;"	s
+img.icon	docs/pkgdown.css	/^img.icon {$/;"	c
+index	inst/template/full/R/utils.R	/^index <- function(m) {$/;"	f
+init	docs/bootstrap-toc.js	/^    init: function(opts) {$/;"	m	class:window.Toc
+inst_files	R/setup_template.R	/^  inst_files <- c($/;"	v
+installation	docs/index.html	/^<div id="installation" class="section level2">$/;"	I
+ipak	R/ipak.R	/^ipak <- function(pkg_list) {$/;"	f
+ipak	inst/template/full/R/local_functions.R	/^ipak <- function(pkg_list) {$/;"	f
+load_requirements	inst/template/full/R/utils.R	/^load_requirements <- function(pkg){$/;"	f
+manuscript	inst/template/full/Makefile	/^manuscript: ## compile manuscript$/;"	t
+mark	docs/docsearch.js	/^    var mark = function() {$/;"	f	function:AnonymousFunctionbc7e89340300
+mark	docs/pkgdown.css	/^mark {$/;"	s
+matchedWords	docs/docsearch.js	/^function matchedWords(hit) {$/;"	f
+minimalTemplate	README.md	/^# minimalTemplate$/;"	c
+minimalTemplate	docs/index.html	/^<a href="#minimaltemplate" class="anchor"><\/a>minimalTemplate<\/h1><\/div>$/;"	h
+minimaltemplate	docs/index.html	/^<div id="minimaltemplate" class="section level1">$/;"	I
+mode	inst/template/full/R/utils.R	/^mode <- function(x) {$/;"	f
+names(cites.bib)	R/cite_packages.R	/^  names(cites.bib) <- packages # pkgs$/;"	v
+names(cites.bib)	inst/template/full/R/local_functions.R	/^  names(cites.bib) <- packages # pkgs$/;"	v
+nav[data-toggle='toc'] .nav .nav	docs/bootstrap-toc.css	/^nav[data-toggle='toc'] .nav .nav {$/;"	c
+nav[data-toggle='toc'] .nav .nav	docs/pkgdown.css	/^nav[data-toggle='toc'] .nav .nav {$/;"	c
+nav[data-toggle='toc'] .nav .nav > .active > a	docs/bootstrap-toc.css	/^nav[data-toggle='toc'] .nav .nav > .active > a,$/;"	s
+nav[data-toggle='toc'] .nav .nav > .active > a	docs/pkgdown.css	/^nav[data-toggle='toc'] .nav .nav > .active > a,$/;"	s
+nav[data-toggle='toc'] .nav .nav > .active:focus > a	docs/bootstrap-toc.css	/^nav[data-toggle='toc'] .nav .nav > .active:focus > a {$/;"	s
+nav[data-toggle='toc'] .nav .nav > .active:focus > a	docs/pkgdown.css	/^nav[data-toggle='toc'] .nav .nav > .active:focus > a {$/;"	s
+nav[data-toggle='toc'] .nav .nav > .active:hover > a	docs/bootstrap-toc.css	/^nav[data-toggle='toc'] .nav .nav > .active:hover > a,$/;"	s
+nav[data-toggle='toc'] .nav .nav > .active:hover > a	docs/pkgdown.css	/^nav[data-toggle='toc'] .nav .nav > .active:hover > a,$/;"	s
+nav[data-toggle='toc'] .nav .nav > li > a	docs/bootstrap-toc.css	/^nav[data-toggle='toc'] .nav .nav > li > a {$/;"	s
+nav[data-toggle='toc'] .nav .nav > li > a	docs/pkgdown.css	/^nav[data-toggle='toc'] .nav .nav > li > a {$/;"	s
+nav[data-toggle='toc'] .nav .nav > li > a:focus	docs/bootstrap-toc.css	/^nav[data-toggle='toc'] .nav .nav > li > a:focus {$/;"	s
+nav[data-toggle='toc'] .nav .nav > li > a:focus	docs/pkgdown.css	/^nav[data-toggle='toc'] .nav .nav > li > a:focus {$/;"	s
+nav[data-toggle='toc'] .nav .nav > li > a:hover	docs/bootstrap-toc.css	/^nav[data-toggle='toc'] .nav .nav > li > a:hover,$/;"	s
+nav[data-toggle='toc'] .nav .nav > li > a:hover	docs/pkgdown.css	/^nav[data-toggle='toc'] .nav .nav > li > a:hover,$/;"	s
+nav[data-toggle='toc'] .nav > .active > a	docs/bootstrap-toc.css	/^nav[data-toggle='toc'] .nav > .active > a,$/;"	s
+nav[data-toggle='toc'] .nav > .active > a	docs/pkgdown.css	/^nav[data-toggle='toc'] .nav > .active > a,$/;"	s
+nav[data-toggle='toc'] .nav > .active > ul	docs/bootstrap-toc.css	/^nav[data-toggle='toc'] .nav > .active > ul {$/;"	s
+nav[data-toggle='toc'] .nav > .active:focus > a	docs/bootstrap-toc.css	/^nav[data-toggle='toc'] .nav > .active:focus > a {$/;"	s
+nav[data-toggle='toc'] .nav > .active:focus > a	docs/pkgdown.css	/^nav[data-toggle='toc'] .nav > .active:focus > a {$/;"	s
+nav[data-toggle='toc'] .nav > .active:hover > a	docs/bootstrap-toc.css	/^nav[data-toggle='toc'] .nav > .active:hover > a,$/;"	s
+nav[data-toggle='toc'] .nav > .active:hover > a	docs/pkgdown.css	/^nav[data-toggle='toc'] .nav > .active:hover > a,$/;"	s
+nav[data-toggle='toc'] .nav > li > a	docs/bootstrap-toc.css	/^nav[data-toggle='toc'] .nav > li > a {$/;"	s
+nav[data-toggle='toc'] .nav > li > a	docs/pkgdown.css	/^nav[data-toggle='toc'] .nav > li > a {$/;"	s
+nav[data-toggle='toc'] .nav > li > a:focus	docs/bootstrap-toc.css	/^nav[data-toggle='toc'] .nav > li > a:focus {$/;"	s
+nav[data-toggle='toc'] .nav > li > a:focus	docs/pkgdown.css	/^nav[data-toggle='toc'] .nav > li > a:focus {$/;"	s
+nav[data-toggle='toc'] .nav > li > a:hover	docs/bootstrap-toc.css	/^nav[data-toggle='toc'] .nav > li > a:hover,$/;"	s
+nav[data-toggle='toc'] .nav > li > a:hover	docs/pkgdown.css	/^nav[data-toggle='toc'] .nav > li > a:hover,$/;"	s
+navbar	docs/404.html	/^    <div id="navbar" class="navbar-collapse collapse">$/;"	I
+navbar	docs/LICENSE-text.html	/^    <div id="navbar" class="navbar-collapse collapse">$/;"	I
+navbar	docs/articles/how-to-use.html	/^    <div id="navbar" class="navbar-collapse collapse">$/;"	I
+navbar	docs/articles/index.html	/^    <div id="navbar" class="navbar-collapse collapse">$/;"	I
+navbar	docs/authors.html	/^    <div id="navbar" class="navbar-collapse collapse">$/;"	I
+navbar	docs/index.html	/^    <div id="navbar" class="navbar-collapse collapse">$/;"	I
+navbar	docs/reference/cite_pkg.html	/^    <div id="navbar" class="navbar-collapse collapse">$/;"	I
+navbar	docs/reference/download_csl.html	/^    <div id="navbar" class="navbar-collapse collapse">$/;"	I
+navbar	docs/reference/extract_comments.html	/^    <div id="navbar" class="navbar-collapse collapse">$/;"	I
+navbar	docs/reference/index.html	/^    <div id="navbar" class="navbar-collapse collapse">$/;"	I
+navbar	docs/reference/ipak.html	/^    <div id="navbar" class="navbar-collapse collapse">$/;"	I
+navbar	docs/reference/setup_template.html	/^    <div id="navbar" class="navbar-collapse collapse">$/;"	I
+navbar	docs/reference/setup_wdiff.html	/^    <div id="navbar" class="navbar-collapse collapse">$/;"	I
+new.pkg	inst/template/full/R/utils.R	/^  new.pkg <- pkg[!(pkg %in% installed.packages()[, 'Package'])]$/;"	v
+new_pkg	R/ipak.R	/^    new_pkg <- pkg_list[!(pkg_list %in% installed.packages()[, "Package"])]$/;"	v
+new_pkg	inst/template/full/R/local_functions.R	/^  new_pkg <- pkg_list[!(pkg_list %in% installed.packages()[, "Package"])]$/;"	v
+new_x	inst/template/full/R/utils.R	/^  new_x <- paste(x, within, sep = sep)$/;"	v
+nominatim_osm	inst/template/full/R/utils.R	/^nominatim_osm <- function(address = NULL) {$/;"	f
+now	inst/template/full/R/utils.R	/^    now <- Sys.time()$/;"	v
+nsb4be31290101	docs/link.svg	/^	 viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">$/;"	n	uri:http://www.w3.org/2000/svg
+opts	docs/bootstrap-toc.js	/^          opts = {$/;"	c	class:window.Toc.helpers.parseOps
+packages	R/cite_packages.R	/^  packages <- sort(pkg_list)$/;"	v
+packages	inst/template/full/R/local_functions.R	/^  packages <- sort(pkg_list)$/;"	v
+parseOps	docs/bootstrap-toc.js	/^      parseOps: function(arg) {$/;"	m	class:window.Toc.helpers
+paths	docs/pkgdown.js	/^  function paths(pathname) {$/;"	f
+pkg_list	inst/template/full/R/package_list.R	/^  c($/;"	v
+pkgdown-sidebar	docs/404.html	/^  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">$/;"	I
+pkgdown-sidebar	docs/LICENSE-text.html	/^  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">$/;"	I
+pkgdown-sidebar	docs/articles/how-to-use.html	/^  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">$/;"	I
+pkgdown-sidebar	docs/index.html	/^  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">$/;"	I
+pkgdown-sidebar	docs/reference/cite_pkg.html	/^  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">$/;"	I
+pkgdown-sidebar	docs/reference/download_csl.html	/^  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">$/;"	I
+pkgdown-sidebar	docs/reference/extract_comments.html	/^  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">$/;"	I
+pkgdown-sidebar	docs/reference/index.html	/^  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">$/;"	I
+pkgdown-sidebar	docs/reference/ipak.html	/^  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">$/;"	I
+pkgdown-sidebar	docs/reference/setup_template.html	/^  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">$/;"	I
+pkgdown-sidebar	docs/reference/setup_wdiff.html	/^  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">$/;"	I
+populateNav	docs/bootstrap-toc.js	/^      populateNav: function($topContext, topLevel, $headings) {$/;"	m	class:window.Toc.helpers
+pre	docs/pkgdown.css	/^pre {$/;"	s
+pre	docs/pkgdown.css	/^pre, code {$/;"	s
+pre .img	docs/pkgdown.css	/^pre .img {$/;"	c
+pre .img img	docs/pkgdown.css	/^pre .img img {$/;"	s
+pre a	docs/pkgdown.css	/^code a, pre a {$/;"	s
+pre code	docs/pkgdown.css	/^pre code {$/;"	s
+prefix_length	docs/pkgdown.js	/^  function prefix_length(needle, haystack) {$/;"	f
+re	inst/template/full/R/utils.R	/^  re <- '^\\\\s'$/;"	v
+read_all_excel_sheets	inst/template/full/R/utils.R	/^read_all_excel_sheets <- function($/;"	f
+reg	inst/template/full/R/utils.R	/^  reg <- paste0(sep, ".+$")$/;"	v
+render_notebook	inst/template/full/R/utils.R	/^render_notebook <- function(notebook_file) {$/;"	f
+reorder_within	inst/template/full/R/utils.R	/^reorder_within <- function(x, by, within, fun = mean, sep = "___", ...) {$/;"	f
+report	inst/template/full/Makefile	/^report: ## generate analyis report$/;"	t
+run_basic_eda	inst/template/full/R/utils.R	/^run_basic_eda <- function(data){$/;"	f
+scale_x_reordered	inst/template/full/R/utils.R	/^scale_x_reordered <- function(..., sep = "___") {$/;"	f
+scale_y_reordered	inst/template/full/R/utils.R	/^scale_y_reordered <- function(..., sep = "___") {$/;"	f
+section-all-functions	docs/reference/index.html	/^          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" clas/;"	I
+setup_template	R/setup_template.R	/^setup_template <- function(name) {$/;"	f
+setup_wdiff	R/setup_wdiff.R	/^setup_wdiff <- function(verbose = TRUE) {$/;"	f
+simplify_string	inst/template/full/R/utils.R	/^simplify_string <- function(x, alpha = TRUE, digits = FALSE) {$/;"	f
+style	R/download_csl.R	/^  style <- "https:\/\/raw.githubusercontent.com\/citation-style-language\/styles\/master\/"$/;"	v
+summary	docs/pkgdown.css	/^summary {$/;"	s
+table	docs/pkgdown.css	/^table {$/;"	s
+toc	docs/404.html	/^    <nav id="toc" data-toggle="toc" class="sticky-top">$/;"	I
+toc	docs/LICENSE-text.html	/^    <nav id="toc" data-toggle="toc" class="sticky-top">$/;"	I
+toc	docs/reference/cite_pkg.html	/^    <nav id="toc" data-toggle="toc" class="sticky-top">$/;"	I
+toc	docs/reference/download_csl.html	/^    <nav id="toc" data-toggle="toc" class="sticky-top">$/;"	I
+toc	docs/reference/extract_comments.html	/^    <nav id="toc" data-toggle="toc" class="sticky-top">$/;"	I
+toc	docs/reference/index.html	/^    <nav id="toc" data-toggle="toc" class="sticky-top">$/;"	I
+toc	docs/reference/ipak.html	/^    <nav id="toc" data-toggle="toc" class="sticky-top">$/;"	I
+toc	docs/reference/setup_template.html	/^    <nav id="toc" data-toggle="toc" class="sticky-top">$/;"	I
+toc	docs/reference/setup_wdiff.html	/^    <nav id="toc" data-toggle="toc" class="sticky-top">$/;"	I
+unaccent	inst/template/full/R/utils.R	/^unaccent <- function(x) {$/;"	f
+updateHitURL	docs/docsearch.js	/^function updateHitURL(hit) {$/;"	f
+ux	inst/template/full/R/utils.R	/^  ux <- unique(x)$/;"	v
+value	docs/reference/cite_pkg.html	/^    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"><\/a>Value<\/h2>$/;"	I
+value	docs/reference/download_csl.html	/^    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"><\/a>Value<\/h2>$/;"	I
+value	docs/reference/extract_comments.html	/^    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"><\/a>Value<\/h2>$/;"	I
+value	docs/reference/ipak.html	/^    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"><\/a>Value<\/h2>$/;"	I
+value	docs/reference/setup_template.html	/^    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"><\/a>Value<\/h2>$/;"	I
+value	docs/reference/setup_wdiff.html	/^    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"><\/a>Value<\/h2>$/;"	I
+write_excel	inst/template/full/R/utils.R	/^write_excel <- function(variable, timestamp = FALSE) {$/;"	f
+write_plot	inst/template/full/R/utils.R	/^write_plot <- function(variable, filename = NA, width = NA, height = NA, format = NA, units = NA/;"	f
+xlink	docs/link.svg	/^	 viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">$/;"	n	uri:http://www.w3.org/1999/xlink

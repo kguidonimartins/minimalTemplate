@@ -1,0 +1,20 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+.ctagsignore
+.editorconfig
+.here
+.session.vim
+.tmuxinator.yml
+.travis.yml
+.atom
+.github
+Dockerfile
+Makefile
+NOTES.md
+main-script.Rmd
+# manuscript
+data
+output
+tags
+todo.txt
+

@@ -1,0 +1,10 @@
+---
+title: analysis
+---
+
+
+```{r, include=FALSE}
+source(here("R", "local_functions.R"))
+source(here("R", "package_list.R"))
+```
+

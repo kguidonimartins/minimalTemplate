@@ -1,0 +1,34 @@
+root = true
+
+[*]
+trim_trailing_whitespace = true
+end_of_line = lf
+insert_final_newline = true
+
+[config]
+trim_trailing_whitespace = false
+
+[~/.config/i3blocks/config]
+trim_trailing_whitespace = false
+
+[man/*.Rd]
+trim_trailing_whitespace = false
+
+[Makefile]
+indent_style = tab
+indent_size = 4
+
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+[*.{js,py,R,r,Rmd,rmd}]
+charset = utf-8
+
+[*.py]
+indent_style = space
+indent_size = 4
+
+[*.{R,r,Rmd,rmd}]
+indent_style = space
+indent_size = 2

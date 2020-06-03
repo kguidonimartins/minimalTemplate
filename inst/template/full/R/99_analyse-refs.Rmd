@@ -1,0 +1,226 @@
+---
+title: "My BibTeX database"
+output:
+  html_document: 
+    keep_md: true
+    toc: true
+    toc_float: true
+---
+
+Modified from: https://github.com/leeper/references
+
+
+```{r setup, results="hide"}
+# knitr
+if (!require("tidyverse", quietly = TRUE)) install.packages("tidyverse")
+if (!require("fs", quietly = TRUE)) install.packages("fs")
+if (!require("knitr", quietly = TRUE)) install.packages("knitr")
+if (!require("ggplot2", quietly = TRUE)) install.packages("ggplot2")
+if (!require("bib2df", quietly = TRUE)) install.packages("bib2df")
+if (!require("igraph", quietly = TRUE)) install.packages("igraph")
+if (!require("gender", quietly = TRUE)) install.packages("gender")
+if (!require("ggraph", quietly = TRUE)) install.packages("ggraph")
+if (!require("networkD3", quietly = TRUE)) install.packages("networkD3")
+if (!require("here", quietly = TRUE)) install.packages("here")
+
+opts_chunk$set(fig.width=8, fig.height=5, cache=FALSE)
+
+theme_set(theme_minimal())
+```
+
+License: Public Domain (CC-0)
+
+This is the bibtex (.bib) file containing all of my bibliographic references. Figured I'd share it publicly.
+
+This README was last updated on `r Sys.Date()`.
+
+```{r data}
+dat <- 
+  here("inst", "template","full","manuscript", "sources") %>% 
+  dir_ls(regexp = "\\.bib") %>% 
+  map_dfr(bib2df, .id = "source_file") %>% 
+  mutate(source_file = basename(source_file)) %>% 
+  rename_all(str_to_lower)
+```
+
+The database contains `r nrow(dat)` references. What follows are some basic statistics on its contents.
+
+## Citation Types
+
+Reference types in the database:
+
+```{r bibtype}
+dat %>% 
+  ggplot(aes(x = category)) +
+  geom_bar() +
+  xlab("Count") +
+  ylab("Citation Type") +
+  coord_flip()
+```
+
+## Journals
+
+Most common 50 journals:
+
+```{r journal, fig.height = 8}
+dat %>% 
+  group_by(journal, category) %>% 
+  count() %>% 
+  ungroup() %>% 
+  mutate(journal = fct_reorder(journal, n)) %>% 
+  ggplot(aes(x = journal, y = n)) +
+  geom_bar(stat = "identity") +
+  ylab("Count") +
+  xlab("Journal") +
+  coord_flip()
+```
+
+## Book Publishers
+
+Most common 25 journals:
+
+```{r publisher, fig.height = 6}
+
+```
+
+
+## Authors
+
+Number of coauthors per publication (excluding some recent extreme outliers):
+
+```{r nauthors}
+dat %>%
+  mutate(author = length(author)) %>% 
+  ggplot(aes(x = year, y = author)) +
+  geom_point(alpha=0.1, fill="black", colour="black") +
+  geom_smooth(method = "gam", colour = "red") +
+  xlab("Publication Year") +
+  ylab("Coauthors per Publication")
+```
+
+Most common 50 authors:
+
+```{r authors, fig.height = 8}
+dat %>% 
+  select(author) %>% 
+  unnest(cols = author) %>% 
+  group_by(author) %>% 
+  count() %>% 
+  ungroup() %>% 
+  mutate(author = fct_reorder(author, n)) %>% 
+  ggplot(aes(x = author, y = n)) +
+  geom_bar(stat = "identity") +
+  ylab("Count") +
+  xlab("Author Name") +
+  coord_flip()
+```
+
+<!--
+
+TODO: Clean up ref analysis
+
+## Gender of authors
+
+The overall breakdown of author genders (counting each author only once) is as follows:
+
+```{r authorgender, dependson=c("data"), fig.height=2}
+pull_first_names <- function(x) {
+    x <- unlist(regmatches(as.character(x), regexec("(?<=, )[A-Za-z]+(?=([., ]{1}|$))", as.character(x), perl = TRUE)))
+    x[x != ""]
+}
+first_names <- pull_first_names(unique(as.character(unlist(dat$AUTHOR))))
+author_genders <- gender::gender(unlist(first_names))
+
+ggplot(author_genders[, "gender", drop = FALSE], aes(x = "", fill = gender)) +
+  geom_bar(aes(y = (..count..)/sum(..count..)), width = 1, position = "dodge") +
+  scale_fill_manual(limits = c("male", "female"), values = c("gray", "black")) +
+  scale_y_continuous(breaks = seq(0,1,by=0.1), labels = scales::percent) +
+  coord_flip() +
+  xlab("") +
+  ylab("") +
+  theme(legend.position = "bottom")
+```
+
+```{r teamgender, dependson=c("data", "authorgender"), fig.height=2}
+team_genders <- unlist(lapply(dat$AUTHOR, function(x) {
+    firsts <- pull_first_names(as.character(x))
+    u <- author_genders$gender[match(firsts[firsts != ""], author_genders$name)]
+    if (!length(u) || is.na(u)) {
+        "Ambiguous"
+    } else if (length(u) == 1 && u == "male") {
+        "Male Solo"
+    } else if (length(u) == 1 && u == "female") {
+        "Female Solo"
+    } else if (all(u %in% "male")) {
+        "Male Team"
+    } else if (all(u %in% "female")) {
+        "Female Team"
+    } else {
+        "Male-Female Team"
+    }
+}))
+team_genders_df <- table(factor(team_genders, rev(c("Male-Female Team", "Male Solo", "Female Solo", "Male Team", "Female Team", "Ambiguous"))))
+ggplot(data.frame(team_genders_df), aes(x = Var1, y = Freq)) +
+  geom_bar(width = 1, position = "dodge", stat = "identity") +
+  coord_flip() +
+  xlab("") +
+  ylab("")
+```
+
+Caveat: The above is based upon [the gender package](https://cran.r-project.org/package=gender), which classifies first names based upon historical data. This is not necessarily accurate and is restricted to a binary classification. It also uses all historical data provided in the package and is based only on United States data, making it possibly inaccurate for any given individual in the dataset.
+
+## Coauthorship
+
+Coauthorship network among most common 150 authors:
+
+```{r authornetwork, dependson=c("data"), fig.height=10}
+# get all coauthor pairs
+colist <- lapply(dat$AUTHOR, function(x) if (length(x) >= 2) combn(x, m = 2) else NA_character_)
+# convert networks of top coauthors to igraph object
+codat <- na.omit(data.frame(t(do.call("cbind", colist))))
+codat$N <- 1L
+# make coauthor graph from top coauthors
+topco <- aggregate(N ~ X1 + X2, data = codat[codat$X1 %in% topaut$aut & codat$X2 %in% topaut$aut, ], FUN = sum)
+cograph <- igraph::graph_from_data_frame(topco, directed = FALSE)
+
+## ggraph
+ggraph::ggraph(cograph, "igraph", algorithm = "nicely") +
+  ggraph::geom_edge_link(aes(edge_width = log(N)), colour = "gray") +
+  ggraph::geom_node_text(aes(label = name), fontface = 1, size = 2) +
+  theme_void()
+```
+
+Another, more interactive way of doing this might be:
+
+```{r eval=FALSE, dependson=c("data", "authornetwork")}
+networkD3::simpleNetwork(topco)
+d3 <- networkD3::igraph_to_networkD3(cograph)
+d3$nodes$group <- 1L
+networkD3::forceNetwork(Links = d3$links, Nodes = d3$nodes, NodeID = "name", Group = "group")
+```
+
+Betweenness centrality of top 25 authors:
+
+```{r between, dependson=c("data", "authornetwork")}
+between <- igraph::betweenness(cograph)
+topcoaut <- na.omit(data.frame(betweenness = head(sort(between, decreasing = TRUE), 30)))
+topcoaut$aut <- factor(rownames(topcoaut), levels = rev(rownames(topcoaut)))
+ggplot(topcoaut, aes(x = aut, y = betweenness)) +
+  geom_bar(stat = "identity") +
+  ylab("Network Betweenness") +
+  xlab("Author Name") +
+  coord_flip()
+```
+
+## Publication Years
+
+Years of publication (post-1950):
+
+```{r year, dependson=c("data"), fig.height=4}
+ggplot(dat[!is.na(dat$YEAR) & dat$YEAR > 1950, ], aes(x = YEAR)) +
+  geom_bar() +
+  xlab("Publication Year") +
+  ylab("Count")
+```
+
+-->

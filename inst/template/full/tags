@@ -1,0 +1,71 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+DOC	Makefile	/^DOC = manuscript\/report.docx$/;"	m
+Lopez-Martinez2013	manuscript/sources/library.bib	/^@article{Lopez-Martinez2013,$/;"	a
+MD	Makefile	/^MD = $(addsuffix .md, $(basename $(DOC)))$/;"	m
+RMD	Makefile	/^RMD = main-script.Rmd$/;"	m
+Span	manuscript/sources/criticmarkup.lua	/^function Span(elem)$/;"	f
+Swenson2012	manuscript/sources/library.bib	/^@article{Swenson2012,$/;"	a
+Vellend2001	manuscript/sources/library.bib	/^@article{Vellend2001,$/;"	a
+all	Makefile	/^all: report convert-pdf $/;"	t
+args	R/utils.R	/^  args <- list($/;"	v
+begin_processing	R/utils.R	/^begin_processing <- function() {$/;"	f
+cite_pkg	R/local_functions.R	/^cite_pkg <- function(pkg_list) {$/;"	f
+cites	R/local_functions.R	/^  cites <- lapply(packages, utils::citation)$/;"	v
+cites.bib	R/local_functions.R	/^  cites.bib <- lapply(cites, utils::toBibtex)$/;"	v
+cites.bib[[i]]	R/local_functions.R	/^      sub($/;"	v
+clean	Makefile	/^clean:$/;"	t
+clean_columns	R/utils.R	/^clean_columns <- function(x) {$/;"	f
+cols	R/utils.R	/^  cols <- x %>%$/;"	v
+cols[i]	R/utils.R	/^      cols[i] <- glue('column_{i}')$/;"	v
+cols[i]	R/utils.R	/^      cols[i] <- glue('{cols[i]}_{i}')$/;"	v
+convert-md	Makefile	/^convert-md:$/;"	t
+convert-pdf	Makefile	/^convert-pdf:$/;"	t
+convert_str_to_logical	R/utils.R	/^convert_str_to_logical <- function(x, truthy = 'T|TRUE', falsy = 'F|FALSE') {$/;"	f
+d	R/utils.R	/^    d <- jsonlite::fromJSON($/;"	v
+default_dpi	R/utils.R	/^  default_dpi <- 300$/;"	v
+default_filename	R/utils.R	/^  default_filename <- deparse(substitute(variable))$/;"	v
+default_format	R/utils.R	/^  default_format <- 'png'$/;"	v
+default_units	R/utils.R	/^  default_units <- 'in'$/;"	v
+end_processing	R/utils.R	/^end_processing <- function() {$/;"	f
+filename	R/utils.R	/^    filename <- glue('{filename}_{format(now, "%Y-%m-%d_%H:%M:%S")}')$/;"	v
+filename	R/utils.R	/^  filename <- deparse(substitute(variable))$/;"	v
+if(!is.na(dpi))default_dpi	R/utils.R	/^  if(!is.na(dpi)) default_dpi <- dpi$/;"	v
+if(!is.na(filename))default_filename	R/utils.R	/^  if(!is.na(filename)) default_filename <- filename$/;"	v
+if(!is.na(format))default_format	R/utils.R	/^  if(!is.na(format)) default_format <- format$/;"	v
+if(!is.na(units))default_units	R/utils.R	/^  if(!is.na(units)) default_units <- units$/;"	v
+if(alpha)re	R/utils.R	/^  if (alpha) re <- paste(re, 'a-zA-Z', sep = '')$/;"	v
+if(default_format=='pdf')args[['useDingbats']]	R/utils.R	/^  if (default_format == 'pdf') args[['useDingbats']] <- FALSE$/;"	v
+if(digits)re	R/utils.R	/^  if (digits) re <- paste(re, '0-9', sep = '')$/;"	v
+index	R/utils.R	/^index <- function(m) {$/;"	f
+ipak	R/local_functions.R	/^ipak <- function(pkg_list) {$/;"	f
+load_requirements	R/utils.R	/^load_requirements <- function(pkg){$/;"	f
+mode	R/utils.R	/^mode <- function(x) {$/;"	f
+names(cites.bib)	R/local_functions.R	/^  names(cites.bib) <- packages # pkgs$/;"	v
+new.pkg	R/utils.R	/^  new.pkg <- pkg[!(pkg %in% installed.packages()[, 'Package'])]$/;"	v
+new_pkg	R/local_functions.R	/^  new_pkg <- pkg_list[!(pkg_list %in% installed.packages()[, "Package"])]$/;"	v
+new_x	R/utils.R	/^  new_x <- paste(x, within, sep = sep)$/;"	v
+nominatim_osm	R/utils.R	/^nominatim_osm <- function(address = NULL) {$/;"	f
+now	R/utils.R	/^    now <- Sys.time()$/;"	v
+packages	R/local_functions.R	/^  packages <- sort(pkg_list)$/;"	v
+pkg_list	R/package_list.R	/^  c($/;"	v
+re	R/utils.R	/^  re <- '^\\\\s'$/;"	v
+read_all_excel_sheets	R/utils.R	/^read_all_excel_sheets <- function($/;"	f
+reg	R/utils.R	/^  reg <- paste0(sep, ".+$")$/;"	v
+render_notebook	R/utils.R	/^render_notebook <- function(notebook_file) {$/;"	f
+reorder_within	R/utils.R	/^reorder_within <- function(x, by, within, fun = mean, sep = "___", ...) {$/;"	f
+report	Makefile	/^report:$/;"	t
+run_basic_eda	R/utils.R	/^run_basic_eda <- function(data){$/;"	f
+scale_x_reordered	R/utils.R	/^scale_x_reordered <- function(..., sep = "___") {$/;"	f
+scale_y_reordered	R/utils.R	/^scale_y_reordered <- function(..., sep = "___") {$/;"	f
+simplify_string	R/utils.R	/^simplify_string <- function(x, alpha = TRUE, digits = FALSE) {$/;"	f
+unaccent	R/utils.R	/^unaccent <- function(x) {$/;"	f
+ux	R/utils.R	/^  ux <- unique(x)$/;"	v
+write_excel	R/utils.R	/^write_excel <- function(variable, timestamp = FALSE) {$/;"	f
+write_plot	R/utils.R	/^write_plot <- function(variable, filename = NA, width = NA, height = NA, format = NA, units = NA/;"	f
