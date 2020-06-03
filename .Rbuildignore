@@ -13,3 +13,7 @@ README.html
 Makefile
 tags
 .session.vim
+.editorconfig
+inst/template/full/.Rbuildignore
+inst/template/full/.editorconfig
+inst/template/full/.travis.yml

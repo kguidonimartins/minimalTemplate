@@ -3,13 +3,13 @@ Title: A minimal template for scientific manuscripts
 Version: 0.1
 Date: 2018-05-31
 Authors@R: c(
-    person("Karlo", "Guidoni Martins", email = "kguidonimartins@gmail.com", 
+    person("Karlo", "Guidoni Martins", email = "kguidonimartins@gmail.com",
     role = c("aut", "cre"), comment = c(ORCID = "0000-0002-8458-8467"))
     )
-Description: This package focuses on writing scientific manuscripts using 
-             RMarkdown. All package architecture was developed to deliver a 
-             document in `.docx` format. In addition, the package provides a 
-             configuration function for version control of files in `.docx` 
+Description: This package focuses on writing scientific manuscripts using
+             RMarkdown. All package architecture was developed to deliver a
+             document in `.docx` format. In addition, the package provides a
+             configuration function for version control of files in `.docx`
              using the pre- and post-commit scripts.
 License: MIT + file LICENSE
 Maintainer: Karlo Guidoni Martins <kguidonimartins@gmail.com>
@@ -17,38 +17,19 @@ URL: https://github.com/kguidonimartins/minimalTemplate, https://kguidonimartins
 BugReports: https://github.com/kguidonimartins/minimalTemplate/issues
 Encoding: UTF-8
 RoxygenNote: 7.1.0
-Imports: 
+Imports:
     usethis,
     git2r,
     bibtex,
     captioner,
     knitr,
     rmarkdown,
-    devtools,
-    curl,
-    vegan,
-    dplyr,
-    readr,
     magrittr,
-    readxl,
     pacman,
-    evaluate,
-    highr,
-    markdown,
-    stringr,
-    yaml,
-    Rcpp,
-    htmltools,
-    htmlwidgets,
-    caTools,
-    bitops,
-    jsonlite,
-    base64enc,
-    rprojroot,
-    digest,
-    fs,
     docxtractr,
+    rcrossref,
+    dplyr,
     glue,
-    rcrossref
-VignetteBuilder: 
+    readr
+VignetteBuilder:
     knitr
