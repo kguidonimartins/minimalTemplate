@@ -15,11 +15,13 @@ setup_template <- function(name) {
 
   # criar r project
   usethis::create_project(path = name,
-                          rstudio = FALSE)
+                          rstudio = FALSE, 
+                          open = FALSE)
 
   inst_files <- c(
       ".ctagsignore",
       ".editorconfig",
+      ".git",
       ".github",
       ".gitignore",
       ".Rbuildignore",
@@ -37,7 +39,8 @@ setup_template <- function(name) {
       "R",
       "README.md",
       "tags",
-      "todo.txt"
+      "todo.txt",
+      "minimalTemplate.Rproj"
     )
 
   # criar pastas
@@ -49,4 +52,10 @@ setup_template <- function(name) {
       recursive = TRUE
     )
   }
+  
+  file.rename(
+    from = paste0(name, "/", "minimalTemplate.Rproj"),
+    to = paste0(name, "/" ,paste0(basename(name), ".Rproj"))
+  )
+  
 }
