@@ -6,6 +6,9 @@
 #' @param directory Directory to store the csl file
 #'
 #' @importFrom rcrossref get_styles
+#' 
+#' @section Note:
+#' See also: [Zotero Style Repository](https://www.zotero.org/styles)
 #'
 #' @return None
 #' @export
