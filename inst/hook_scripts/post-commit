@@ -37,10 +37,10 @@
 # Author: Ramon Casero <rcasero@gmail.com>
 # Version: 0.1.0
 # Copyright © 2016 University of Oxford
-# 
+#
 # University of Oxford means the Chancellor, Masters and Scholars of
 # the University of Oxford, having an administrative office at
-# Wellington Square, Oxford OX1 2JD, UK. 
+# Wellington Square, Oxford OX1 2JD, UK.
 #
 # This file is part of Gerardus.
 #
@@ -91,4 +91,7 @@ then
     }
 
 fi
+
+.git/hooks/ctags >/dev/null 2>&1 &
+
 exit

@@ -16,7 +16,7 @@ Maintainer: Karlo Guidoni Martins <kguidonimartins@gmail.com>
 URL: https://github.com/kguidonimartins/minimalTemplate, https://kguidonimartins.github.io/minimalTemplate
 BugReports: https://github.com/kguidonimartins/minimalTemplate/issues
 Encoding: UTF-8
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 Imports:
     usethis,
     git2r,

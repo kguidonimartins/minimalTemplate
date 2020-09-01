@@ -1,3 +1,5 @@
+# CHECK: https://github.com/benmarwick/rrtools/blob/master/inst/templates/travis.yml-no-docker
+# CHECK: https://github.com/benmarwick/rrtools/blob/master/inst/templates/travis.yml-with-docker
 os:
   - linux
 

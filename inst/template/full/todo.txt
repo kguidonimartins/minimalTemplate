@@ -6,8 +6,7 @@
 
 ## TODO
 
-- edit `.tmuxinator.yml`
-- run `ctags -R --exclude=@.ctagsignore`
+- edit `DESCRIPTION`
 
 ## DOING
 

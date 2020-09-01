@@ -2,45 +2,38 @@
 #'
 #' Setup and open a new projetc in RStudio
 #'
-#' @param name Name of the projetc
+#' @param project_name Name of the projetc
+#' 
+#' @importFrom usethis create_project
 #'
 #' @return None
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#' setup_template(name = "my_new_project")
+#' setup_template(project_name = "my_new_project")
 #' }
-setup_template <- function(name) {
+setup_template <- function(project_name) {
 
   # criar r project
-  usethis::create_project(path = name,
-                          rstudio = FALSE, 
+  usethis::create_project(path = project_name,
+                          rstudio = TRUE,
                           open = FALSE)
 
   inst_files <- c(
-      ".ctagsignore",
-      ".editorconfig",
-      ".git",
-      ".github",
       ".gitignore",
-      ".Rbuildignore",
-      ".session.vim",
-      ".tmuxinator.yml",
       ".travis.yml",
       "data",
       "DESCRIPTION",
       "Dockerfile",
       "main-script.Rmd",
       "Makefile",
+      "man",
       "manuscript",
-      "NOTES.md",
       "output",
       "R",
       "README.md",
-      "tags",
-      "todo.txt",
-      "minimalTemplate.Rproj"
+      "todo.txt"
     )
 
   # criar pastas
@@ -48,14 +41,9 @@ setup_template <- function(name) {
     file.copy(
       from = system.file(paste0("template/full/", inst_files[i]),
                          package = "minimalTemplate"),
-      to = name,
+      to = project_name,
       recursive = TRUE
     )
   }
-  
-  file.rename(
-    from = paste0(name, "/", "minimalTemplate.Rproj"),
-    to = paste0(name, "/" ,paste0(basename(name), ".Rproj"))
-  )
-  
+ 
 }

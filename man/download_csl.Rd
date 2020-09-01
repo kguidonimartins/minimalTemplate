@@ -17,6 +17,11 @@ None
 \description{
 Download csl citation style from \url{https://github.com/citation-style-language/styles}.
 }
+\section{Note}{
+
+See also: [Zotero Style Repository](https://www.zotero.org/styles)
+}
+
 \examples{
 \dontrun{
 # First, search by your preferred citation style using:

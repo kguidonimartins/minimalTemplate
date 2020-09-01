@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# You need to configure vim to load .git/tags (or install Fugitive.vim).
+#
+
+ctags -R --tag-relative=yes --exclude=@.git/hooks/ctagsignore 

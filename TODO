@@ -9,3 +9,6 @@
 ☐ update Dockerfile
 ☐ update travis for template
 ☐ add travis in repo
+☐ see: https://github.com/benmarwick/rrtools/blob/master/inst/templates/Dockerfile
+☐ `{rrtools}` tem maneiras interessantes de usar o travis para reconstruir a imagem docker de um repositório versionado; rodando inclusive o último render do paper.Rmd
+☐ os arquivos do setup_template não estão sendo baixados. eles estão no github, mas não vêm com a instalação do pacote.

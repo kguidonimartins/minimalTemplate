@@ -1,4 +1,5 @@
 # TODO: make this more general
+# CHECK: https://github.com/benmarwick/rrtools/blob/master/inst/templates/travis.yml-no-docker
 
 # get shiny serves plus tidyverse packages image
 FROM rocker/shiny-verse:latest

@@ -1,8 +1,30 @@
 ---
+title: "Chapter xx"
+
+author:
+- Eu^1^\*, Tu^2^, Ele^3^
+- ^1^Aqui, Brazil
+- ^2^Lá, Brazil
+- ^3^Acolá, Brazil
+- \*meliga@gagamail.com
+
+knit: (function(inputFile, encoding) {
+      out_dir <- 'manuscript';
+      rmarkdown::render(inputFile,
+                        encoding = encoding,
+                        output_file = file.path(dirname(inputFile),
+                        out_dir,
+                        'manuscript.docx')) })
+
 output:
   word_document:
     reference_docx: manuscript/sources/template.docx
-    pandoc_args: ["--metadata-file=manuscript/header.yml"]
+
+csl: manuscript/sources/ecology-letters.csl
+
+bibliography:
+- manuscript/sources/library.bib
+- manuscript/sources/installed-r-packages.bib
 ---
 
 
@@ -144,7 +166,7 @@ include_graphics(path = "pasta/da/minha/figura", dpi = "2in")
 
 \pagebreak
 
-<!-- Word count by *wordcountaddin* package 
+<!-- Word count by *wordcountaddin* package
 
 ```{r, echo=FALSE, eval=FALSE, message=FALSE}
 # wordcountaddin::text_stats(filename = "main-script.Rmd")
@@ -154,6 +176,18 @@ include_graphics(path = "pasta/da/minha/figura", dpi = "2in")
 
 \pagebreak
 
-```{r session-info}
-sessionInfo()
+### Colophon
+
+This report was generated on `r Sys.time()` using the following computational environment and dependencies:
+
+```{r colophon, cache = FALSE}
+# which R packages and versions?
+if ("devtools" %in% installed.packages()) devtools::session_info()
+```
+
+The current Git commit details are:
+
+```{r}
+# what commit is this file at?
+if ("git2r" %in% installed.packages() & git2r::in_repository(path = ".")) git2r::repository(here::here())
 ```
