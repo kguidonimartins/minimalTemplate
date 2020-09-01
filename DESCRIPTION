@@ -33,3 +33,4 @@ Imports:
     readr
 VignetteBuilder:
     knitr
+SystemRequirements: GNU make

@@ -4,10 +4,10 @@
 \alias{setup_template}
 \title{Setup a new project template}
 \usage{
-setup_template(name)
+setup_template(project_name)
 }
 \arguments{
-\item{name}{Name of the projetc}
+\item{project_name}{Name of the projetc}
 }
 \value{
 None
@@ -17,6 +17,6 @@ Setup and open a new projetc in RStudio
 }
 \examples{
 \dontrun{
-setup_template(name = "my_new_project")
+setup_template(project_name = "my_new_project")
 }
 }
