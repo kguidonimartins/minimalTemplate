@@ -10,10 +10,13 @@ author:
 
 knit: (function(inputFile, encoding) {
       out_dir <- 'manuscript';
+      if (!file.exists(out_dir)) {
+        dir.create(out_dir)
+      }
       rmarkdown::render(inputFile,
                         encoding = encoding,
                         output_file = file.path(dirname(inputFile),
-                        out_dir,
+                        output_dir = out_dir,
                         'manuscript.docx')) })
 
 output:
@@ -27,14 +30,19 @@ bibliography:
 - manuscript/sources/installed-r-packages.bib
 ---
 
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-if (!require("here")) install.packages("here")
+```{r setting_params, include = FALSE}
+params <- list()
+params$show_results <- FALSE
 ```
 
-
 ```{r analysis, child = "R/analysis.Rmd", eval = TRUE}
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, eval = TRUE, include = TRUE, cache = TRUE, root.dir = here::here())
+if (!require("here")) install.packages("here")
+if (!require("remotes")) install.packages("remotes")
+if (!require("misc")) remotes::install_github("kguidonimartins/misc")
 ```
 
 

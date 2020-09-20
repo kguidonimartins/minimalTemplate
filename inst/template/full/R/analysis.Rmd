@@ -1,6 +1,15 @@
 ---
 title: analysis
+params:
+  show_results: FALSE
 ---
+
+```{r knitr_setup_analysis, include=FALSE}
+
+show_results <- params$show_results
+
+knitr::opts_chunk$set(echo = show_results, eval = TRUE, include = params$show_results, cache = TRUE, root.dir = here::here())
+```
 
 
 ```{r, include=FALSE}

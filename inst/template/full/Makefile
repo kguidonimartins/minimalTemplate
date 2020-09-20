@@ -1,30 +1,42 @@
 .DEFAULT_GOAL := help
 
-RMD = main-script.Rmd
-DOC = manuscript/manuscript.docx
-MD = $(addsuffix .md, $(basename $(DOC)))
+R := Rscript -e
+RMD := main-script.Rmd
+DOCX := manuscript/manuscript.docx
+IMAGE := {{{USER}}}/{{{REPO}}}
 
-all: report manuscript convert-pdf ## run report, manuscript and convert-pdf
+.PHONY: analysis manuscript convert-pdf clean_cache
 
-report: ## generate analyis report
-	Rscript -e "rmarkdown::render(\
-	input = 'R/analysis.Rmd', \
-	output_file = '../output/results/analysis.html' \
-	)"
+all: clean_cache analysis manuscript convert-pdf ## run report and convert-pdf targets
 
-manuscript: ## compile manuscript
-	Rscript -e "rmarkdown::render(\
+styler: ## styler package
+	$(R) "styler::style_file('main-script.Rmd')"
+	$(R) "styler::style_file('R/analysis.Rmd')"
+
+manuscript: ## compile manuscript as draft_fire_beta_kggm_v6.docx
+	$(R) "rmarkdown::render(\
 	input = '$(RMD)', \
-	output_file = '$(DOC)' \
+	output_format = 'all', \
+	output_file = '$(DOCX)' \
 	)"
 
-convert-pdf: ## convert manuscript to pdf
-	lowriter --convert-to pdf $(DOC) --outdir manuscript
+analysis: ## compile analysis document to output/analysis.html
+	$(R) "rmarkdown::render(input = 'R/analysis.Rmd', params = list(show_results = TRUE), output_dir = 'output')"
 
-.PHONY: clean
-clean: ## remove figures
-	rm output/figures/*
+convert-pdf: ## convert report to a pdf file
+	lowriter --convert-to pdf $(DOCX) --outdir manuscript
+
+docker_build: ## build docker image
+	docker build -t $(IMAGE) .
+
+docker_run: ## run docker image and copy rendered to .
+	@echo "You need to run: docker run --rm -v `pwd`:/rendered chapter-01"
+	docker run --rm -v `pwd`:/rendered $(IMAGE)
+
+clean_cache: ## remove cache
+	rm -rf main-script_cache
+	rm -rf R/analysis_cache
 
 help: ## show this message
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
-		awk 'BEGIN {FS = ":.*?## "}; { printf "\033[36m%-20s\033[0m %s\n", $$1, $$2 }'
+		awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'

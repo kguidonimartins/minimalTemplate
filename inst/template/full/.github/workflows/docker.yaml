@@ -1,0 +1,37 @@
+on: [push]
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    container: rocker/verse
+    steps:
+      - uses: actions/checkout@v1
+      - run: |
+          apt-get update -y &&  apt-get install -y \
+          build-essential \
+          bwidget \
+          libcairo2-dev \
+          libcurl4-gnutls-dev \
+          libgdal-dev \
+          libgeos++-dev \
+          libgeos-dev \
+          libgmp3-dev \
+          libgsl0-dev \
+          libproj-dev \
+          libspatialite-dev \
+          libssh2-1-dev \
+          libssl-dev \
+          libudunits2-dev \
+          libxml2-dev \
+          libxt-dev \
+          make \
+          netcdf-bin \
+          pandoc \
+          pandoc-citeproc \
+          zlib1g-dev
+      - run: |
+          Rscript -e 'install.packages("remotes"); remotes::install_deps(upgrade = "never"); rmarkdown::render(input = "main-script.Rmd", output_file = "rendered-in-githubactions.docx")'
+      - name: Upload results
+        uses: actions/upload-artifact@main
+        with:
+          name: results
+          path: rendered-in-githubactions.docx

@@ -7,6 +7,9 @@
 ## TODO
 
 - edit `DESCRIPTION`
+- edit `Makefile`
+- edit `Dockerfile`
+- edit `.travis.yml`
 
 ## DOING
 

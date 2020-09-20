@@ -1,40 +1,16 @@
-# CHECK: https://github.com/benmarwick/rrtools/blob/master/inst/templates/travis.yml-no-docker
-# CHECK: https://github.com/benmarwick/rrtools/blob/master/inst/templates/travis.yml-with-docker
-os:
-  - linux
+language: bash
 
-language: r
+services:
+  - docker
 
-r_packages:
-  - devtools
+script:
+  - make docker_build
 
-sudo: false
-
-before_install: |
-  sudo apt-get -y install \
-  build-essential \
-  libcurl4-gnutls-dev \
-  libxml2-dev \
-  libssl-dev \
-  libgdal-dev \
-  bwidget \
-  libgdal1-dev \
-  libgeos-dev \
-  libgeos++-dev \
-  libgsl0-dev \
-  libproj-dev \
-  libspatialite-dev \
-  netcdf-bin \
-  libudunits2-dev
-
-cache: packages
-
-script: make all
-
-matrix:
-  include:
-  - r: release
+env:
+  global:
+  - REPO={{{USER}}}/{{{REPO}}}
 
 after_success:
-  - Rscript -e 'devtools::install()'
-
+  - docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
+  - export REPO={{{USER}}}/{{{REPO}}}
+  - if [ $TRAVIS_BRANCH == "main" ]; then docker push $REPO; fi

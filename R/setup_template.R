@@ -3,7 +3,7 @@
 #' Setup and open a new projetc in RStudio
 #'
 #' @param project_name Name of the projetc
-#' 
+#'
 #' @importFrom usethis create_project
 #'
 #' @return None
@@ -21,17 +21,22 @@ setup_template <- function(project_name) {
                           open = FALSE)
 
   inst_files <- c(
-      ".gitignore",
-      ".travis.yml",
+      ".github",
       "data",
-      "DESCRIPTION",
-      "Dockerfile",
-      "main-script.Rmd",
-      "Makefile",
-      "man",
       "manuscript",
       "output",
       "R",
+      ".dockerignore",
+      ".gitignore",
+      ".pre-pre-commit-config.yaml",
+      ".Rbuildignore",
+      ".Rprofile",
+      ".travis.yml",
+      "DESCRIPTION",
+      "Dockerfile",
+      "LICENSE.md",
+      "main-script.Rmd",
+      "Makefile",
       "README.md",
       "todo.txt"
     )
@@ -45,5 +50,5 @@ setup_template <- function(project_name) {
       recursive = TRUE
     )
   }
- 
+
 }
