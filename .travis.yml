@@ -22,7 +22,7 @@ before_install: |
 
 cache: packages
 
-script: make all
+script: make check
 
 matrix:
   include:
