@@ -14,7 +14,7 @@ pkg_list <-
     "usethis"
     )
 
-ipak(pkg_list)
+misc::ipak(pkg_list)
 
 write.bib(pkg_list, here("manuscript", "sources", "installed-r-packages.bib"))
 

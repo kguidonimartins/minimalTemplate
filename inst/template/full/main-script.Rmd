@@ -33,6 +33,7 @@ bibliography:
 ```{r setting_params, include = FALSE}
 params <- list()
 params$show_results <- FALSE
+if (!require("here")) install.packages("here")
 ```
 
 ```{r analysis, child = "R/analysis.Rmd", eval = TRUE}
@@ -40,7 +41,6 @@ params$show_results <- FALSE
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, eval = TRUE, include = TRUE, cache = TRUE, root.dir = here::here())
-if (!require("here")) install.packages("here")
 if (!require("remotes")) install.packages("remotes")
 if (!require("misc")) remotes::install_github("kguidonimartins/misc")
 ```

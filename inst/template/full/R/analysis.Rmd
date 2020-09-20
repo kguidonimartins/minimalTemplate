@@ -4,15 +4,14 @@ params:
   show_results: FALSE
 ---
 
-```{r knitr_setup_analysis, include=FALSE}
-
+```{r knitr_setup_analysis, include=params$show_results}
+if (!require("here")) install.packages("here")
 show_results <- params$show_results
-
 knitr::opts_chunk$set(echo = show_results, eval = TRUE, include = params$show_results, cache = TRUE, root.dir = here::here())
 ```
 
 
-```{r, include=FALSE}
+```{r, include=show_results}
 source(here("R", "local_functions.R"))
 source(here("R", "package_list.R"))
 ```

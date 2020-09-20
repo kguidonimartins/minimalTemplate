@@ -21,7 +21,7 @@ manuscript: ## compile manuscript as draft_fire_beta_kggm_v6.docx
 	)"
 
 analysis: ## compile analysis document to output/analysis.html
-	$(R) "rmarkdown::render(input = 'R/analysis.Rmd', params = list(show_results = TRUE), output_dir = 'output')"
+	$(R) "rmarkdown::render(input = 'R/analysis.Rmd', params = list(show_results = TRUE), output_dir = 'output/results')"
 
 convert-pdf: ## convert report to a pdf file
 	lowriter --convert-to pdf $(DOCX) --outdir manuscript
