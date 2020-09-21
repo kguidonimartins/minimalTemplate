@@ -12,7 +12,6 @@
 #' @return a csv file
 #' @export
 #'
-#' @examples
 extract_comments <- function(docx_path, filename_to_save = NULL) {
   
   if (is.null(filename_to_save)) {

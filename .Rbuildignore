@@ -7,3 +7,5 @@
 README.Rmd
 README.html
 tags
+^Makefile$
+^\.travis.yml$

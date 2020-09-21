@@ -4,7 +4,7 @@
 \alias{download_csl}
 \title{Download csl citation style}
 \usage{
-download_csl(journal_style, directory)
+download_csl(journal_style, directory = NULL)
 }
 \arguments{
 \item{journal_style}{Journal style (see examples)}

@@ -27,10 +27,13 @@ Imports:
     magrittr,
     pacman,
     docxtractr,
-    rcrossref,
     dplyr,
     glue,
-    readr
+    readr,
+    here,
+    fs
 VignetteBuilder:
     knitr
 SystemRequirements: GNU make
+Suggests:
+    testthat
