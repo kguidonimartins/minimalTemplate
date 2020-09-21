@@ -126,7 +126,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 # R packages
 
 ```{r eval = TRUE, echo = FALSE, results='asis'}
-cite_pkg(pkg_list)
+# cite_pkg(pkg_list)
 ```
 
 \pagebreak

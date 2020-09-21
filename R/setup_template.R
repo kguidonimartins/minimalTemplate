@@ -28,7 +28,7 @@ setup_template <- function(project_name) {
       "R",
       ".dockerignore",
       ".gitignore",
-      ".pre-pre-commit-config.yaml",
+      ".pre-commit-config.yaml",
       ".Rbuildignore",
       ".Rprofile",
       ".travis.yml",

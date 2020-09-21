@@ -1,7 +1,8 @@
 
 ![](http://www.textfiles.com/underconstruction/HeHeartlandPark2601underconstructionbar9.gif)
 
-# minimalTemplate
+minimalTemplate
+===============
 
 [![Build
 Status](https://travis-ci.com/kguidonimartins/minimalTemplate.svg?branch=master)](https://travis-ci.com/kguidonimartins/minimalTemplate)
@@ -17,16 +18,16 @@ production of docx files using
 no commitment to the structure standards of the projects or R packages.
 *Use at your own risk*.
 
-## Installation
+Installation
+------------
 
 You can install the development version of `{minimalTemplate}` with:
 
-``` r
-if(!require("remotes")) install.packages("remotes")
-remotes::install_github("kguidonimartins/minimalTemplate")
-```
+    if(!require("remotes")) install.packages("remotes")
+    remotes::install_github("kguidonimartins/minimalTemplate")
 
-## Example
+Example
+-------
 
 To use the full workflow of the `{minimalTemplate}`, follow the steps
 below:
@@ -36,24 +37,22 @@ below:
 3.  Set up the version control of `.docx` files (optional, but
     recommended)
 
-### 1\. Setting up a new template
+### 1. Setting up a new template
 
 Set a new template using:
 
-``` r
-# load minimalTemplate
-library(minimalTemplate)
+    # load minimalTemplate
+    library(minimalTemplate)
 
-# create a temporary directory (for a demo proposal only)
-tmp_proj <- file.path(tempdir(), "ms_chap_01")
+    # create a temporary directory (for a demo proposal only)
+    tmp_proj <- file.path(tempdir(), "ms_chap_01")
 
-# run `setup_template()`
-setup_template(tmp_proj)
-```
+    # run `setup_template()`
+    setup_template(tmp_proj)
 
-    ## ✔ Creating '/tmp/RtmplOdqpq/ms_chap_01/'
+    ## ✔ Creating '/tmp/RtmpKDOueX/ms_chap_01/'
 
-    ## ✔ Setting active project to '/tmp/RtmplOdqpq/ms_chap_01'
+    ## ✔ Setting active project to '/tmp/RtmpKDOueX/ms_chap_01'
 
     ## ✔ Creating 'R/'
 
@@ -69,62 +68,54 @@ project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects)
 The folder structure of the `ms_chap_01` project is (*this is not a
 mandatory structure*):
 
-    ## /tmp/RtmplOdqpq/ms_chap_01
-    ## ├── NOTES.md
+    ## /tmp/RtmpKDOueX/ms_chap_01
+    ## ├── DESCRIPTION
+    ## ├── Dockerfile
+    ## ├── LICENSE.md
+    ## ├── Makefile
     ## ├── R
+    ## │   ├── 99_analyse-refs.Rmd
     ## │   ├── README.md
     ## │   ├── analysis.Rmd
     ## │   ├── local_functions.R
-    ## │   ├── package_list.R
-    ## │   └── utils.R
+    ## │   └── package_list.R
     ## ├── README.md
     ## ├── data
     ## │   ├── clean
-    ## │   │   └── README.md
     ## │   ├── raw
-    ## │   │   └── README.md
     ## │   └── temp
-    ## │       └── README.md
     ## ├── main-script.Rmd
     ## ├── manuscript
-    ## │   ├── README.md
-    ## │   ├── header.yml
     ## │   └── sources
-    ## │       ├── README.md
-    ## │       ├── analyse-refs.Rmd
-    ## │       ├── clean-bib-file-bibtool.sh
-    ## │       ├── criticmarkup.lua
     ## │       ├── ecology-letters.csl
+    ## │       ├── helpers
+    ## │       │   ├── bibtool.config.rsc
+    ## │       │   └── clean-bib.sh
+    ## │       ├── installed-r-packages.bib
     ## │       ├── library.bib
-    ## │       ├── source-config-bibtool.rsc
     ## │       └── template.docx
     ## ├── ms_chap_01.Rproj
     ## ├── output
     ## │   ├── figures
-    ## │   │   └── README.md
     ## │   ├── results
-    ## │   │   └── README.md
     ## │   └── supp
-    ## │       └── README.md
     ## └── todo.txt
 
-You can use the various README files distributed by the subdirectories
-to explain what these folders contain.
+You can edit the various README files distributed among the
+subdirectories to explain what these folders contain.
 
 Open the `main_script.Rmd` file and press the `Knit` button.
 
-### 2\. Download a new citation style
+### 2. Download a new citation style
 
 Set a new citation style using:
 
-``` r
-# First, search by your citation style using:
-(eco <- grep(pattern = "ecology", x = rcrossref::get_styles(), value = TRUE))
-# then:
-download_csl(journal_style = eco[4], directory = "manuscript/sources/")
-```
+    # First, search by your citation style using:
+    (eco <- grep(pattern = "ecology", x = rcrossref::get_styles(), value = TRUE))
+    # then:
+    download_csl(journal_style = eco[4], directory = "manuscript/sources/")
 
-### 3\. Setting up the version control of `.docx` files
+### 3. Setting up the version control of `.docx` files
 
 In this step, I’m assuming you want to control the changes (files
 changes \[text and code\], entry of new analysis files) in your new
@@ -134,9 +125,7 @@ git in your new project template.
 
 To versioning your `.docx` files, just run the function:
 
-``` r
-setup_wdiff()
-```
+    setup_wdiff()
 
 This function is based on two git hooks (available
 [here](https://github.com/vigente/gerardus/tree/master/shell-script)) to
