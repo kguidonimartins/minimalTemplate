@@ -19,13 +19,10 @@ Encoding: UTF-8
 RoxygenNote: 7.1.1
 Imports:
     usethis,
-    git2r,
-    bibtex,
-    captioner,
     knitr,
+    git2r,
     rmarkdown,
     magrittr,
-    pacman,
     docxtractr,
     dplyr,
     glue,
