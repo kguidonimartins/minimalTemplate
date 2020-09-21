@@ -35,7 +35,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">minimalTemplate</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.2</span>
       </span>
     </div>
 
@@ -93,8 +93,8 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the development version of <code>{minimalTemplate}</code> with:</p>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="kw">if</span>(!<span class="fu"><a href="https://rdrr.io/r/base/library.html">require</a></span>(<span class="st">"remotes"</span>)) <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"remotes"</span>)
-<span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"kguidonimartins/minimalTemplate"</span>)</pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(<span class="st">"remotes"</span>)) <span class="kw">install.packages</span>(<span class="st">"remotes"</span>)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"kguidonimartins/minimalTemplate"</span>)</a></code></pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
@@ -109,71 +109,60 @@
 <h3 class="hasAnchor">
 <a href="#setting-up-a-new-template" class="anchor"></a>1. Setting up a new template</h3>
 <p>Set a new template using:</p>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="co"># load minimalTemplate</span>
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">minimalTemplate</span>)
-
-<span class="co"># create a temporary directory (for a demo proposal only)</span>
-<span class="no">tmp_proj</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/file.path.html">file.path</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/tempfile.html">tempdir</a></span>(), <span class="st">"ms_chap_01"</span>)
-
-<span class="co"># run `setup_template()`</span>
-<span class="fu"><a href="reference/setup_template.html">setup_template</a></span>(<span class="no">tmp_proj</span>)</pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">## ✔ Creating '/tmp/Rtmpeaofx2/ms_chap_01/'</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3">## ✔ Setting active project to '/tmp/Rtmpeaofx2/ms_chap_01'</a>
-<a class="sourceLine" id="cb3-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb3-5" data-line-number="5">## ✔ Creating 'R/'</a>
-<a class="sourceLine" id="cb3-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb3-7" data-line-number="7">## ✔ Writing 'ms_chap_01.Rproj'</a>
-<a class="sourceLine" id="cb3-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb3-9" data-line-number="9">## ✔ Adding '.Rproj.user' to '.gitignore'</a>
-<a class="sourceLine" id="cb3-10" data-line-number="10"></a>
-<a class="sourceLine" id="cb3-11" data-line-number="11">## ✔ Setting active project to '&lt;no active project&gt;'</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># load minimalTemplate</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">library</span>(minimalTemplate)</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co"># create a temporary directory (for a demo proposal only)</span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">tmp_proj &lt;-<span class="st"> </span><span class="kw">file.path</span>(<span class="kw">tempdir</span>(), <span class="st">"ms_chap_01"</span>)</a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co"># run `setup_template()`</span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="kw">setup_template</span>(tmp_proj)</a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10">## ✔ Creating '/tmp/RtmpKDOueX/ms_chap_01/'</a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12">## ✔ Setting active project to '/tmp/RtmpKDOueX/ms_chap_01'</a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"></a>
+<a class="sourceLine" id="cb2-14" data-line-number="14">## ✔ Creating 'R/'</a>
+<a class="sourceLine" id="cb2-15" data-line-number="15"></a>
+<a class="sourceLine" id="cb2-16" data-line-number="16">## ✔ Writing 'ms_chap_01.Rproj'</a>
+<a class="sourceLine" id="cb2-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb2-18" data-line-number="18">## ✔ Adding '.Rproj.user' to '.gitignore'</a>
+<a class="sourceLine" id="cb2-19" data-line-number="19"></a>
+<a class="sourceLine" id="cb2-20" data-line-number="20">## ✔ Setting active project to '&lt;no active project&gt;'</a></code></pre></div>
 <p>The above line will open a new <a href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects">RStudio project</a>.</p>
 <p>The folder structure of the <code>ms_chap_01</code> project is (<em>this is not a mandatory structure</em>):</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">## /tmp/Rtmpeaofx2/ms_chap_01</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2">## ├── DESCRIPTION</a>
-<a class="sourceLine" id="cb4-3" data-line-number="3">## ├── Dockerfile</a>
-<a class="sourceLine" id="cb4-4" data-line-number="4">## ├── Makefile</a>
-<a class="sourceLine" id="cb4-5" data-line-number="5">## ├── R</a>
-<a class="sourceLine" id="cb4-6" data-line-number="6">## │   ├── 99_analyse-refs.Rmd</a>
-<a class="sourceLine" id="cb4-7" data-line-number="7">## │   ├── README.md</a>
-<a class="sourceLine" id="cb4-8" data-line-number="8">## │   ├── analysis.Rmd</a>
-<a class="sourceLine" id="cb4-9" data-line-number="9">## │   ├── local_functions.R</a>
-<a class="sourceLine" id="cb4-10" data-line-number="10">## │   ├── package_list.R</a>
-<a class="sourceLine" id="cb4-11" data-line-number="11">## │   ├── utils-pipe.R</a>
-<a class="sourceLine" id="cb4-12" data-line-number="12">## │   └── utils.R</a>
-<a class="sourceLine" id="cb4-13" data-line-number="13">## ├── README.md</a>
-<a class="sourceLine" id="cb4-14" data-line-number="14">## ├── data</a>
-<a class="sourceLine" id="cb4-15" data-line-number="15">## │   ├── clean</a>
-<a class="sourceLine" id="cb4-16" data-line-number="16">## │   │   └── README.md</a>
-<a class="sourceLine" id="cb4-17" data-line-number="17">## │   ├── raw</a>
-<a class="sourceLine" id="cb4-18" data-line-number="18">## │   │   └── README.md</a>
-<a class="sourceLine" id="cb4-19" data-line-number="19">## │   └── temp</a>
-<a class="sourceLine" id="cb4-20" data-line-number="20">## │       └── README.md</a>
-<a class="sourceLine" id="cb4-21" data-line-number="21">## ├── main-script.Rmd</a>
-<a class="sourceLine" id="cb4-22" data-line-number="22">## ├── man</a>
-<a class="sourceLine" id="cb4-23" data-line-number="23">## │   └── pipe.Rd</a>
-<a class="sourceLine" id="cb4-24" data-line-number="24">## ├── manuscript</a>
-<a class="sourceLine" id="cb4-25" data-line-number="25">## │   ├── README.md</a>
-<a class="sourceLine" id="cb4-26" data-line-number="26">## │   └── sources</a>
-<a class="sourceLine" id="cb4-27" data-line-number="27">## │       ├── README.md</a>
-<a class="sourceLine" id="cb4-28" data-line-number="28">## │       ├── ecology-letters.csl</a>
-<a class="sourceLine" id="cb4-29" data-line-number="29">## │       ├── helpers</a>
-<a class="sourceLine" id="cb4-30" data-line-number="30">## │       │   ├── README.md</a>
-<a class="sourceLine" id="cb4-31" data-line-number="31">## │       │   ├── bibtool.config.rsc</a>
-<a class="sourceLine" id="cb4-32" data-line-number="32">## │       │   ├── clean-bib.sh</a>
-<a class="sourceLine" id="cb4-33" data-line-number="33">## │       │   └── criticmarkup.lua</a>
-<a class="sourceLine" id="cb4-34" data-line-number="34">## │       ├── library.bib</a>
-<a class="sourceLine" id="cb4-35" data-line-number="35">## │       └── template.docx</a>
-<a class="sourceLine" id="cb4-36" data-line-number="36">## ├── ms_chap_01.Rproj</a>
-<a class="sourceLine" id="cb4-37" data-line-number="37">## ├── output</a>
-<a class="sourceLine" id="cb4-38" data-line-number="38">## │   ├── figures</a>
-<a class="sourceLine" id="cb4-39" data-line-number="39">## │   │   └── README.md</a>
-<a class="sourceLine" id="cb4-40" data-line-number="40">## │   ├── results</a>
-<a class="sourceLine" id="cb4-41" data-line-number="41">## │   │   └── README.md</a>
-<a class="sourceLine" id="cb4-42" data-line-number="42">## │   └── supp</a>
-<a class="sourceLine" id="cb4-43" data-line-number="43">## │       └── README.md</a>
-<a class="sourceLine" id="cb4-44" data-line-number="44">## └── todo.txt</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">## /tmp/RtmpKDOueX/ms_chap_01</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">## ├── DESCRIPTION</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">## ├── Dockerfile</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">## ├── LICENSE.md</a>
+<a class="sourceLine" id="cb3-5" data-line-number="5">## ├── Makefile</a>
+<a class="sourceLine" id="cb3-6" data-line-number="6">## ├── R</a>
+<a class="sourceLine" id="cb3-7" data-line-number="7">## │   ├── 99_analyse-refs.Rmd</a>
+<a class="sourceLine" id="cb3-8" data-line-number="8">## │   ├── README.md</a>
+<a class="sourceLine" id="cb3-9" data-line-number="9">## │   ├── analysis.Rmd</a>
+<a class="sourceLine" id="cb3-10" data-line-number="10">## │   ├── local_functions.R</a>
+<a class="sourceLine" id="cb3-11" data-line-number="11">## │   └── package_list.R</a>
+<a class="sourceLine" id="cb3-12" data-line-number="12">## ├── README.md</a>
+<a class="sourceLine" id="cb3-13" data-line-number="13">## ├── data</a>
+<a class="sourceLine" id="cb3-14" data-line-number="14">## │   ├── clean</a>
+<a class="sourceLine" id="cb3-15" data-line-number="15">## │   ├── raw</a>
+<a class="sourceLine" id="cb3-16" data-line-number="16">## │   └── temp</a>
+<a class="sourceLine" id="cb3-17" data-line-number="17">## ├── main-script.Rmd</a>
+<a class="sourceLine" id="cb3-18" data-line-number="18">## ├── manuscript</a>
+<a class="sourceLine" id="cb3-19" data-line-number="19">## │   └── sources</a>
+<a class="sourceLine" id="cb3-20" data-line-number="20">## │       ├── ecology-letters.csl</a>
+<a class="sourceLine" id="cb3-21" data-line-number="21">## │       ├── helpers</a>
+<a class="sourceLine" id="cb3-22" data-line-number="22">## │       │   ├── bibtool.config.rsc</a>
+<a class="sourceLine" id="cb3-23" data-line-number="23">## │       │   └── clean-bib.sh</a>
+<a class="sourceLine" id="cb3-24" data-line-number="24">## │       ├── installed-r-packages.bib</a>
+<a class="sourceLine" id="cb3-25" data-line-number="25">## │       ├── library.bib</a>
+<a class="sourceLine" id="cb3-26" data-line-number="26">## │       └── template.docx</a>
+<a class="sourceLine" id="cb3-27" data-line-number="27">## ├── ms_chap_01.Rproj</a>
+<a class="sourceLine" id="cb3-28" data-line-number="28">## ├── output</a>
+<a class="sourceLine" id="cb3-29" data-line-number="29">## │   ├── figures</a>
+<a class="sourceLine" id="cb3-30" data-line-number="30">## │   ├── results</a>
+<a class="sourceLine" id="cb3-31" data-line-number="31">## │   └── supp</a>
+<a class="sourceLine" id="cb3-32" data-line-number="32">## └── todo.txt</a></code></pre></div>
 <p>You can edit the various README files distributed among the subdirectories to explain what these folders contain.</p>
 <p>Open the <code>main_script.Rmd</code> file and press the <code>Knit</code> button.</p>
 </div>
@@ -181,17 +170,17 @@
 <h3 class="hasAnchor">
 <a href="#download-a-new-citation-style" class="anchor"></a>2. Download a new citation style</h3>
 <p>Set a new citation style using:</p>
-<div class="sourceCode" id="cb5"><pre class="r"><span class="co"># First, search by your citation style using:</span>
-(<span class="no">eco</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/grep.html">grep</a></span>(<span class="kw">pattern</span> <span class="kw">=</span> <span class="st">"ecology"</span>, <span class="kw">x</span> <span class="kw">=</span> <span class="kw pkg">rcrossref</span><span class="kw ns">::</span><span class="fu"><a href="https://docs.ropensci.org/rcrossref/reference/get_styles.html">get_styles</a></span>(), <span class="kw">value</span> <span class="kw">=</span> <span class="fl">TRUE</span>))
-<span class="co"># then:</span>
-<span class="fu"><a href="reference/download_csl.html">download_csl</a></span>(<span class="kw">journal_style</span> <span class="kw">=</span> <span class="no">eco</span>[<span class="fl">4</span>], <span class="kw">directory</span> <span class="kw">=</span> <span class="st">"manuscript/sources/"</span>)</pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co"># First, search by your citation style using:</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2">(eco &lt;-<span class="st"> </span><span class="kw">grep</span>(<span class="dt">pattern =</span> <span class="st">"ecology"</span>, <span class="dt">x =</span> rcrossref<span class="op">::</span><span class="kw">get_styles</span>(), <span class="dt">value =</span> <span class="ot">TRUE</span>))</a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co"># then:</span></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="kw">download_csl</span>(<span class="dt">journal_style =</span> eco[<span class="dv">4</span>], <span class="dt">directory =</span> <span class="st">"manuscript/sources/"</span>)</a></code></pre></div>
 </div>
 <div id="setting-up-the-version-control-of--docx-files" class="section level3">
 <h3 class="hasAnchor">
 <a href="#setting-up-the-version-control-of--docx-files" class="anchor"></a>3. Setting up the version control of <code>.docx</code> files</h3>
 <p>In this step, I’m assuming you want to control the changes (files changes <br><span class="math display"><em>t</em><em>e</em><em>x</em><em>t</em><em>a</em><em>n</em><em>d</em><em>c</em><em>o</em><em>d</em><em>e</em></span><br>, entry of new analysis files) in your new project folder. Please, refer to <a href="https://kbroman.org/github_tutorial/">this</a> to learn how to configure git in your new project template.</p>
 <p>To versioning your <code>.docx</code> files, just run the function:</p>
-<div class="sourceCode" id="cb6"><pre class="r"><span class="fu"><a href="reference/setup_wdiff.html">setup_wdiff</a></span>()</pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">setup_wdiff</span>()</a></code></pre></div>
 <p>This function is based on two git hooks (available <a href="https://github.com/vigente/gerardus/tree/master/shell-script">here</a>) to create a <code>.md</code> copy of <code>.docx</code> files and track the changes.</p>
 </div>
 </div>
@@ -233,7 +222,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
