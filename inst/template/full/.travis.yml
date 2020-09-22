@@ -1,4 +1,7 @@
-language: bash
+os: linux
+dist: xenial
+
+language: shell
 
 services:
   - docker
@@ -6,11 +9,7 @@ services:
 script:
   - make docker_build
 
-env:
-  global:
-  - REPO={{{USER}}}/{{{REPO}}}
-
 after_success:
-  - docker login -u "$DOCKER_USER" -p "$DOCKER_PASSWORD"
+  - docker login -u {{{USER}}} -p "$DOCKER_PASSWORD"
   - export REPO={{{USER}}}/{{{REPO}}}
   - if [ $TRAVIS_BRANCH == "main" ]; then docker push $REPO; fi

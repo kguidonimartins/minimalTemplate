@@ -16,7 +16,6 @@ styler: ## styler package
 manuscript: ## compile manuscript as draft_fire_beta_kggm_v6.docx
 	$(R) "rmarkdown::render(\
 	input = '$(RMD)', \
-	output_format = 'all', \
 	output_file = '$(DOCX)' \
 	)"
 
