@@ -36,7 +36,7 @@ params$show_results <- FALSE
 if (!require("here")) install.packages("here")
 ```
 
-```{r analysis, child = "R/analysis.Rmd", eval = TRUE}
+```{r analysis, child = here::here("R", "analysis.Rmd"), eval = TRUE}
 ```
 
 ```{r setup, include=FALSE}
