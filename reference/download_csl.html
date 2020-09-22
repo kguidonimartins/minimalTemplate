@@ -156,7 +156,7 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
 <span class='co'># First, search by your preferred citation style using:</span>
-(<span class='kw'>eco</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grep</a></span>(pattern = <span class='st'>"ecology"</span>, x = <span class='kw'>rcrossref</span>::<span class='fu'><a href='https://rdrr.io/pkg/rcrossref/man/get_styles.html'>get_styles</a></span>(), value = <span class='fl'>TRUE</span>))
+(<span class='kw'>eco</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grep</a></span>(pattern = <span class='st'>"ecology"</span>, x = <span class='kw'>rcrossref</span>::<span class='fu'><a href='https://docs.ropensci.org/rcrossref/reference/get_styles.html'>get_styles</a></span>(), value = <span class='fl'>TRUE</span>))
 <span class='co'># then:</span>
 <span class='fu'>download_csl</span>(journal_style = <span class='kw'>eco</span>[<span class='fl'>4</span>], directory = <span class='st'>""</span>)
 }
