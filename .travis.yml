@@ -41,5 +41,5 @@ deploy:
 after_success:
   - Rscript -e "devtools::install()"
   - Rscript -e "pkgdown::build_site(preview = FALSE)"
-  - Rscript -e "minimalTemplate::setup_template('ma-teste'); rmarkdown::render('ma-teste/main-script.Rmd')"
+  - Rscript -e "proj <- file.path(tempdir(), 'ma-proj'); minimalTemplate::setup_template(proj); rmarkdown::render(paste0(proj, '/main-script.Rmd'))"
 
