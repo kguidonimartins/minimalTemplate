@@ -1,8 +1,8 @@
 FROM rocker/verse
 
-RUN . /etc/environment \
-  && apt-get update \
-  && apt-get install -y \
+RUN . /etc/environment && \
+  apt-get update && \
+  apt-get install -y \
   build-essential \
   bwidget \
   libcairo2-dev \

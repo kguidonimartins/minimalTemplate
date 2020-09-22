@@ -1,20 +1,16 @@
-## BACKLOG
-
-- ICEBOX
-    > Someday, maybe, that data...
-    * [ ] see cool_paper.pdf
-
 ## TODO
 
-- edit `DESCRIPTION`
-- edit `Makefile`
-- edit `Dockerfile`
-- edit `.travis.yml`
+- edit Author field in the `DESCRIPTION` file
+- create an account in DockerHub: https://hub.docker.com/
+- edit the `Makefile` file
+    > on top of the file, change the word USER in the DOCKERHUB_USERNAME variable by your DockerHub username
+- edit the `.travis.yml` file
+    > on top of the file, change the word USER in the DOCKERHUB_USERNAME variable by your DockerHub username
+- knit (compile) the `main-script.Rmd` file
+- add, commit, and push the changes to your Git remote repository
+- add your DockerHub password as DOCKERHUB_PASSWORD environment variable in Travis CI
 
 ## DOING
-
-
-## WAITING
 
 
 ## DONE
