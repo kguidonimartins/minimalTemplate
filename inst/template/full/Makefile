@@ -1,11 +1,11 @@
-# Change the word WORD by your DockerHub username
+# Change the word USER by your DockerHub username
 DOCKERHUB_USERNAME := USER
 
 # variables for R
 R := Rscript -e
 RMD_TEXT := main-script.Rmd
-RMD_CODE := R/analysis.Rmd
 DOCX := manuscript/manuscript.docx
+RMD_CODE := R/analysis.Rmd
 HTML := output/results/analysis.html
 
 # variables for Docker
@@ -29,7 +29,7 @@ analysis: ## compile RMD_CODE as HTML
 	$(R) "rmarkdown::render( \
 	input = '$(RMD_CODE)', \
 	params = list(show_results = TRUE), \
-	output_dir = '$(dir $(HTML))' \
+	output_file = '$(HTML)' \
 	)"
 
 .PHONY: clean_cache

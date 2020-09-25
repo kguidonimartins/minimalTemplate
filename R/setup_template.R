@@ -4,7 +4,7 @@
 #'
 #' @param project_name Name of the projetc
 #'
-#' @importFrom usethis create_project
+#' @importFrom usethis create_project ui_info
 #'
 #' @return None
 #' @export
@@ -28,7 +28,6 @@ setup_template <- function(project_name) {
       "R",
       ".dockerignore",
       ".gitignore",
-      ".pre-commit-config.yaml",
       ".Rbuildignore",
       ".Rprofile",
       ".travis.yml",
@@ -46,9 +45,12 @@ setup_template <- function(project_name) {
     file.copy(
       from = system.file(paste0("template/full/", inst_files[i]),
                          package = "minimalTemplate"),
+      overwrite = TRUE,
       to = project_name,
       recursive = TRUE
     )
   }
+
+  usethis::ui_info("Please, following the instructions in the 'todo.txt' file")
 
 }

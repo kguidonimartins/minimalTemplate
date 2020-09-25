@@ -4,3 +4,10 @@
 ^LICENSE\.md$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^todo\.txt$
+^tags$
+^\.pre-commit-config\.yaml$
+^\.travis\.yml$
+^Makefile$
+^Dockerfile$
+

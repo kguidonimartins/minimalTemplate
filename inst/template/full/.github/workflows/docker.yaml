@@ -6,20 +6,27 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: |
-          apt-get update -y &&  apt-get install -y \
+          apt-get update && \
+          apt-get install -y \
           build-essential \
           bwidget \
           libcairo2-dev \
           libcurl4-gnutls-dev \
+          libexif-dev \
+          libfontconfig1-dev \
+          libfreetype6-dev \
           libgdal-dev \
           libgeos++-dev \
           libgeos-dev \
+          libglib2.0-dev \
           libgmp3-dev \
           libgsl0-dev \
+          libmagick++-dev \
           libproj-dev \
           libspatialite-dev \
           libssh2-1-dev \
           libssl-dev \
+          libtiff5-dev \
           libudunits2-dev \
           libxml2-dev \
           libxt-dev \
@@ -29,9 +36,13 @@ jobs:
           pandoc-citeproc \
           zlib1g-dev
       - run: |
-          Rscript -e 'install.packages("remotes"); remotes::install_deps(upgrade = "never"); rmarkdown::render(input = "main-script.Rmd", output_file = "rendered-in-githubactions.docx")'
+          echo "options(Ncpus = $(nproc --all))" >> /usr/local/lib/R/etc/Rprofile.site
+      - run: |
+          Rscript -e 'options(repos = list(CRAN = "https://cran.microsoft.com/snapshot/2020-03-26/")); install.packages("remotes"); remotes::install_deps(upgrade = "never"); rmarkdown::render(input = "R/analysis.Rmd", params = list(show_results = TRUE), output_file = "analysis-rendered-in-githubactions.html"); rmarkdown::render(input = "main-script.Rmd", output_file = "paper-rendered-in-githubactions.docx")'
       - name: Upload results
         uses: actions/upload-artifact@main
         with:
           name: results
-          path: rendered-in-githubactions.docx
+          path: |
+            paper-rendered-in-githubactions.docx
+            R/analysis-rendered-in-githubactions.html
