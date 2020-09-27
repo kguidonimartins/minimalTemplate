@@ -1,18 +1,77 @@
 ---
 title: analysis
+date: "`r Sys.time()`"
 params:
   show_results: FALSE
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    highlight: tango
 ---
 
-```{r knitr_setup_analysis, include=params$show_results}
+```{r knitr_setup_analysis, include=FALSE}
+
 if (!require("here")) install.packages("here")
+
 show_results <- params$show_results
-knitr::opts_chunk$set(echo = show_results, eval = TRUE, include = params$show_results, cache = TRUE, root.dir = here::here())
+
+knitr::opts_chunk$set(
+  echo = show_results,
+  eval = TRUE,
+  include = params$show_results,
+  cache = TRUE
+)
+
 ```
 
 
-```{r, include=show_results}
-source(here("R", "local_functions.R"))
-source(here("R", "package_list.R"))
+```{r pkg_and_functions_setup}
+
+source(here::here("R", "package_list.R"))
+source(here::here("R", "local_functions.R"))
+
 ```
 
+```{r data_entry}
+
+mtcars <- mtcars
+
+```
+
+```{r plots}
+
+mpg_cyl_plot <-
+  mtcars %>%
+  ggplot() +
+  aes(x = mpg, y = cyl) +
+  geom_point()
+
+mpg_cyl_plot
+
+save_plot(mpg_cyl_plot, format = "tiff", trim = TRUE)
+
+mpg_hp_plot <-
+  mtcars %>%
+  ggplot() +
+  aes(x = mpg, y = hp) +
+  geom_point()
+
+mpg_hp_plot
+
+save_plot(mpg_hp_plot, dir_to_save = here::here("output", "supp"), format = "tiff", trim = TRUE)
+
+```
+
+```{r session-info}
+
+if ("devtools" %in% installed.packages()) devtools::session_info()
+
+```
+
+
+```{r commit_info}
+
+if ("git2r" %in% installed.packages() & git2r::in_repository(path = ".")) git2r::repository(here::here())
+
+```

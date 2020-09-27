@@ -1,12 +1,12 @@
 ---
-title: "Chapter xx"
+title: "My awesome scientific paper"
 
 author:
-- Eu^1^\*, Tu^2^, Ele^3^
-- ^1^Aqui, Brazil
-- ^2^Lá, Brazil
-- ^3^Acolá, Brazil
-- \*meliga@gagamail.com
+- Elza da C. Soares^1^\*, Aretha L. Franklin^2^, Phabullo Rodrigues da Silva^3^
+- ^1^Padre Miguel, Rio de Janeiro, Brazil
+- ^2^Memphis, Tennessee, USA
+- ^3^São Luís, Maranhão, Brazil
+- \*cacildis@gagamail.com
 
 knit: (function(inputFile, encoding) {
       out_dir <- 'manuscript';
@@ -27,42 +27,72 @@ csl: manuscript/sources/ecology-letters.csl
 
 bibliography:
 - manuscript/sources/library.bib
-- manuscript/sources/installed-r-packages.bib
+- manuscript/sources/packages.bib
 ---
 
 ```{r setting_params, include = FALSE}
+
+if (!require("here")) install.packages("here")
+# turn off results when compiling the main-script.Rmd
 params <- list()
 params$show_results <- FALSE
-if (!require("here")) install.packages("here")
-```
 
-```{r analysis, child = here::here("R", "analysis.Rmd"), eval = TRUE}
-```
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, eval = TRUE, include = TRUE, cache = TRUE, root.dir = here::here())
-if (!require("remotes")) install.packages("remotes")
-if (!require("misc")) remotes::install_github("kguidonimartins/misc")
 ```
 
 
-```{r caption_functions}
-table_cap <- captioner(prefix = "Table")
+<!--
+The following chunk (analysis_and_figures) need to be empty.
+R/analysis.Rmd run all analysis and create figures.
+Some objects created there are used here to extract results
+and embed them in the main text.
+-->
 
-table_ref <- function(label) {
-  stringr::str_extract(label, "[^:]*")
-}
 
-figure_cap <- captioner(prefix = "Figure")
+```{r analysis_and_figures, child = here::here("R", "analysis.Rmd"), eval = TRUE, include = params$show_results}
+```
 
-figure_ref <- function(label) {
-  stringr::str_extract(label, "[^:]*")
-}
+
+```{r knitr_setup_for_main_script, include=FALSE}
+
+knitr::opts_chunk$set(
+  echo = FALSE,
+  eval = TRUE,
+  include = FALSE,
+  cache = TRUE,
+  root.dir = here::here()
+)
+
+```
+
+```{r figure_and_captions}
+
+TAB_CAP_CARS <- table_cap(
+  name = "tab-mtcars",
+  caption = "My mtcars table."
+)
+
+FIG_CAP_CARS <-
+  figure_cap(
+    name = "fig-mtcars",
+    caption = "My mtcars figure."
+  )
+
+FIG_CAP_CARS_SUPP <-
+  figure_cap_supp(
+    name = "fig-mtcars-supp",
+    caption = "My supp mtcars figure."
+  )
+
 ```
 
 # Abstract
 
-Lá-lá-lá
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 **Keywords: aguardente, gelo, limão, açúcar**
 
@@ -86,7 +116,7 @@ tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit [@Vellend2001] in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum [@rcore].
 
 \pagebreak
 
@@ -95,9 +125,9 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit [@Vellend2001] in voluptate velit esse
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum `r figure_ref(FIG_CAP_CARS)` and `r figure_ref(FIG_CAP_CARS_SUPP)`.
 
 \pagebreak
 
@@ -123,14 +153,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \pagebreak
 
-# R packages
-
-```{r eval = TRUE, echo = FALSE, results='asis'}
-# cite_pkg(pkg_list)
-```
-
-\pagebreak
-
 # References
 
 <!-- https://stackoverflow.com/a/44294306/5974372 -->
@@ -141,61 +163,50 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 # Tables
 
-# TODO: add flextable here
 
-<!-- https://datascienceplus.com/r-markdown-how-to-number-and-reference-tables/ -->
+```{r overwrite_chunk_settings_for_results, include=FALSE}
 
+knitr::opts_chunk$set(
+  echo = FALSE,
+  eval = TRUE,
+  include = TRUE,
+  fig.height = 10,
+  fig.width = 10,
+  results = "asis",
+  root.dir = here::here()
+)
 
-```{r, eval=TRUE, echo=FALSE, results='asis'}
-cat(table_cap(name = "tab_exemplo", "Apenas um exempĺo de como aplicar a legenda em uma tabela."))
-knitr::kable(x = head(mtcars), format = "markdown", align = "c")
+```
+
+```{r print_table}
+
+cat(TAB_CAP_CARS)
+
+mtcars %>%
+  knitr::kable(align = "l")
+
 ```
 
 \pagebreak
 
 # Figures
 
-```{r, echo=FALSE, eval=TRUE, results='asis', fig.height=10, fig.width=10}
-plot(1:10, pch = 21, bg = "red")
-cat("\n", figure_cap(name = "fig_exemplo", "Apenas um exemplo de como aplicar a legenda em um figura."))
-```
+```{r print_fig_cars, fig.cap=FIG_CAP_CARS}
 
-\pagebreak
+FIGURE_CARS <- here::here("output", "figures", "trim", "mpg_cyl_plot.tiff")
+grid::grid.raster(readTIFF(source = FIGURE_CARS))
 
-External figures can also be included using the `include_graphics` function. Example code below:
-
-```{r, echo=TRUE, eval=FALSE}
-include_graphics(path = "pasta/da/minha/figura", dpi = "2in")
 ```
 
 \pagebreak
 
 # Appendix
 
-\pagebreak
+```{r figure_caption_supp, fig.cap=FIG_CAP_CARS_SUPP}
 
-<!-- Word count by *wordcountaddin* package
+FIGURE_CARS_SUPP <- here::here("output", "supp", "mpg_hp_plot.tiff")
+grid::grid.raster(readTIFF(source = FIGURE_CARS_SUPP))
 
-```{r, echo=FALSE, eval=FALSE, message=FALSE}
-# wordcountaddin::text_stats(filename = "main-script.Rmd")
 ```
 
--->
 
-\pagebreak
-
-### Colophon
-
-This report was generated on `r Sys.time()` using the following computational environment and dependencies:
-
-```{r colophon, cache = FALSE}
-# which R packages and versions?
-if ("devtools" %in% installed.packages()) devtools::session_info()
-```
-
-The current Git commit details are:
-
-```{r}
-# what commit is this file at?
-if ("git2r" %in% installed.packages() & git2r::in_repository(path = ".")) git2r::repository(here::here())
-```

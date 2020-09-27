@@ -23,6 +23,27 @@ Imports:
     broom,
     usethis,
     here,
-    magrittr
+    magrittr,
+    conflicted,
+    cowplot,
+    crayon,
+    dplyr,
+    forcats,
+    fs,
+    ggplot2,
+    ggsn,
+    glue,
+    grid,
+    gridExtra,
+    magick,
+    purrr,
+    RColorBrewer,
+    readr,
+    sf,
+    stringr,
+    tibble,
+    tidyr,
+    tiff,
+    vegan
 Depends:
     tidyverse

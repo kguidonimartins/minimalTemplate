@@ -1,6 +1,6 @@
 Package: minimalTemplate
 Title: A minimal template for scientific manuscripts
-Version: 0.0.2
+Version: 0.0.3
 Date: 2018-05-31
 Authors@R: c(
     person("Karlo", "Guidoni Martins", email = "kguidonimartins@gmail.com",

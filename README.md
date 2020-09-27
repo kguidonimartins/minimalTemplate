@@ -45,64 +45,71 @@ Set a new template using:
     library(minimalTemplate)
 
     # create a temporary directory (for a demo proposal only)
-    tmp_proj <- file.path(tempdir(), "ms_chap_01")
+    tmp_proj <- file.path(tempdir(), "awesome-manuscript")
 
     # run `setup_template()`
     setup_template(tmp_proj)
 
-    ## ✔ Creating '/tmp/RtmpKDOueX/ms_chap_01/'
+    ## ✔ Creating '/tmp/Rtmp3UYZJ9/awesome-manuscript/'
 
-    ## ✔ Setting active project to '/tmp/RtmpKDOueX/ms_chap_01'
+    ## ✔ Setting active project to '/tmp/Rtmp3UYZJ9/awesome-manuscript'
 
     ## ✔ Creating 'R/'
 
-    ## ✔ Writing 'ms_chap_01.Rproj'
+    ## ✔ Writing 'awesome-manuscript.Rproj'
 
     ## ✔ Adding '.Rproj.user' to '.gitignore'
 
     ## ✔ Setting active project to '<no active project>'
 
+    ## ℹ Please, following the instructions in the 'todo.txt' file
+
 The above line will open a new [RStudio
 project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects).
 
-The folder structure of the `ms_chap_01` project is (*this is not a
+The folder structure of the `awesome-project` project is (*this is not a
 mandatory structure*):
 
-    ## /tmp/RtmpKDOueX/ms_chap_01
+    ## /tmp/Rtmp3UYZJ9/awesome-manuscript
+    ## ├── .Rbuildignore
+    ## ├── .dockerignore
+    ## ├── .github
+    ## │   └── workflows
+    ## │       └── docker.yaml
+    ## ├── .gitignore
+    ## ├── .travis.yml
     ## ├── DESCRIPTION
     ## ├── Dockerfile
     ## ├── LICENSE.md
     ## ├── Makefile
     ## ├── R
-    ## │   ├── 99_analyse-refs.Rmd
-    ## │   ├── README.md
     ## │   ├── analysis.Rmd
     ## │   ├── local_functions.R
     ## │   └── package_list.R
     ## ├── README.md
+    ## ├── awesome-manuscript.Rproj
     ## ├── data
     ## │   ├── clean
+    ## │   │   └── .gitkeep
     ## │   ├── raw
+    ## │   │   └── .gitkeep
     ## │   └── temp
+    ## │       └── .gitkeep
     ## ├── main-script.Rmd
     ## ├── manuscript
     ## │   └── sources
     ## │       ├── ecology-letters.csl
-    ## │       ├── helpers
-    ## │       │   ├── bibtool.config.rsc
-    ## │       │   └── clean-bib.sh
     ## │       ├── installed-r-packages.bib
     ## │       ├── library.bib
     ## │       └── template.docx
-    ## ├── ms_chap_01.Rproj
     ## ├── output
     ## │   ├── figures
+    ## │   │   └── .gitkeep
     ## │   ├── results
+    ## │   │   └── .gitkeep
     ## │   └── supp
+    ## │       └── .gitkeep
     ## └── todo.txt
-
-You can edit the various README files distributed among the
-subdirectories to explain what these folders contain.
 
 Open the `main_script.Rmd` file and press the `Knit` button.
 

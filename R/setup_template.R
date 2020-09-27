@@ -5,6 +5,7 @@
 #' @param project_name Name of the projetc
 #'
 #' @importFrom usethis create_project ui_info
+#' @importFrom utils download.file
 #'
 #' @return None
 #' @export
@@ -50,6 +51,14 @@ setup_template <- function(project_name) {
       recursive = TRUE
     )
   }
+
+  file_wanted <- paste0(project_name, "/.gitignore")
+  URL_base <- "https://www.toptal.com/developers/gitignore/api/"
+  type <- "r"
+  URL_wanted <- paste0(URL_base, type)
+  utils::download.file(url = URL_wanted, destfile = file_wanted, quiet = TRUE)
+  write("tags", file = file_wanted, append = TRUE)
+  write("*_files/", file = file_wanted, append = TRUE)
 
   usethis::ui_info("Please, following the instructions in the 'todo.txt' file")
 
