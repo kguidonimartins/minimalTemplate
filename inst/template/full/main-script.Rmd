@@ -10,9 +10,7 @@ author:
 
 knit: (function(inputFile, encoding) {
       out_dir <- 'manuscript';
-      if (!file.exists(out_dir)) {
-        dir.create(out_dir)
-      }
+      if (!file.exists(out_dir)) dir.create(out_dir);
       rmarkdown::render(inputFile,
                         encoding = encoding,
                         output_file = file.path(dirname(inputFile),

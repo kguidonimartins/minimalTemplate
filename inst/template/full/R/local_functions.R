@@ -1,31 +1,48 @@
-
-table_cap <- captioner(prefix = "Table")
-
-table_cap_supp <- captioner(prefix = "Table S", auto_space = FALSE)
-
-table_ref <- function(label) {
-  stringr::str_extract(label, "[^:]*")
-}
-
-figure_cap <- captioner(prefix = "Figure")
-
-figure_cap_supp <- captioner(prefix = "Figure S", auto_space = FALSE)
-
-figure_ref <- function(label) {
-  stringr::str_extract(label, "[^:]*")
-}
-
 check_require <- function(pkg) {
+
   full_pkgname <- pkg
   pkgname <- basename(full_pkgname)
 
   if (!requireNamespace(pkgname, quietly = TRUE)) {
-    usethis::ui_stop(
-      "Package {usethis::ui_field(pkgname)} needed for this function to work!
-       Solution: You can install it with `misc::ipak(\"{ui_field(full_pkgname)}\")`"
-    )
+    if (grepl(pattern = "/", x = full_pkgname)) {
+      stop(
+        paste("Please install: remotes::install_github('",full_pkgname,"')."),
+        call. = FALSE
+      )
+    } else {
+      stop(
+        paste("Please install: install.packages('",pkgname,"')."),
+        call. = FALSE
+      )
+    }
+
   }
+
 }
+
+
+if ("captioner" %in% installed.packages()) {
+
+  table_cap <- captioner::captioner(prefix = "Table")
+
+  table_cap_supp <- captioner::captioner(prefix = "Table S", auto_space = FALSE)
+
+  table_ref <- function(label) {
+    stringr::str_extract(label, "[^:]*")
+  }
+
+  figure_cap <- captioner::captioner(prefix = "Figure")
+
+  figure_cap_supp <- captioner::captioner(prefix = "Figure S", auto_space = FALSE)
+
+  figure_ref <- function(label) {
+    stringr::str_extract(label, "[^:]*")
+  }
+
+} else {
+  check_require("captioner")
+}
+
 
 save_plot <- function(object, filename = NULL, dir_to_save = NULL, width = NA, height = NA, format = NULL, units = NULL, dpi = NULL, overwrite = FALSE, trim = FALSE) {
   default_format <- "png"
@@ -99,4 +116,18 @@ trim_fig <- function(figure_path, overwrite = FALSE) {
   }
 }
 
+render_analysis <- function() {
+  rmarkdown::render(
+    input = here::here("R/analysis.Rmd"),
+    output_dir = here::here("output/results"),
+    params = list(show_results = TRUE)
+  )
+}
 
+render_manuscript <- function() {
+  rmarkdown::render(
+    here::here("main-script.Rmd"),
+    output_file = "manuscript.docx",
+    output_dir = here::here("manuscript")
+  )
+}

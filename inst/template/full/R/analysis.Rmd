@@ -1,6 +1,14 @@
 ---
 title: analysis
 date: "`r Sys.time()`"
+knit: (function(inputFile, encoding) {
+      out_dir <- '../output/results';
+      if (!file.exists(out_dir)) dir.create(out_dir);
+      rmarkdown::render(inputFile,
+                        encoding = encoding,
+                        output_file = file.path(dirname(inputFile),
+                        output_dir = out_dir,
+                        'analysis.html')) })
 params:
   show_results: FALSE
 output:

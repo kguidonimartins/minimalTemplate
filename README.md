@@ -50,9 +50,9 @@ Set a new template using:
     # run `setup_template()`
     setup_template(tmp_proj)
 
-    ## ✔ Creating '/tmp/Rtmp3UYZJ9/awesome-manuscript/'
+    ## ✔ Creating '/tmp/Rtmpgw15l1/awesome-manuscript/'
 
-    ## ✔ Setting active project to '/tmp/Rtmp3UYZJ9/awesome-manuscript'
+    ## ✔ Setting active project to '/tmp/Rtmpgw15l1/awesome-manuscript'
 
     ## ✔ Creating 'R/'
 
@@ -64,13 +64,10 @@ Set a new template using:
 
     ## ℹ Please, following the instructions in the 'todo.txt' file
 
-The above line will open a new [RStudio
-project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects).
-
 The folder structure of the `awesome-project` project is (*this is not a
 mandatory structure*):
 
-    ## /tmp/Rtmp3UYZJ9/awesome-manuscript
+    ## /tmp/Rtmpgw15l1/awesome-manuscript
     ## ├── .Rbuildignore
     ## ├── .dockerignore
     ## ├── .github
@@ -99,8 +96,8 @@ mandatory structure*):
     ## ├── manuscript
     ## │   └── sources
     ## │       ├── ecology-letters.csl
-    ## │       ├── installed-r-packages.bib
     ## │       ├── library.bib
+    ## │       ├── packages.bib
     ## │       └── template.docx
     ## ├── output
     ## │   ├── figures

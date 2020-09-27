@@ -44,8 +44,6 @@ tmp_proj <- file.path(tempdir(), "awesome-manuscript")
 setup_template(tmp_proj)
 ```
 
-The above line will open a new [RStudio project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects).
-
 The folder structure of the `awesome-project` project is (*this is not a mandatory structure*):
 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE}
