@@ -35,7 +35,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">minimalTemplate</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.3</span>
       </span>
     </div>
 
@@ -113,57 +113,66 @@
 <a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">library</span>(minimalTemplate)</a>
 <a class="sourceLine" id="cb2-3" data-line-number="3"></a>
 <a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co"># create a temporary directory (for a demo proposal only)</span></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5">tmp_proj &lt;-<span class="st"> </span><span class="kw">file.path</span>(<span class="kw">tempdir</span>(), <span class="st">"ms_chap_01"</span>)</a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">tmp_proj &lt;-<span class="st"> </span><span class="kw">file.path</span>(<span class="kw">tempdir</span>(), <span class="st">"awesome-manuscript"</span>)</a>
 <a class="sourceLine" id="cb2-6" data-line-number="6"></a>
 <a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co"># run `setup_template()`</span></a>
 <a class="sourceLine" id="cb2-8" data-line-number="8"><span class="kw">setup_template</span>(tmp_proj)</a>
 <a class="sourceLine" id="cb2-9" data-line-number="9"></a>
-<a class="sourceLine" id="cb2-10" data-line-number="10">## ✔ Creating '/tmp/RtmpKDOueX/ms_chap_01/'</a>
+<a class="sourceLine" id="cb2-10" data-line-number="10">## ✔ Creating '/tmp/Rtmp3UYZJ9/awesome-manuscript/'</a>
 <a class="sourceLine" id="cb2-11" data-line-number="11"></a>
-<a class="sourceLine" id="cb2-12" data-line-number="12">## ✔ Setting active project to '/tmp/RtmpKDOueX/ms_chap_01'</a>
+<a class="sourceLine" id="cb2-12" data-line-number="12">## ✔ Setting active project to '/tmp/Rtmp3UYZJ9/awesome-manuscript'</a>
 <a class="sourceLine" id="cb2-13" data-line-number="13"></a>
 <a class="sourceLine" id="cb2-14" data-line-number="14">## ✔ Creating 'R/'</a>
 <a class="sourceLine" id="cb2-15" data-line-number="15"></a>
-<a class="sourceLine" id="cb2-16" data-line-number="16">## ✔ Writing 'ms_chap_01.Rproj'</a>
+<a class="sourceLine" id="cb2-16" data-line-number="16">## ✔ Writing 'awesome-manuscript.Rproj'</a>
 <a class="sourceLine" id="cb2-17" data-line-number="17"></a>
 <a class="sourceLine" id="cb2-18" data-line-number="18">## ✔ Adding '.Rproj.user' to '.gitignore'</a>
 <a class="sourceLine" id="cb2-19" data-line-number="19"></a>
-<a class="sourceLine" id="cb2-20" data-line-number="20">## ✔ Setting active project to '&lt;no active project&gt;'</a></code></pre></div>
+<a class="sourceLine" id="cb2-20" data-line-number="20">## ✔ Setting active project to '&lt;no active project&gt;'</a>
+<a class="sourceLine" id="cb2-21" data-line-number="21"></a>
+<a class="sourceLine" id="cb2-22" data-line-number="22">## ℹ Please, following the instructions in the 'todo.txt' file</a></code></pre></div>
 <p>The above line will open a new <a href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects">RStudio project</a>.</p>
-<p>The folder structure of the <code>ms_chap_01</code> project is (<em>this is not a mandatory structure</em>):</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">## /tmp/RtmpKDOueX/ms_chap_01</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">## ├── DESCRIPTION</a>
-<a class="sourceLine" id="cb3-3" data-line-number="3">## ├── Dockerfile</a>
-<a class="sourceLine" id="cb3-4" data-line-number="4">## ├── LICENSE.md</a>
-<a class="sourceLine" id="cb3-5" data-line-number="5">## ├── Makefile</a>
-<a class="sourceLine" id="cb3-6" data-line-number="6">## ├── R</a>
-<a class="sourceLine" id="cb3-7" data-line-number="7">## │   ├── 99_analyse-refs.Rmd</a>
-<a class="sourceLine" id="cb3-8" data-line-number="8">## │   ├── README.md</a>
-<a class="sourceLine" id="cb3-9" data-line-number="9">## │   ├── analysis.Rmd</a>
-<a class="sourceLine" id="cb3-10" data-line-number="10">## │   ├── local_functions.R</a>
-<a class="sourceLine" id="cb3-11" data-line-number="11">## │   └── package_list.R</a>
-<a class="sourceLine" id="cb3-12" data-line-number="12">## ├── README.md</a>
-<a class="sourceLine" id="cb3-13" data-line-number="13">## ├── data</a>
-<a class="sourceLine" id="cb3-14" data-line-number="14">## │   ├── clean</a>
-<a class="sourceLine" id="cb3-15" data-line-number="15">## │   ├── raw</a>
-<a class="sourceLine" id="cb3-16" data-line-number="16">## │   └── temp</a>
-<a class="sourceLine" id="cb3-17" data-line-number="17">## ├── main-script.Rmd</a>
-<a class="sourceLine" id="cb3-18" data-line-number="18">## ├── manuscript</a>
-<a class="sourceLine" id="cb3-19" data-line-number="19">## │   └── sources</a>
-<a class="sourceLine" id="cb3-20" data-line-number="20">## │       ├── ecology-letters.csl</a>
-<a class="sourceLine" id="cb3-21" data-line-number="21">## │       ├── helpers</a>
-<a class="sourceLine" id="cb3-22" data-line-number="22">## │       │   ├── bibtool.config.rsc</a>
-<a class="sourceLine" id="cb3-23" data-line-number="23">## │       │   └── clean-bib.sh</a>
-<a class="sourceLine" id="cb3-24" data-line-number="24">## │       ├── installed-r-packages.bib</a>
-<a class="sourceLine" id="cb3-25" data-line-number="25">## │       ├── library.bib</a>
-<a class="sourceLine" id="cb3-26" data-line-number="26">## │       └── template.docx</a>
-<a class="sourceLine" id="cb3-27" data-line-number="27">## ├── ms_chap_01.Rproj</a>
-<a class="sourceLine" id="cb3-28" data-line-number="28">## ├── output</a>
-<a class="sourceLine" id="cb3-29" data-line-number="29">## │   ├── figures</a>
-<a class="sourceLine" id="cb3-30" data-line-number="30">## │   ├── results</a>
-<a class="sourceLine" id="cb3-31" data-line-number="31">## │   └── supp</a>
-<a class="sourceLine" id="cb3-32" data-line-number="32">## └── todo.txt</a></code></pre></div>
-<p>You can edit the various README files distributed among the subdirectories to explain what these folders contain.</p>
+<p>The folder structure of the <code>awesome-project</code> project is (<em>this is not a mandatory structure</em>):</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">## /tmp/Rtmp3UYZJ9/awesome-manuscript</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">## ├── .Rbuildignore</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">## ├── .dockerignore</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">## ├── .github</a>
+<a class="sourceLine" id="cb3-5" data-line-number="5">## │   └── workflows</a>
+<a class="sourceLine" id="cb3-6" data-line-number="6">## │       └── docker.yaml</a>
+<a class="sourceLine" id="cb3-7" data-line-number="7">## ├── .gitignore</a>
+<a class="sourceLine" id="cb3-8" data-line-number="8">## ├── .travis.yml</a>
+<a class="sourceLine" id="cb3-9" data-line-number="9">## ├── DESCRIPTION</a>
+<a class="sourceLine" id="cb3-10" data-line-number="10">## ├── Dockerfile</a>
+<a class="sourceLine" id="cb3-11" data-line-number="11">## ├── LICENSE.md</a>
+<a class="sourceLine" id="cb3-12" data-line-number="12">## ├── Makefile</a>
+<a class="sourceLine" id="cb3-13" data-line-number="13">## ├── R</a>
+<a class="sourceLine" id="cb3-14" data-line-number="14">## │   ├── analysis.Rmd</a>
+<a class="sourceLine" id="cb3-15" data-line-number="15">## │   ├── local_functions.R</a>
+<a class="sourceLine" id="cb3-16" data-line-number="16">## │   └── package_list.R</a>
+<a class="sourceLine" id="cb3-17" data-line-number="17">## ├── README.md</a>
+<a class="sourceLine" id="cb3-18" data-line-number="18">## ├── awesome-manuscript.Rproj</a>
+<a class="sourceLine" id="cb3-19" data-line-number="19">## ├── data</a>
+<a class="sourceLine" id="cb3-20" data-line-number="20">## │   ├── clean</a>
+<a class="sourceLine" id="cb3-21" data-line-number="21">## │   │   └── .gitkeep</a>
+<a class="sourceLine" id="cb3-22" data-line-number="22">## │   ├── raw</a>
+<a class="sourceLine" id="cb3-23" data-line-number="23">## │   │   └── .gitkeep</a>
+<a class="sourceLine" id="cb3-24" data-line-number="24">## │   └── temp</a>
+<a class="sourceLine" id="cb3-25" data-line-number="25">## │       └── .gitkeep</a>
+<a class="sourceLine" id="cb3-26" data-line-number="26">## ├── main-script.Rmd</a>
+<a class="sourceLine" id="cb3-27" data-line-number="27">## ├── manuscript</a>
+<a class="sourceLine" id="cb3-28" data-line-number="28">## │   └── sources</a>
+<a class="sourceLine" id="cb3-29" data-line-number="29">## │       ├── ecology-letters.csl</a>
+<a class="sourceLine" id="cb3-30" data-line-number="30">## │       ├── installed-r-packages.bib</a>
+<a class="sourceLine" id="cb3-31" data-line-number="31">## │       ├── library.bib</a>
+<a class="sourceLine" id="cb3-32" data-line-number="32">## │       └── template.docx</a>
+<a class="sourceLine" id="cb3-33" data-line-number="33">## ├── output</a>
+<a class="sourceLine" id="cb3-34" data-line-number="34">## │   ├── figures</a>
+<a class="sourceLine" id="cb3-35" data-line-number="35">## │   │   └── .gitkeep</a>
+<a class="sourceLine" id="cb3-36" data-line-number="36">## │   ├── results</a>
+<a class="sourceLine" id="cb3-37" data-line-number="37">## │   │   └── .gitkeep</a>
+<a class="sourceLine" id="cb3-38" data-line-number="38">## │   └── supp</a>
+<a class="sourceLine" id="cb3-39" data-line-number="39">## │       └── .gitkeep</a>
+<a class="sourceLine" id="cb3-40" data-line-number="40">## └── todo.txt</a></code></pre></div>
 <p>Open the <code>main_script.Rmd</code> file and press the <code>Knit</code> button.</p>
 </div>
 <div id="download-a-new-citation-style" class="section level3">
