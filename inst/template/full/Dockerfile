@@ -36,8 +36,7 @@ RUN echo "options(Ncpus = $(nproc --all))" >> /usr/local/lib/R/etc/Rprofile.site
 COPY . /research-paper
 
 RUN cd research-paper && \
-          Rscript -e 'options(repos = list(CRAN = "https://cran.microsoft.com/snapshot/2020-03-26/")); \
-          install.packages("remotes"); \
+          Rscript -e 'install.packages("remotes"); \
           remotes::install_deps(upgrade = "never"); \
           rmarkdown::render(input = "R/analysis.Rmd", params = list(show_results = TRUE), output_file = "analysis-rendered-in-docker.html"); \
           rmarkdown::render(input = "main-script.Rmd", output_file = "paper-rendered-in-docker.docx")'

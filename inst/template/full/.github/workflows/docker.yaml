@@ -38,7 +38,7 @@ jobs:
       - run: |
           echo "options(Ncpus = $(nproc --all))" >> /usr/local/lib/R/etc/Rprofile.site
       - run: |
-          Rscript -e 'options(repos = list(CRAN = "https://cran.microsoft.com/snapshot/2020-03-26/")); install.packages("remotes"); remotes::install_deps(upgrade = "never"); rmarkdown::render(input = "R/analysis.Rmd", params = list(show_results = TRUE), output_file = "analysis-rendered-in-githubactions.html"); rmarkdown::render(input = "main-script.Rmd", output_file = "paper-rendered-in-githubactions.docx")'
+          Rscript -e 'install.packages("remotes"); remotes::install_deps(upgrade = "never"); rmarkdown::render(input = "R/analysis.Rmd", params = list(show_results = TRUE), output_file = "analysis-rendered-in-githubactions.html"); rmarkdown::render(input = "main-script.Rmd", output_file = "paper-rendered-in-githubactions.docx")'
       - name: Upload results
         uses: actions/upload-artifact@main
         with:
