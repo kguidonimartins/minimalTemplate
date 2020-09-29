@@ -1,0 +1,22 @@
+---
+title: "Basic workflow"
+author: "Karlo Guidoni Martins"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Basic workflow}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+if (!require("remotes")) install.packages("remotes")
+remotes::install_github("kguidonimartins/minimalTemplate")
+```

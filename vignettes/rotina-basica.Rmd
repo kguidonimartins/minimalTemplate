@@ -1,0 +1,32 @@
+---
+title: "Rotina básica"
+author: "Karlo Guidoni Martins"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Rotina básica}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+if (!require("remotes")) install.packages("remotes")
+remotes::install_github("kguidonimartins/minimalTemplate")
+```
+
+**Um pequeno contexto**: O pacote `{minimalTemplate}` nasceu por conta da necessidade de escrever os capítulos da minha tese no R (usando o RMarkdown e gerando o arquivo final em formato `docx`). Minha pequena experiência lidando com colaborações em textos científicos ainda exige o formato `docx`, infelizmente. O RMarkdown é extremamente flexível e permite mesclar texto (incluindo referências bibliográficas), códigos e gráficos em um único documento. Ao longo do doutorado também surgiu a necessidade de tornar reprodutível (pelo menos computacionalmente) toda essa rotina de redação e de análise. Por conta disso, incorporei mais uma camada de rotina baseada em containers Docker. Isso garante que o arquivo de texto em formato `docx` seja refeito a cada nova modificação de uma maneira totalmente isolada do meu computador pessoal, usando sempre as mesmas versões do R e dos pacotes.
+
+Esse guia é baseado em três partes (a segunda e a terceira são opcionais, mas se decidir segui-las, pode tornar sua rotina reprodutível):
+
+- Preparo e uso do template: o `{minimalTemplate}` vai preparar todo o ambiente para você trabalhar em seus textos e análises;
+
+- Uso do Git e GitHub: ao adicionar seu projeto criado pelo `{minimalTemplate}` ao GitHub você usará automaticamente a primeira camada de reprodutibilidade;
+
+- Uso do Docker e Travis CI:
