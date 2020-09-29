@@ -5,7 +5,7 @@ minimalTemplate
 ===============
 
 [![Build
-Status](https://travis-ci.com/kguidonimartins/minimalTemplate.svg?branch=master)](https://travis-ci.com/kguidonimartins/minimalTemplate)
+Status](https://travis-ci.com/kguidonimartins/minimalTemplate.svg?branch=main)](https://travis-ci.com/kguidonimartins/minimalTemplate)
 [![Project Status: WIP – Initial development is in progress, but there
 has not yet been a stable, usable release suitable for the
 public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
@@ -50,9 +50,9 @@ Set a new template using:
     # run `setup_template()`
     setup_template(tmp_proj)
 
-    ## ✔ Creating '/tmp/Rtmpgw15l1/awesome-manuscript/'
+    ## ✔ Creating '/tmp/RtmpUCZXET/awesome-manuscript/'
 
-    ## ✔ Setting active project to '/tmp/Rtmpgw15l1/awesome-manuscript'
+    ## ✔ Setting active project to '/tmp/RtmpUCZXET/awesome-manuscript'
 
     ## ✔ Creating 'R/'
 
@@ -67,7 +67,7 @@ Set a new template using:
 The folder structure of the `awesome-project` project is (*this is not a
 mandatory structure*):
 
-    ## /tmp/Rtmpgw15l1/awesome-manuscript
+    ## /tmp/RtmpUCZXET/awesome-manuscript
     ## ├── .Rbuildignore
     ## ├── .dockerignore
     ## ├── .github
@@ -108,7 +108,7 @@ mandatory structure*):
     ## │       └── .gitkeep
     ## └── todo.txt
 
-Open the `main_script.Rmd` file and press the `Knit` button.
+Open the `main-script.Rmd` file and press the `Knit` button.
 
 ### 2. Download a new citation style
 

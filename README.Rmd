@@ -5,7 +5,7 @@ output: github_document
 ![](http://www.textfiles.com/underconstruction/HeHeartlandPark2601underconstructionbar9.gif)
 
 # minimalTemplate
-[![Build Status](https://travis-ci.com/kguidonimartins/minimalTemplate.svg?branch=master)](https://travis-ci.com/kguidonimartins/minimalTemplate)
+[![Build Status](https://travis-ci.com/kguidonimartins/minimalTemplate.svg?branch=main)](https://travis-ci.com/kguidonimartins/minimalTemplate)
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -51,7 +51,7 @@ if (!require("fs")) install.packages("fs")
 fs::dir_tree(path = tmp_proj, recurse = TRUE, all = TRUE)
 ```
 
-Open the `main_script.Rmd` file and press the `Knit` button.
+Open the `main-script.Rmd` file and press the `Knit` button.
 
 ### 2. Download a new citation style
 
