@@ -60,6 +60,6 @@ setup_template <- function(project_name) {
   write("tags", file = file_wanted, append = TRUE)
   write("*_files/", file = file_wanted, append = TRUE)
 
-  usethis::ui_info("Please, following the instructions in the 'todo.txt' file")
+  usethis::ui_info("Please, follow the instructions in the 'todo.txt' file")
 
 }
