@@ -19,6 +19,7 @@ knit: (function(inputFile, encoding) {
 
 output:
   word_document:
+    keep_md: true
     reference_docx: manuscript/sources/template.docx
 
 csl: manuscript/sources/ecology-letters.csl

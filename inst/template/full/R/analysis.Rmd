@@ -13,6 +13,7 @@ params:
   show_results: FALSE
 output:
   html_document:
+    keep_md: true
     toc: true
     toc_float: true
     highlight: tango

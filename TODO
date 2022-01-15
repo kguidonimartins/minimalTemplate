@@ -13,3 +13,4 @@
 ☐ `{rrtools}` tem maneiras interessantes de usar o travis para reconstruir a imagem docker de um repositório versionado; rodando inclusive o último render do paper.Rmd
 ☐ os arquivos do setup_template não estão sendo baixados. eles estão no github, mas não vêm com a instalação do pacote.
 ☐ veja isso: https://github.com/ropensci/rrrpkg
+ver dataspice: https://github.com/ropenscilabs/dataspice

@@ -2,35 +2,92 @@ Package: minimalTemplate
 Title: A minimal template for scientific manuscripts
 Version: 0.0.3
 Date: 2018-05-31
-Authors@R: c(
-    person("Karlo", "Guidoni Martins", email = "kguidonimartins@gmail.com",
-    role = c("aut", "cre"), comment = c(ORCID = "0000-0002-8458-8467"))
-    )
-Description: This package focuses on writing scientific manuscripts using
-             RMarkdown. All package architecture was developed to deliver a
-             document in `.docx` format. In addition, the package provides a
-             configuration function for version control of files in `.docx`
-             using the pre- and post-commit scripts.
-License: MIT + file LICENSE
+Authors@R: 
+    person(given = "Karlo",
+           family = "Guidoni Martins",
+           role = c("aut", "cre"),
+           email = "kguidonimartins@gmail.com",
+           comment = c(ORCID = "0000-0002-8458-8467"))
 Maintainer: Karlo Guidoni Martins <kguidonimartins@gmail.com>
-URL: https://github.com/kguidonimartins/minimalTemplate, https://kguidonimartins.github.io/minimalTemplate
+Description: This package focuses on writing scientific manuscripts using
+    RMarkdown. All package architecture was developed to deliver a
+    document in `.docx` format. In addition, the package provides a
+    configuration function for version control of files in `.docx` using
+    the pre- and post-commit scripts.
+License: MIT + file LICENSE
+URL: https://github.com/kguidonimartins/minimalTemplate,
+    https://kguidonimartins.github.io/minimalTemplate
 BugReports: https://github.com/kguidonimartins/minimalTemplate/issues
-Encoding: UTF-8
-RoxygenNote: 7.1.1
 Imports:
-    usethis,
-    knitr,
-    git2r,
-    rmarkdown,
-    magrittr,
-    docxtractr,
-    dplyr,
-    glue,
-    readr,
-    here,
-    fs
+    assertthat (>= 0.2.1),
+    base (>= 4.1.0),
+    cachem (>= 1.0.5),
+    callr (>= 3.7.0),
+    cli (>= 2.5.0),
+    compiler (>= 4.1.0),
+    crayon (>= 1.4.1),
+    datasets (>= 4.1.0),
+    DBI (>= 1.1.1),
+    desc (>= 1.3.0),
+    devtools (>= 2.4.1),
+    digest (>= 0.6.27),
+    docxtractr (>= 0.6.5),
+    dplyr (>= 1.0.6),
+    ellipsis (>= 0.3.2),
+    evaluate (>= 0.14),
+    fansi (>= 0.4.2),
+    fastmap (>= 1.1.0),
+    fs (>= 1.5.0),
+    generics (>= 0.1.0),
+    git2r (>= 0.28.0),
+    glue (>= 1.4.2),
+    graphics (>= 4.1.0),
+    grDevices (>= 4.1.0),
+    here (>= 1.0.1),
+    hms (>= 1.1.0),
+    htmltools (>= 0.5.1.1),
+    httr (>= 1.4.2),
+    knitr (>= 1.33),
+    lifecycle (>= 1.0.0),
+    magrittr (>= 2.0.1),
+    memoise (>= 2.0.0),
+    methods (>= 4.1.0),
+    minimalTemplate (>= 0.0.3),
+    pillar (>= 1.6.1),
+    pkgbuild (>= 1.2.0),
+    pkgconfig (>= 2.0.3),
+    pkgload (>= 1.2.1),
+    prettyunits (>= 1.1.1),
+    processx (>= 3.5.2),
+    ps (>= 1.6.0),
+    purrr (>= 0.3.4),
+    R6 (>= 2.5.0),
+    Rcpp (>= 1.0.6),
+    readr (>= 1.9.9.9000),
+    remotes (>= 2.3.0),
+    rlang (>= 0.4.11),
+    rmarkdown (>= 2.8),
+    roxygen2 (>= 7.1.1),
+    rprojroot (>= 2.0.2),
+    rstudioapi (>= 0.13),
+    sessioninfo (>= 1.1.1),
+    stats (>= 4.1.0),
+    stringi (>= 1.6.2),
+    stringr (>= 1.4.0),
+    testthat (>= 3.0.2),
+    tibble (>= 3.1.2),
+    tidyselect (>= 1.1.1),
+    tools (>= 4.1.0),
+    tzdb (>= 0.1.1),
+    usethis (>= 2.0.1),
+    utf8 (>= 1.2.1),
+    utils (>= 4.1.0),
+    vctrs (>= 0.3.8),
+    withr (>= 2.4.2),
+    xfun (>= 0.23),
+    xml2 (>= 1.3.2)
 VignetteBuilder:
     knitr
+Encoding: UTF-8
+RoxygenNote: 7.1.1
 SystemRequirements: GNU make
-Suggests:
-    testthat

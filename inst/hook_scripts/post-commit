@@ -73,8 +73,8 @@ then
     # add Mardown versions (.md) of the .docx files to amend the
     # commit
     cat .commit-amend-markdown | xargs git add || {
-    	echo "Git cannot add Markdown files to amend the commit";
-    	exit 1;
+    	eecho "Git cannot add Markdown files to amend the commit";
+    	eexit 1;
     }
 
     # delete the file with the list of Markdown files to avoid an
@@ -86,8 +86,8 @@ then
     ##              hook again
     echo Amend last commit adding .md files
     git commit --amend -C HEAD --no-verify || {
-    	echo "Git cannot amend the commit";
-    	exit 1;
+    	eecho "Git cannot amend the commit";
+    	eexit 1;
     }
 
 fi
